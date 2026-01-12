@@ -264,6 +264,20 @@ If TNX is up >= +2.00% vs prior close:
 ## PHASE 3 — SCANNER (MAX ONE BUY)
 Only if Macro allows:
 
+**USE YOUR WEB SEARCH / DEEP RESEARCH CAPABILITY** to find ONE valid setup.
+
+STEP 1 — SEARCH for candidates:
+- Use Finviz, MarketWatch, Yahoo Finance, or similar screeners
+- Filter: US stocks $3–$50, high short interest (>15%), price above moving averages
+
+STEP 2 — VERIFY each candidate by searching for:
+- Current short interest % (cite source: Finviz, NASDAQ, HighShortInterest.com, date)
+- Technical levels: confirm price > 20SMA and > 50SMA
+- Upcoming catalyst within 30–45 days (earnings, FDA, product launch, etc.)
+- No reverse splits, halts, or bankruptcy risk
+
+STEP 3 — VALIDATE setup meets all criteria:
+
 UNIVERSE:
 - US-listed common stock
 - Price $3–$50
@@ -286,7 +300,7 @@ ORDER:
 - BUY must be LIMIT
 - BUY must include STOP_LOSS and TAKE_PROFIT
 - TAKE_PROFIT ≥ 2R
-- If numbers are uncertain → NO BUY
+- If search fails or data is uncertain → NO BUY
 
 ------------------------------------------------------------
 ## PHASE 4 — EXECUTION TABLE (STRICT FORMAT)
