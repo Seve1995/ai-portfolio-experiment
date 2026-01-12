@@ -261,7 +261,7 @@
   },
   "2026-01-12": {
     "ChatGPT": {
-      "equity": 941.38,
+      "equity": 941.53,
       "cash": 758.61,
       "buying_power": 692.8,
       "positions": [
@@ -269,10 +269,10 @@
           "ticker": "NVAX",
           "qty": 14.0,
           "avg_cost": 7.44,
-          "current_price": 7.45,
-          "market_value": 104.3,
-          "unrealized_pl": 0.14,
-          "unrealized_pl_pct": 0.13440860215054,
+          "current_price": 7.451,
+          "market_value": 104.314,
+          "unrealized_pl": 0.154,
+          "unrealized_pl_pct": 0.14784946236559002,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -280,17 +280,17 @@
           "ticker": "UAA",
           "qty": 14.0,
           "avg_cost": 5.78,
-          "current_price": 5.605,
-          "market_value": 78.47,
-          "unrealized_pl": -2.45,
-          "unrealized_pl_pct": -3.02768166089965,
+          "current_price": 5.615,
+          "market_value": 78.61,
+          "unrealized_pl": -2.31,
+          "unrealized_pl_pct": -2.85467128027682,
           "sector": "Consumer Cyclical",
           "industry": "Apparel Manufacturing"
         }
       ]
     },
     "Gemini": {
-      "equity": 987.36,
+      "equity": 985.79,
       "cash": 599.36,
       "buying_power": 599.36,
       "positions": [
@@ -298,10 +298,10 @@
           "ticker": "RIOT",
           "qty": 13.0,
           "avg_cost": 15.25,
-          "current_price": 15.52,
-          "market_value": 201.76,
-          "unrealized_pl": 3.51,
-          "unrealized_pl_pct": 1.7704918032786903,
+          "current_price": 15.47,
+          "market_value": 201.11,
+          "unrealized_pl": 2.86,
+          "unrealized_pl_pct": 1.44262295081967,
           "sector": "Financial Services",
           "industry": "Capital Markets"
         },
@@ -309,10 +309,10 @@
           "ticker": "UPST",
           "qty": 4.0,
           "avg_cost": 50.1,
-          "current_price": 46.56,
-          "market_value": 186.24,
-          "unrealized_pl": -14.16,
-          "unrealized_pl_pct": -7.0658682634730505,
+          "current_price": 46.33,
+          "market_value": 185.32,
+          "unrealized_pl": -15.08,
+          "unrealized_pl_pct": -7.5249500998003995,
           "sector": "Financial Services",
           "industry": "Credit Services"
         }
