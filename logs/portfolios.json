@@ -258,5 +258,88 @@
       "buying_power": 1023.81,
       "positions": []
     }
+  },
+  "2026-01-12": {
+    "ChatGPT": {
+      "equity": 935.43,
+      "cash": 758.61,
+      "buying_power": 692.8,
+      "positions": [
+        {
+          "ticker": "NVAX",
+          "qty": 14.0,
+          "avg_cost": 7.44,
+          "current_price": 7.215,
+          "market_value": 101.01,
+          "unrealized_pl": -3.15,
+          "unrealized_pl_pct": -3.0241935483871,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "UAA",
+          "qty": 14.0,
+          "avg_cost": 5.78,
+          "current_price": 5.415,
+          "market_value": 75.81,
+          "unrealized_pl": -5.11,
+          "unrealized_pl_pct": -6.314878892733559,
+          "sector": "Consumer Cyclical",
+          "industry": "Apparel Manufacturing"
+        }
+      ]
+    },
+    "Gemini": {
+      "equity": 991.48,
+      "cash": 576.75,
+      "buying_power": 462.99,
+      "positions": [
+        {
+          "ticker": "ENVX",
+          "qty": 3.0,
+          "avg_cost": 7.85,
+          "current_price": 7.82,
+          "market_value": 23.46,
+          "unrealized_pl": -0.09,
+          "unrealized_pl_pct": -0.38216560509554004,
+          "sector": "Industrials",
+          "industry": "Electrical Equipment & Parts"
+        },
+        {
+          "ticker": "RIOT",
+          "qty": 13.0,
+          "avg_cost": 15.25,
+          "current_price": 15.2143,
+          "market_value": 197.7859,
+          "unrealized_pl": -0.4641,
+          "unrealized_pl_pct": -0.23409836065574,
+          "sector": "Financial Services",
+          "industry": "Capital Markets"
+        },
+        {
+          "ticker": "UPST",
+          "qty": 4.0,
+          "avg_cost": 50.1,
+          "current_price": 48.37,
+          "market_value": 193.48,
+          "unrealized_pl": -6.92,
+          "unrealized_pl_pct": -3.4530938123752497,
+          "sector": "Financial Services",
+          "industry": "Credit Services"
+        }
+      ]
+    },
+    "Claude": {
+      "equity": 917.78,
+      "cash": 917.78,
+      "buying_power": 917.78,
+      "positions": []
+    },
+    "Perplexity": {
+      "equity": 1023.79,
+      "cash": 1023.79,
+      "buying_power": 1023.79,
+      "positions": []
+    }
   }
 }
