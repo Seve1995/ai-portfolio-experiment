@@ -733,8 +733,10 @@
 
         .holdings-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
+            align-items: stretch;
+            /* Force equal height rows */
         }
 
         .holdings-card {
@@ -745,6 +747,8 @@
             box-shadow: var(--shadow), 0 0 0 1px rgba(255, 255, 255, 0.05);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
 
         .holdings-card::before {
@@ -790,7 +794,10 @@
 
         .holdings-card-body {
             padding: 16px 20px;
-            min-height: 100px;
+            flex: 1;
+            /* Take remaining space in flex container */
+            display: flex;
+            flex-direction: column;
         }
 
         .holding-row {
@@ -941,10 +948,9 @@
             vertical-align: middle;
         }
 
+        /* Additional holdings-card-body styles - main styles defined above */
         .holdings-card-body {
-            padding: 16px;
-            display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             gap: 12px;
         }
 
@@ -1035,78 +1041,222 @@
             padding-bottom: 0;
         }
 
-        /* Allocation Visualization - Enhanced */
-        .allocation-display {
+        /* ============================================
+           2026 Premium Stock Chips Design
+           ============================================ */
+
+        /* Holdings chips container */
+        .holdings-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
             margin-bottom: 16px;
         }
 
-        .allocation-bar-wrapper {
-            margin-bottom: 6px;
-        }
-
-        .allocation-bar-track {
-            width: 100%;
-            height: 14px;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
-            border: 1px solid rgba(128, 128, 128, 0.2);
-            border-radius: 7px;
-            overflow: hidden;
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-            display: flex;
-            cursor: help;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .allocation-bar-track:hover {
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(59, 130, 246, 0.3);
-        }
-
-        /* Bar segments for sector-colored allocation */
-        .bar-segment {
-            height: 100%;
-            display: inline-block;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .bar-segment:hover {
-            transform: scaleY(1.3);
-            filter: brightness(1.2);
-            z-index: 10;
-        }
-
-        .bar-segment:first-child {
-            border-radius: 6px 0 0 6px;
-        }
-
-        .bar-segment:last-child {
-            border-radius: 0 6px 6px 0;
-        }
-
-        .bar-segment:only-child {
-            border-radius: 6px;
-        }
-
-        /* Cash segment with inline label */
-        .bar-segment.bar-cash {
-            background-color: transparent;
-            display: flex;
+        /* Individual stock chip - premium glass style */
+        .stock-chip {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: default;
+            position: relative;
+            overflow: hidden;
         }
 
-        .cash-label {
-            font-size: 0.6rem;
-            color: var(--text-dim);
-            text-transform: uppercase;
+        .stock-chip::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--chip-accent-color, #6b7280);
+            border-radius: 3px 0 0 3px;
+        }
+
+        .stock-chip:hover {
+            transform: translateY(-2px);
+            border-color: var(--chip-accent-color, rgba(255, 255, 255, 0.2));
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 0 0 0 1px var(--chip-accent-color);
+        }
+
+        .chip-ticker {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--text-value);
             letter-spacing: 0.5px;
         }
 
-        .allocation-summary {
-            font-size: 0.7rem;
+        .chip-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
             color: var(--text-dim);
+        }
+
+        .chip-pnl {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 6px;
+        }
+
+        .chip-pnl.positive {
+            color: #3fb950;
+            background: rgba(63, 185, 80, 0.12);
+        }
+
+        .chip-pnl.negative {
+            color: #f85149;
+            background: rgba(248, 81, 73, 0.12);
+        }
+
+        /* Cash chip - special styling */
+        .stock-chip.cash-chip {
+            background: linear-gradient(135deg, rgba(128, 128, 128, 0.08) 0%, rgba(128, 128, 128, 0.03) 100%);
+            border-style: dashed;
+        }
+
+        .stock-chip.cash-chip::before {
+            background: rgba(128, 128, 128, 0.4);
+        }
+
+        .cash-chip .chip-ticker {
+            color: var(--text-dim);
+            font-weight: 500;
+        }
+
+        /* "+X more" badge for overflow holdings */
+        .chip-more-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 14px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.12) 0%, rgba(59, 130, 246, 0.05) 100%);
+            border: 1px dashed rgba(59, 130, 246, 0.3);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #60a5fa;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chip-more-badge:hover {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Portfolio summary stats */
+        .portfolio-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: auto;
+            /* Push to bottom of flex container */
+        }
+
+        .summary-stat {
             text-align: center;
-            margin-top: 6px;
+        }
+
+        .summary-stat-label {
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .summary-stat-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* All cash strategy - Premium Display */
+        .all-cash-display {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 16px;
+            text-align: center;
+        }
+
+        .cash-icon-wrapper {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0.05) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            animation: cashPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes cashPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 0.9;
+            }
+        }
+
+        .cash-icon-wrapper svg {
+            color: #10b981;
+        }
+
+        .cash-amount-large {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-value);
+            margin-bottom: 4px;
+        }
+
+        .cash-label-text {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Light mode adjustments */
+        [data-theme="light"] .stock-chip {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.01) 100%);
+            border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        [data-theme="light"] .chip-pnl.positive {
+            color: #1a7f37;
+            background: rgba(26, 127, 55, 0.1);
+        }
+
+        [data-theme="light"] .chip-pnl.negative {
+            color: #d1242f;
+            background: rgba(209, 36, 47, 0.1);
         }
 
         .allocation-labels {
@@ -1429,6 +1579,192 @@
             font-weight: 600;
             font-family: 'JetBrains Mono', monospace;
             margin-left: 4px;
+        }
+
+        /* ============================================
+           Holdings Detail Modal - 2026 Glass Design
+           ============================================ */
+        .holdings-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .holdings-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .holdings-modal {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-height: 70vh;
+            background: linear-gradient(180deg, rgba(13, 17, 23, 0.98) 0%, rgba(5, 7, 10, 0.99) 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px 24px 0 0;
+            z-index: 1001;
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .holdings-modal-overlay.active .holdings-modal {
+            transform: translateY(0);
+        }
+
+        .modal-handle {
+            width: 40px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            margin: 12px auto;
+            cursor: grab;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .modal-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-value);
+        }
+
+        .modal-close {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-dim);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+        }
+
+        .modal-content {
+            padding: 16px 24px 24px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .modal-holdings-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .modal-holding-chip {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            flex: 1 1 calc(50% - 5px);
+            min-width: 200px;
+        }
+
+        .modal-holding-chip::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--chip-accent-color, #6b7280);
+        }
+
+        .modal-chip-main {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            flex: 1;
+            padding-left: 8px;
+        }
+
+        .modal-chip-ticker {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-value);
+        }
+
+        .modal-chip-sector {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-chip-values {
+            text-align: right;
+        }
+
+        .modal-chip-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+            color: var(--text-value);
+            font-weight: 600;
+        }
+
+        .modal-chip-pnl {
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .modal-chip-pnl.positive {
+            color: #3fb950;
+        }
+
+        .modal-chip-pnl.negative {
+            color: #f85149;
+        }
+
+        /* Light mode for modal */
+        [data-theme="light"] .holdings-modal {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(250, 250, 250, 0.99) 100%);
+            border-top-color: rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="light"] .modal-holding-chip {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.01) 100%);
+            border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        @media (max-width: 768px) {
+            .holdings-modal {
+                max-height: 85vh;
+            }
+
+            .modal-holding-chip {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
@@ -2450,6 +2786,7 @@ https://seve1995.github.io/ai-portfolio-experiment/`;
                 })
                 .then(data => {
                     portfolioData = data;
+                    window.portfolioData = data; // Expose for modal access
                     populateDateSelector();
                 })
                 .catch(err => {
@@ -2484,6 +2821,7 @@ https://seve1995.github.io/ai-portfolio-experiment/`;
         });
 
         function renderHoldings(date) {
+            window.currentHoldingsDate = date; // Store for modal access
             if (!portfolioData[date]) {
                 holdingsGrid.innerHTML = '<p class="empty-holdings">No data for this date.</p>';
                 return;
@@ -2492,80 +2830,129 @@ https://seve1995.github.io/ai-portfolio-experiment/`;
             const dayData = portfolioData[date];
             holdingsGrid.innerHTML = '';
 
+            // Sector colors mapping
+            const sectorColors = {
+                'healthcare': '#10b981',
+                'technology': '#3b82f6',
+                'energy': '#f59e0b',
+                'consumer': '#ec4899',
+                'financial': '#8b5cf6',
+                'industrials': '#6366f1',
+                'materials': '#14b8a6',
+                'utilities': '#84cc16',
+                'real': '#f97316',
+                'communication': '#06b6d4',
+                'unknown': '#6b7280'
+            };
+
             modelOrder.forEach(model => {
                 const modelData = dayData[model];
 
                 // Handle both old (list) and new (dict) data structures
                 let holdings = [];
-                let cash = 0, equity = 0;
+                let totalValue, cashValue, investedValue;
 
                 if (Array.isArray(modelData)) {
-                    // Old format (backup)
                     holdings = modelData;
                     const stockVal = holdings.reduce((sum, h) => sum + h.market_value, 0);
-                    totalValue = 1000; // Assume baseline for old data
+                    totalValue = 1000;
                     investedValue = stockVal;
                     cashValue = 1000 - stockVal;
                 } else {
-                    // New format (Alpaca Data)
                     holdings = modelData.positions || [];
                     totalValue = parseFloat(modelData.equity || 0);
                     cashValue = parseFloat(modelData.cash || 0);
                     investedValue = totalValue - cashValue;
-
-                    // Sanity check: if invested < 0 (due to margin/settlement timing), clamp to 0
                     if (investedValue < 0) investedValue = 0;
                 }
 
                 const investedPct = totalValue > 0 ? (investedValue / totalValue) * 100 : 0;
-                // const cashPct = totalValue > 0 ? (cashValue / totalValue) * 100 : 0; // Unused for bar width if we just use background
 
                 const card = document.createElement('div');
                 card.className = 'holdings-card';
 
-                // Build sector-colored bar segments
-                const sectorColors = {
-                    'healthcare': '#10b981',
-                    'technology': '#3b82f6',
-                    'energy': '#f59e0b',
-                    'consumer': '#ec4899',
-                    'financial': '#8b5cf6',
-                    'industrials': '#6366f1',
-                    'materials': '#14b8a6',
-                    'utilities': '#84cc16',
-                    'real': '#f97316',       // Real Estate
-                    'communication': '#06b6d4',
-                    'unknown': '#6b7280'
-                };
+                // Build stock chips HTML
+                let chipsHtml = '';
 
-                let barSegmentsHtml = '';
-                holdings.forEach(h => {
-                    const holdingPct = totalValue > 0 ? (h.market_value / totalValue) * 100 : 0;
-                    const sectorKey = (h.sector || 'unknown').toLowerCase().split(' ')[0];
-                    const segmentColor = sectorColors[sectorKey] || sectorColors['unknown'];
-                    // Enhanced tooltip with value
-                    barSegmentsHtml += `<div class="bar-segment" style="width: ${holdingPct}%; background-color: ${segmentColor};" title="${h.ticker} · $${h.market_value.toFixed(0)} · ${h.sector || 'Unknown'}"></div>`;
-                });
+                if (holdings.length === 0) {
+                    chipsHtml = `
+                        <div class="all-cash-display">
+                            <div class="cash-icon-wrapper">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                            <div class="cash-amount-large">$${cashValue.toFixed(0)}</div>
+                            <div class="cash-label-text">Cash Position</div>
+                        </div>
+                    `;
+                } else {
+                    const MAX_CHIPS = 4; // Limit visible chips for consistent card heights
+                    const visibleHoldings = holdings.slice(0, MAX_CHIPS);
+                    const remainingCount = holdings.length - MAX_CHIPS;
 
-                // Add cash segment (empty track with tooltip)
-                const cashPct = 100 - investedPct;
+                    chipsHtml = '<div class="holdings-chips">';
+                    visibleHoldings.forEach(h => {
+                        const sectorKey = (h.sector || 'unknown').toLowerCase().split(' ')[0];
+                        const chipColor = sectorColors[sectorKey] || sectorColors['unknown'];
+                        const plClass = h.unrealized_pl_pct >= 0 ? 'positive' : 'negative';
+                        const plSign = h.unrealized_pl_pct >= 0 ? '+' : '';
+
+                        chipsHtml += `
+                            <div class="stock-chip" style="--chip-accent-color: ${chipColor};" title="${h.sector || 'Unknown Sector'}">
+                                <span class="chip-ticker">${h.ticker}</span>
+                                <span class="chip-value">$${h.market_value.toFixed(0)}</span>
+                                <span class="chip-pnl ${plClass}">${plSign}${h.unrealized_pl_pct.toFixed(1)}%</span>
+                            </div>
+                        `;
+                    });
+
+                    // Add "+X more" badge if there are more holdings
+                    if (remainingCount > 0) {
+                        chipsHtml += `
+                            <div class="chip-more-badge" 
+                                 data-model="${model}" 
+                                 onclick="openHoldingsModal('${model}')"
+                                 title="View all ${holdings.length} holdings">
+                                +${remainingCount} more
+                            </div>
+                        `;
+                    }
+
+                    // Add cash chip if there's cash (only if we have room or always show it)
+                    if (cashValue > 10) {
+                        chipsHtml += `
+                            <div class="stock-chip cash-chip" title="Available Cash">
+                                <span class="chip-ticker">CASH</span>
+                                <span class="chip-value">$${cashValue.toFixed(0)}</span>
+                            </div>
+                        `;
+                    }
+                    chipsHtml += '</div>';
+                }
 
                 card.innerHTML = `
                     <div class="holdings-card-header">
                         <h3>${model}</h3>
                     </div>
                     <div class="holdings-card-body">
-                        <!-- Sector-Colored Allocation Bar -->
-                        <div class="allocation-display">
-                            <div class="allocation-bar-track" title="Cash: $${cashValue.toFixed(2)}">
-                                ${barSegmentsHtml}
+                        ${chipsHtml}
+                        
+                        <div class="portfolio-summary">
+                            <div class="summary-stat">
+                                <div class="summary-stat-label">Holdings</div>
+                                <div class="summary-stat-value">${holdings.length}</div>
                             </div>
-                            <div class="allocation-summary">
-                                ${holdings.length} holding${holdings.length !== 1 ? 's' : ''} · ${investedPct.toFixed(0)}% invested · $${cashValue.toFixed(0)} cash
+                            <div class="summary-stat">
+                                <div class="summary-stat-label">Invested</div>
+                                <div class="summary-stat-value">${investedPct.toFixed(0)}%</div>
+                            </div>
+                            <div class="summary-stat">
+                                <div class="summary-stat-label">Total</div>
+                                <div class="summary-stat-value">$${totalValue.toFixed(0)}</div>
                             </div>
                         </div>
-                        
-                        ${renderHoldingsList(holdings, totalValue, sectorColors)}
                     </div>
                 `;
 
@@ -2783,7 +3170,126 @@ https://seve1995.github.io/ai-portfolio-experiment/`;
             loadPortfolios();
             loadTransactions();
         });
+
+        // ============================================
+        // Holdings Modal Functions
+        // ============================================
+        let currentModalData = {};
+
+        function openHoldingsModal(model) {
+            const overlay = document.getElementById('holdingsModalOverlay');
+            const titleEl = document.getElementById('modalModelTitle');
+            const gridEl = document.getElementById('modalHoldingsGrid');
+
+            // Get the current holdings data from the stored portfolioData
+            if (!window.portfolioData || !window.currentHoldingsDate) return;
+
+            const dayData = window.portfolioData[window.currentHoldingsDate];
+            if (!dayData || !dayData[model]) return;
+
+            const modelData = dayData[model];
+            let holdings = [];
+            let cashValue = 0;
+
+            if (Array.isArray(modelData)) {
+                holdings = modelData;
+                const stockVal = holdings.reduce((sum, h) => sum + h.market_value, 0);
+                cashValue = 1000 - stockVal;
+            } else {
+                holdings = modelData.positions || [];
+                cashValue = parseFloat(modelData.cash || 0);
+            }
+
+            const sectorColors = {
+                'technology': '#3b82f6', 'healthcare': '#10b981', 'financial': '#8b5cf6',
+                'consumer': '#f59e0b', 'industrial': '#6366f1', 'energy': '#ef4444',
+                'materials': '#14b8a6', 'utilities': '#84cc16', 'real': '#f97316',
+                'communication': '#06b6d4', 'unknown': '#6b7280'
+            };
+
+            // Populate modal
+            titleEl.textContent = `${model} Holdings`;
+
+            let gridHtml = '';
+            holdings.forEach(h => {
+                const sectorKey = (h.sector || 'unknown').toLowerCase().split(' ')[0];
+                const chipColor = sectorColors[sectorKey] || sectorColors['unknown'];
+                const plClass = h.unrealized_pl_pct >= 0 ? 'positive' : 'negative';
+                const plSign = h.unrealized_pl_pct >= 0 ? '+' : '';
+
+                gridHtml += `
+                    <div class="modal-holding-chip" style="--chip-accent-color: ${chipColor};">
+                        <div class="modal-chip-main">
+                            <div class="modal-chip-ticker">${h.ticker}</div>
+                            <div class="modal-chip-sector">${h.sector || 'Unknown'}</div>
+                        </div>
+                        <div class="modal-chip-values">
+                            <div class="modal-chip-value">$${h.market_value.toFixed(0)}</div>
+                            <div class="modal-chip-pnl ${plClass}">${plSign}${h.unrealized_pl_pct.toFixed(1)}%</div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Add cash if present
+            if (cashValue > 10) {
+                gridHtml += `
+                    <div class="modal-holding-chip" style="--chip-accent-color: #6b7280;">
+                        <div class="modal-chip-main">
+                            <div class="modal-chip-ticker">CASH</div>
+                            <div class="modal-chip-sector">Available</div>
+                        </div>
+                        <div class="modal-chip-values">
+                            <div class="modal-chip-value">$${cashValue.toFixed(0)}</div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            gridEl.innerHTML = gridHtml;
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeHoldingsModal() {
+            const overlay = document.getElementById('holdingsModalOverlay');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal on overlay click
+        document.addEventListener('click', (e) => {
+            if (e.target.id === 'holdingsModalOverlay') {
+                closeHoldingsModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeHoldingsModal();
+            }
+        });
     </script>
+
+    <!-- Holdings Detail Modal -->
+    <div class="holdings-modal-overlay" id="holdingsModalOverlay">
+        <div class="holdings-modal">
+            <div class="modal-handle"></div>
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalModelTitle">Holdings</h3>
+                <button class="modal-close" onclick="closeHoldingsModal()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="modal-holdings-grid" id="modalHoldingsGrid"></div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
