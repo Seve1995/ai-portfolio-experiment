@@ -1506,6 +1506,87 @@
                 width: 100%;
                 justify-content: center;
             }
+
+            /* Portfolio Holdings - Mobile Responsive */
+            .portfolio-header {
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start;
+            }
+
+            .holdings-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .holdings-card-header {
+                padding: 12px 14px;
+            }
+
+            .holdings-card-header h3 {
+                font-size: 0.9rem;
+            }
+
+            .holdings-card-body {
+                padding: 12px 14px;
+            }
+
+            /* Chips become more compact on mobile */
+            .holdings-chips {
+                gap: 6px;
+            }
+
+            .stock-chip {
+                padding: 8px 10px;
+                gap: 6px;
+                border-radius: 10px;
+            }
+
+            .chip-ticker {
+                font-size: 0.8rem;
+            }
+
+            .chip-value {
+                font-size: 0.7rem;
+            }
+
+            .chip-pnl {
+                font-size: 0.65rem;
+                padding: 2px 4px;
+            }
+
+            /* Portfolio summary stats on mobile */
+            .portfolio-summary {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .summary-stat {
+                flex: 1;
+                min-width: 60px;
+            }
+
+            .summary-stat-label {
+                font-size: 0.55rem;
+            }
+
+            .summary-stat-value {
+                font-size: 0.75rem;
+            }
+
+            /* All cash display mobile adjustments */
+            .all-cash-display {
+                padding: 16px 12px;
+            }
+
+            .cash-amount-large {
+                font-size: 1.2rem;
+            }
+
+            .cash-icon-wrapper {
+                width: 40px;
+                height: 40px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1519,6 +1600,17 @@
 
             .stat-card .value {
                 font-size: 1.5rem;
+            }
+
+            /* Single column layout for extra small screens */
+            .holdings-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            /* Chips can wrap naturally */
+            .stock-chip {
+                padding: 8px 12px;
             }
         }
 
