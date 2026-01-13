@@ -330,5 +330,99 @@
       "buying_power": 1023.79,
       "positions": []
     }
+  },
+  "2026-01-13": {
+    "ChatGPT": {
+      "equity": 947.89,
+      "cash": 666.29,
+      "buying_power": 600.48,
+      "positions": [
+        {
+          "ticker": "NVAX",
+          "qty": 14.0,
+          "avg_cost": 7.44,
+          "current_price": 7.9299,
+          "market_value": 111.0186,
+          "unrealized_pl": 6.8586,
+          "unrealized_pl_pct": 6.58467741935484,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "SOUN",
+          "qty": 8.0,
+          "avg_cost": 11.54,
+          "current_price": 11.54,
+          "market_value": 92.32,
+          "unrealized_pl": 0.0,
+          "unrealized_pl_pct": 0.0,
+          "sector": "Technology",
+          "industry": "Software - Application"
+        },
+        {
+          "ticker": "UAA",
+          "qty": 14.0,
+          "avg_cost": 5.78,
+          "current_price": 5.59,
+          "market_value": 78.26,
+          "unrealized_pl": -2.66,
+          "unrealized_pl_pct": -3.2871972318339098,
+          "sector": "Consumer Cyclical",
+          "industry": "Apparel Manufacturing"
+        }
+      ]
+    },
+    "Gemini": {
+      "equity": 997.23,
+      "cash": 440.72,
+      "buying_power": 327.21,
+      "positions": [
+        {
+          "ticker": "LCID",
+          "qty": 14.0,
+          "avg_cost": 11.33,
+          "current_price": 11.325,
+          "market_value": 158.55,
+          "unrealized_pl": -0.07,
+          "unrealized_pl_pct": -0.044130626654899995,
+          "sector": "Consumer Cyclical",
+          "industry": "Auto Manufacturers"
+        },
+        {
+          "ticker": "RIOT",
+          "qty": 13.0,
+          "avg_cost": 15.25,
+          "current_price": 16.72,
+          "market_value": 217.36,
+          "unrealized_pl": 19.11,
+          "unrealized_pl_pct": 9.63934426229508,
+          "sector": "Financial Services",
+          "industry": "Capital Markets"
+        },
+        {
+          "ticker": "UPST",
+          "qty": 4.0,
+          "avg_cost": 50.1,
+          "current_price": 45.15,
+          "market_value": 180.6,
+          "unrealized_pl": -19.8,
+          "unrealized_pl_pct": -9.88023952095808,
+          "sector": "Financial Services",
+          "industry": "Credit Services"
+        }
+      ]
+    },
+    "Claude": {
+      "equity": 917.78,
+      "cash": 917.78,
+      "buying_power": 756.27,
+      "positions": []
+    },
+    "Perplexity": {
+      "equity": 1023.79,
+      "cash": 1023.79,
+      "buying_power": 1023.79,
+      "positions": []
+    }
   }
 }
