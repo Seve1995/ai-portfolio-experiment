@@ -62,7 +62,28 @@ def log_all_performance():
         except Exception as e:
             print(f"   ❌ Error fetching {model_name}: {e}")
 
-    # 4. Save to CSV
+    # 4. Forward-fill missing days (market closed / no data)
+    # If a day still has all default 1000.0 values, carry forward from previous day
+    sorted_dates = sorted(master_data.keys())
+    for i, dt in enumerate(sorted_dates):
+        if i == 0:
+            continue  # Skip first day, nothing to carry forward from
+        
+        # Check if all models have the default 1000.0 value (meaning no real data)
+        all_default = all(
+            master_data[dt][info['name']] == 1000.0 
+            for info in config.MODELS.values()
+        )
+        
+        if all_default:
+            # Carry forward values from previous day
+            prev_dt = sorted_dates[i - 1]
+            for info in config.MODELS.values():
+                model_name = info['name']
+                master_data[dt][model_name] = master_data[prev_dt][model_name]
+            print(f"   ⏭️ {dt}: No data (market closed?), carried forward from {prev_dt}")
+
+    # 5. Save to CSV
     headers = ["Date"] + [info['name'] for info in config.MODELS.values()]
     
     try:
