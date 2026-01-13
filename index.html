@@ -2065,13 +2065,89 @@
             border: 1px solid rgba(248, 81, 73, 0.2);
         }
 
-        /* Time display */
+        /* Time display - 2026 smart formatting */
         .activity-time {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: var(--text-dim);
             white-space: nowrap;
             text-align: right;
-            min-width: 60px;
+            min-width: 50px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            position: relative;
+        }
+
+        /* Live pulse indicator for very recent items */
+        .activity-time .live-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #3fb950;
+            animation: livePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes livePulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.6);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(1.1);
+                box-shadow: 0 0 8px 2px rgba(63, 185, 80, 0.3);
+            }
+        }
+
+        .activity-time .time-text {
+            cursor: help;
+        }
+
+        /* Tooltip for exact timestamp */
+        .activity-time .time-tooltip {
+            position: absolute;
+            bottom: calc(100% + 8px);
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 0.65rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(4px);
+            transition: all 0.2s ease;
+            pointer-events: none;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .activity-time .time-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            right: 12px;
+            border: 5px solid transparent;
+            border-top-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .activity-time:hover .time-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        [data-theme="light"] .activity-time .time-tooltip {
+            background: rgba(15, 23, 42, 0.95);
+        }
+
+        [data-theme="light"] .activity-time .time-tooltip::after {
+            border-top-color: rgba(15, 23, 42, 0.95);
         }
 
         /* Light mode adjustments */
@@ -3579,7 +3655,7 @@ https://seve1995.github.io/ai-portfolio-experiment/`;
             });
         }
 
-        // Helper for date group labels
+        // Helper for date group labels - 2026 smart formatting
         function getDateGroupLabel(date) {
             const now = new Date();
             const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
@@ -3594,8 +3670,11 @@ https://seve1995.github.io/ai-portfolio-experiment/`;
             } else {
                 const diffDays = Math.floor((today - txDate) / (1000 * 60 * 60 * 24));
                 if (diffDays < 7) {
-                    return `${diffDays} days ago`;
+                    // Use weekday name for recent dates (e.g., "Last Monday")
+                    const dayName = date.toLocaleDateString('en-US', { weekday: 'long' });
+                    return `Last ${dayName}`;
                 }
+                // For older dates, show month and day
                 return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
             }
         }
@@ -3625,20 +3704,50 @@ https://seve1995.github.io/ai-portfolio-experiment/`;
             return descriptions[type.toLowerCase()] || 'Order type';
         }
 
-        // Helper for time ago
+        // Helper for time display - 2026 smart formatting with live indicators
         function timeAgo(date) {
-            const seconds = Math.floor((new Date() - date) / 1000);
-            let interval = seconds / 31536000;
-            if (interval > 1) return Math.floor(interval) + "y ago";
-            interval = seconds / 2592000;
-            if (interval > 1) return Math.floor(interval) + "m ago";
-            interval = seconds / 86400;
-            if (interval > 1) return Math.floor(interval) + "d ago";
-            interval = seconds / 3600;
-            if (interval > 1) return Math.floor(interval) + "h ago";
-            interval = seconds / 60;
-            if (interval > 1) return Math.floor(interval) + "m ago";
-            return "Just now";
+            const now = new Date();
+            const seconds = Math.floor((now - date) / 1000);
+            const minutes = Math.floor(seconds / 60);
+            const hours = Math.floor(seconds / 3600);
+            const days = Math.floor(seconds / 86400);
+
+            // Full timestamp for tooltip
+            const fullTimestamp = date.toLocaleString('en-US', {
+                weekday: 'short',
+                month: 'short',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true
+            });
+
+            // Build the time display
+            let timeText = '';
+            let showLiveDot = false;
+
+            if (days > 0) {
+                // For items older than today, show the actual time of day
+                timeText = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+            } else if (hours > 0) {
+                // Within today but hours ago
+                timeText = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+            } else if (minutes > 5) {
+                // More than 5 minutes ago: show relative time
+                timeText = `${minutes} mins ago`;
+            } else if (minutes > 0) {
+                // Within last 5 minutes: show "Just now" with live indicator
+                timeText = 'Just now';
+                showLiveDot = true;
+            } else {
+                // Within last minute
+                timeText = 'Just now';
+                showLiveDot = true;
+            }
+
+            // Return HTML with optional live dot and tooltip
+            const liveDotHtml = showLiveDot ? '<span class="live-dot"></span>' : '';
+            return `${liveDotHtml}<span class="time-text">${timeText}</span><span class="time-tooltip">${fullTimestamp}</span>`;
         }
 
         // Global Donut Chart Instances to manage updates
