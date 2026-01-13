@@ -1858,6 +1858,370 @@
                 flex: 1 1 100%;
             }
         }
+
+        /* ============================================
+           2026 Premium Activity Feed Design
+           ============================================ */
+
+        .activity-feed-section {
+            margin-top: 40px;
+        }
+
+        .activity-feed-section h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .activity-feed {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 8px;
+        }
+
+        /* Custom scrollbar for activity feed */
+        .activity-feed::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .activity-feed::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 3px;
+        }
+
+        .activity-feed::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+
+        .activity-feed::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Date group header */
+        .activity-date-group {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 16px 0 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 8px;
+        }
+
+        .activity-date-group:first-child {
+            padding-top: 0;
+        }
+
+        /* Individual activity item - premium glass card */
+        .activity-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: activitySlideIn 0.4s ease-out backwards;
+        }
+
+        @keyframes activitySlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .activity-item:hover {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateX(4px);
+        }
+
+        /* Buy/Sell icon */
+        .activity-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .activity-icon.buy {
+            background: rgba(63, 185, 80, 0.15);
+            color: #3fb950;
+        }
+
+        .activity-icon.sell {
+            background: rgba(248, 81, 73, 0.15);
+            color: #f85149;
+        }
+
+        /* Content area */
+        .activity-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .activity-main {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        /* AI Model name with brand colors */
+        .activity-model {
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .activity-model.chatgpt {
+            color: #58a6ff;
+            background: rgba(88, 166, 255, 0.12);
+        }
+
+        .activity-model.gemini {
+            color: #bc8cff;
+            background: rgba(188, 140, 255, 0.12);
+        }
+
+        .activity-model.claude {
+            color: #3fb950;
+            background: rgba(63, 185, 80, 0.12);
+        }
+
+        .activity-model.perplexity {
+            color: #f85149;
+            background: rgba(248, 81, 73, 0.12);
+        }
+
+        .activity-action {
+            color: var(--text-dim);
+        }
+
+        .activity-ticker {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            color: var(--text-value);
+        }
+
+        .activity-details {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 4px;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+        }
+
+        .activity-value {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Order type badge */
+        .order-type-badge {
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .order-type-badge.limit {
+            color: #58a6ff;
+            background: rgba(88, 166, 255, 0.1);
+            border: 1px solid rgba(88, 166, 255, 0.2);
+        }
+
+        .order-type-badge.market {
+            color: #f0883e;
+            background: rgba(240, 136, 62, 0.1);
+            border: 1px solid rgba(240, 136, 62, 0.2);
+        }
+
+        .order-type-badge.stop {
+            color: #f85149;
+            background: rgba(248, 81, 73, 0.1);
+            border: 1px solid rgba(248, 81, 73, 0.2);
+        }
+
+        /* Time display */
+        .activity-time {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            white-space: nowrap;
+            text-align: right;
+            min-width: 60px;
+        }
+
+        /* Light mode adjustments */
+        [data-theme="light"] .activity-item {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.01) 100%);
+            border-color: rgba(0, 0, 0, 0.06);
+        }
+
+        [data-theme="light"] .activity-item:hover {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.02) 100%);
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="light"] .activity-date-group {
+            border-bottom-color: rgba(0, 0, 0, 0.05);
+        }
+
+        [data-theme="light"] .activity-icon.buy {
+            background: rgba(26, 127, 55, 0.12);
+            color: #1a7f37;
+        }
+
+        [data-theme="light"] .activity-icon.sell {
+            background: rgba(209, 36, 47, 0.12);
+            color: #d1242f;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .activity-item {
+                padding: 12px;
+                gap: 10px;
+            }
+
+            .activity-main {
+                font-size: 0.85rem;
+            }
+
+            .activity-model {
+                font-size: 0.65rem;
+                padding: 2px 6px;
+            }
+
+            .activity-details {
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+
+            .activity-time {
+                min-width: auto;
+            }
+        }
+
+        /* Activity Info Toggle & Panel */
+        .activity-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .activity-header h2 {
+            margin-bottom: 0;
+        }
+
+        .info-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: var(--text-dim);
+            font-size: 0.75rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .info-toggle:hover {
+            border-color: var(--accent-primary);
+            color: var(--text-main);
+        }
+
+        .info-toggle .chevron {
+            transition: transform 0.2s ease;
+        }
+
+        .info-toggle[aria-expanded="true"] .chevron {
+            transform: rotate(180deg);
+        }
+
+        [data-theme="light"] .info-toggle {
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .activity-info-panel {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .activity-info-panel[hidden] {
+            display: none;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        [data-theme="light"] .activity-info-panel {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.01) 100%);
+            border-color: rgba(0, 0, 0, 0.06);
+        }
+
+        @media (max-width: 768px) {
+            .activity-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .info-item {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 
@@ -1977,9 +2341,10 @@
                 </div>
                 <div class="chart-controls" style="display: flex; gap: 15px; align-items: center;">
                     <div class="segmented-control">
-                        <button class="segment-btn active" data-scale="dynamic"
-                            onclick="setYScale('dynamic')">Dynamic</button>
-                        <button class="segment-btn" data-scale="zero" onclick="setYScale('zero')">From $0</button>
+                        <button class="segment-btn active" data-scale="dynamic" onclick="setYScale('dynamic')"
+                            title="Auto-scale chart to show price movements in detail">Dynamic</button>
+                        <button class="segment-btn" data-scale="zero" onclick="setYScale('zero')"
+                            title="Show full scale from $0 to compare absolute values">From $0</button>
                     </div>
                     <button id="downloadBtn" onclick="takeSnapshot()" class="custom-file-upload btn-share">
                         <span id="snapshotBtnIcon">
@@ -2002,7 +2367,36 @@
 
         <!-- Activity Feed -->
         <div class="activity-feed-section stagger-4">
-            <h2>Recent Activity</h2>
+            <div class="activity-header">
+                <h2>Recent Activity</h2>
+                <button class="info-toggle" onclick="toggleActivityInfo()" aria-expanded="false">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 16v-4"></path>
+                        <path d="M12 8h.01"></path>
+                    </svg>
+                    <span>Order types</span>
+                    <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div id="activityInfoPanel" class="activity-info-panel" hidden>
+                <div class="info-item">
+                    <span class="order-type-badge limit">LIMIT</span>
+                    <span>Executed only at a specified price or better</span>
+                </div>
+                <div class="info-item">
+                    <span class="order-type-badge market">MARKET</span>
+                    <span>Executed immediately at the current market price</span>
+                </div>
+                <div class="info-item">
+                    <span class="order-type-badge stop">STOP</span>
+                    <span>Triggered when price reaches a specified level</span>
+                </div>
+            </div>
             <div id="activityFeed" class="activity-feed">
                 <!-- Activity items will be populated by JS -->
                 <div style="padding: 20px; text-align: center; color: var(--text-dim);">Loading activity...</div>
@@ -3126,31 +3520,109 @@ https://seve1995.github.io/ai-portfolio-experiment/`;
 
             activityFeed.innerHTML = '';
 
+            // Group transactions by date
+            const groups = {};
             allTxs.forEach(tx => {
-                const isBuy = tx.side === 'buy';
-                const timeStr = new Date(tx.timestamp).toLocaleString();
-
-                const item = document.createElement('div');
-                item.className = 'activity-item';
-
-                const iconSvg = isBuy
-                    ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>`
-                    : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>`;
-
-                item.innerHTML = `
-                    <div class="activity-icon ${isBuy ? 'buy' : 'sell'}">
-                        ${iconSvg}
-                    </div>
-                    <div class="activity-content">
-                        <strong>${tx.model}</strong> ${tx.side === 'buy' ? 'bought' : 'sold'} 
-                        <strong>${tx.qty} ${tx.symbol}</strong> at $${tx.price.toFixed(2)}
-                    </div>
-                    <div class="activity-time">
-                        ${timeAgo(new Date(tx.timestamp))}
-                    </div>
-                `;
-                activityFeed.appendChild(item);
+                const dateKey = getDateGroupLabel(new Date(tx.timestamp));
+                if (!groups[dateKey]) groups[dateKey] = [];
+                groups[dateKey].push(tx);
             });
+
+            let animationIndex = 0;
+
+            // Render grouped transactions
+            Object.keys(groups).forEach(dateKey => {
+                // Date header
+                const dateHeader = document.createElement('div');
+                dateHeader.className = 'activity-date-group';
+                dateHeader.textContent = dateKey;
+                activityFeed.appendChild(dateHeader);
+
+                // Transactions in this group
+                groups[dateKey].forEach(tx => {
+                    const isBuy = tx.side === 'buy';
+                    const tradeValue = (tx.qty * tx.price).toFixed(2);
+                    const modelClass = tx.model.toLowerCase().replace(/\s+/g, '');
+                    const orderType = tx.type || 'market';
+
+                    const item = document.createElement('div');
+                    item.className = 'activity-item';
+                    item.style.animationDelay = `${animationIndex * 0.05}s`;
+                    animationIndex++;
+
+                    const iconSvg = isBuy
+                        ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>`
+                        : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>`;
+
+                    item.innerHTML = `
+                        <div class="activity-icon ${isBuy ? 'buy' : 'sell'}">
+                            ${iconSvg}
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-main">
+                                <span class="activity-model ${modelClass}" title="${modelVersions[tx.model] || tx.model}">${tx.model}</span>
+                                <span class="activity-action">${isBuy ? 'bought' : 'sold'}</span>
+                                <span class="activity-ticker">${tx.qty} ${tx.symbol}</span>
+                                <span class="activity-action">at $${tx.price.toFixed(2)}</span>
+                            </div>
+                            <div class="activity-details">
+                                <span class="activity-value">$${tradeValue} trade</span>
+                                <span class="order-type-badge ${orderType}" title="${getOrderTypeDescription(orderType)}">${orderType.toUpperCase()}</span>
+                            </div>
+                        </div>
+                        <div class="activity-time">
+                            ${timeAgo(new Date(tx.timestamp))}
+                        </div>
+                    `;
+                    activityFeed.appendChild(item);
+                });
+            });
+        }
+
+        // Helper for date group labels
+        function getDateGroupLabel(date) {
+            const now = new Date();
+            const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            const yesterday = new Date(today);
+            yesterday.setDate(yesterday.getDate() - 1);
+            const txDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+            if (txDate.getTime() === today.getTime()) {
+                return 'Today';
+            } else if (txDate.getTime() === yesterday.getTime()) {
+                return 'Yesterday';
+            } else {
+                const diffDays = Math.floor((today - txDate) / (1000 * 60 * 60 * 24));
+                if (diffDays < 7) {
+                    return `${diffDays} days ago`;
+                }
+                return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            }
+        }
+
+        // Toggle activity info panel
+        function toggleActivityInfo() {
+            const panel = document.getElementById('activityInfoPanel');
+            const button = document.querySelector('.info-toggle');
+            const isHidden = panel.hasAttribute('hidden');
+
+            if (isHidden) {
+                panel.removeAttribute('hidden');
+                button.setAttribute('aria-expanded', 'true');
+            } else {
+                panel.setAttribute('hidden', '');
+                button.setAttribute('aria-expanded', 'false');
+            }
+        }
+
+        // Helper for order type descriptions (tooltips)
+        function getOrderTypeDescription(type) {
+            const descriptions = {
+                'limit': 'Limit Order: Executed only at a specified price or better',
+                'market': 'Market Order: Executed immediately at the current market price',
+                'stop': 'Stop Order: Triggered when price reaches a specified level'
+            };
+            return descriptions[type.toLowerCase()] || 'Order type';
         }
 
         // Helper for time ago
