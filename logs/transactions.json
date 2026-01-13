@@ -1,6 +1,15 @@
 {
   "ChatGPT": [
     {
+      "symbol": "SOUN",
+      "side": "buy",
+      "qty": 8.0,
+      "price": 11.54,
+      "timestamp": "2026-01-13T14:31:08.984051+00:00",
+      "type": "limit",
+      "id": "dfe06fed-d262-44a3-a8e6-dda362966ba3"
+    },
+    {
       "symbol": "NVAX",
       "side": "buy",
       "qty": 14.0,
