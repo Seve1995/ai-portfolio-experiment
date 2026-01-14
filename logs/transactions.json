@@ -1,6 +1,15 @@
 {
   "ChatGPT": [
     {
+      "symbol": "NTLA",
+      "side": "buy",
+      "qty": 6.0,
+      "price": 11.38,
+      "timestamp": "2026-01-13T14:45:10.425287+00:00",
+      "type": "limit",
+      "id": "dac893ae-2afb-4af4-9deb-7060d6384414"
+    },
+    {
       "symbol": "SOUN",
       "side": "buy",
       "qty": 8.0,
@@ -8,6 +17,15 @@
       "timestamp": "2026-01-13T14:31:08.984051+00:00",
       "type": "limit",
       "id": "dfe06fed-d262-44a3-a8e6-dda362966ba3"
+    },
+    {
+      "symbol": "RXRX",
+      "side": "buy",
+      "qty": 14.0,
+      "price": 4.7,
+      "timestamp": "2026-01-13T14:45:25.853493+00:00",
+      "type": "limit",
+      "id": "305c2b36-93fc-4f7c-a730-9c768eaf815f"
     },
     {
       "symbol": "NVAX",
@@ -65,6 +83,24 @@
     }
   ],
   "Gemini": [
+    {
+      "symbol": "SOUN",
+      "side": "buy",
+      "qty": 19.0,
+      "price": 11.25,
+      "timestamp": "2026-01-13T14:58:57.358247+00:00",
+      "type": "limit",
+      "id": "5111370d-3a54-4616-82c9-37a72989887c"
+    },
+    {
+      "symbol": "LCID",
+      "side": "buy",
+      "qty": 24.0,
+      "price": 11.2925,
+      "timestamp": "2026-01-13T14:31:35.461244+00:00",
+      "type": "limit",
+      "id": "b0411738-79e5-4cbd-bc2e-14e7d4a87683"
+    },
     {
       "symbol": "ENVX",
       "side": "sell",
@@ -157,6 +193,15 @@
     }
   ],
   "Claude": [
+    {
+      "symbol": "RXRX",
+      "side": "buy",
+      "qty": 34.0,
+      "price": 4.75,
+      "timestamp": "2026-01-13T14:37:30.988584+00:00",
+      "type": "limit",
+      "id": "a1fee62d-c7eb-4eeb-a07d-61ab176778ce"
+    },
     {
       "symbol": "AQST",
       "side": "sell",
