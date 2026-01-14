@@ -1,6 +1,15 @@
 {
   "ChatGPT": [
     {
+      "symbol": "APLD",
+      "side": "buy",
+      "qty": 3.0,
+      "price": 35.06,
+      "timestamp": "2026-01-14T14:40:22.611468659+00:00",
+      "type": "limit",
+      "id": "9858edd4-78fa-496d-b88f-bd2a8176233e"
+    },
+    {
       "symbol": "NTLA",
       "side": "buy",
       "qty": 6.0,
@@ -83,6 +92,24 @@
     }
   ],
   "Gemini": [
+    {
+      "symbol": "LCID",
+      "side": "sell",
+      "qty": 24.0,
+      "price": 10.93625,
+      "timestamp": "2026-01-14T14:41:21.482137+00:00",
+      "type": "market",
+      "id": "f6330550-6d40-44e7-baa6-195012654fec"
+    },
+    {
+      "symbol": "SOUN",
+      "side": "sell",
+      "qty": 19.0,
+      "price": 10.85,
+      "timestamp": "2026-01-14T14:35:29.022877+00:00",
+      "type": "stop",
+      "id": "ceaed2ec-d5c1-4c6e-900b-2abe3b34c142"
+    },
     {
       "symbol": "SOUN",
       "side": "buy",
