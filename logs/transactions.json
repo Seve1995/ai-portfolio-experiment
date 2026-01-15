@@ -1,6 +1,15 @@
 {
   "ChatGPT": [
     {
+      "symbol": "CLSK",
+      "side": "buy",
+      "qty": 28.0,
+      "price": 12.976786,
+      "timestamp": "2026-01-15T14:40:54.874132+00:00",
+      "type": "limit",
+      "id": "6783ea52-c0dc-4030-bd61-0273a0e7641a"
+    },
+    {
       "symbol": "APLD",
       "side": "buy",
       "qty": 3.0,
