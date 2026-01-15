@@ -7,6 +7,9 @@ from datetime import date
 import json
 import pathlib
 
+# Experiment Configuration
+EXPERIMENT_END_DATE = date(2026, 3, 31)
+
 import sys
 import pathlib
 # Add root directory to path to import config
@@ -216,7 +219,8 @@ def generate_daily_prompt():
 You are a Senior Portfolio Manager running a rules-based experiment.
 
 **GOAL:**
-Maximize 3-month risk-adjusted return.
+Maximize risk-adjusted return by the experiment end date: {EXPERIMENT_END_DATE.strftime('%B %d, %Y')}.
+Days remaining: {(EXPERIMENT_END_DATE - date.today()).days}
 Strictly follow all rules. Skip trades if uncertain.
 
 ------------------------------------------------------------
