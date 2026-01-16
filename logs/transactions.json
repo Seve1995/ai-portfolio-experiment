@@ -111,6 +111,15 @@
   ],
   "Gemini": [
     {
+      "symbol": "WULF",
+      "side": "buy",
+      "qty": 13.0,
+      "price": 13.648462,
+      "timestamp": "2026-01-16T14:32:28.581576+00:00",
+      "type": "limit",
+      "id": "ede45c19-d40e-4641-ae36-a6a9c8779e09"
+    },
+    {
       "symbol": "LCID",
       "side": "sell",
       "qty": 24.0,
