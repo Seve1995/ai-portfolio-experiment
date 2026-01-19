@@ -2675,24 +2675,66 @@
 
         function getMarketStatus() {
             const now = new Date();
-            const etOffset = -5; // EST (adjust for DST if needed)
-            const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-            const etTime = new Date(utc + (3600000 * etOffset));
 
-            const day = etTime.getDay();
-            const hours = etTime.getHours();
-            const minutes = etTime.getMinutes();
-            const timeInMinutes = hours * 60 + minutes;
+            // Get ET time using proper timezone conversion
+            // Create a formatter to get the current hour in America/New_York timezone
+            const etFormatter = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'America/New_York',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                weekday: 'short',
+                hour12: false
+            });
+
+            const parts = etFormatter.formatToParts(now);
+            const getPart = (type) => parts.find(p => p.type === type)?.value;
+
+            const etYear = parseInt(getPart('year'));
+            const etMonth = parseInt(getPart('month'));
+            const etDay = parseInt(getPart('day'));
+            const etWeekday = getPart('weekday'); // 'Sun', 'Mon', etc.
+            const etHours = parseInt(getPart('hour'));
+            const etMinutes = parseInt(getPart('minute'));
+
+            const timeInMinutes = etHours * 60 + etMinutes;
 
             // Market hours: Mon-Fri, 9:30 AM - 4:00 PM ET
             const marketOpen = 9 * 60 + 30;  // 9:30 AM
             const marketClose = 16 * 60;      // 4:00 PM
 
-            const isWeekday = day >= 1 && day <= 5;
+            // Check if it's a weekday
+            const weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+            const isWeekday = weekdays.includes(etWeekday);
+
+            // US Stock Market Holidays for 2026
+            // Format: 'MM-DD'
+            const holidays2026 = [
+                '01-01', // New Year's Day
+                '01-19', // Martin Luther King Jr. Day
+                '02-16', // Presidents' Day
+                '04-03', // Good Friday
+                '05-25', // Memorial Day
+                '06-19', // Juneteenth (observed)
+                '07-03', // Independence Day (observed, since July 4 is Saturday)
+                '09-07', // Labor Day
+                '11-26', // Thanksgiving Day
+                '12-25', // Christmas Day
+            ];
+
+            // Build current date string for holiday check
+            const monthStr = String(etMonth).padStart(2, '0');
+            const dayStr = String(etDay).padStart(2, '0');
+            const dateStr = `${monthStr}-${dayStr}`;
+
+            const isHoliday = holidays2026.includes(dateStr);
             const isDuringHours = timeInMinutes >= marketOpen && timeInMinutes < marketClose;
 
             return {
-                isOpen: isWeekday && isDuringHours
+                isOpen: isWeekday && isDuringHours && !isHoliday,
+                reason: !isWeekday ? 'Weekend' : (isHoliday ? 'Holiday' : (!isDuringHours ? 'Outside trading hours' : null))
             };
         }
 
