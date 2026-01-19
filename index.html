@@ -2534,6 +2534,23 @@
         // Theme Handling
         const themeToggle = document.getElementById('themeToggle');
 
+        // Global Chart Plugins
+        // Plugin for Line Glow and Shadow (Enhanced 2026 Look)
+        const glowPlugin = {
+            id: 'glow',
+            beforeDatasetDraw: (chart, args) => {
+                const { ctx } = chart;
+                ctx.save();
+                ctx.shadowBlur = 20;
+                ctx.shadowColor = args.meta.dataset.options.borderColor;
+                ctx.shadowOffsetX = 0;
+                ctx.shadowOffsetY = 0;
+            },
+            afterDatasetDraw: (chart) => {
+                chart.ctx.restore();
+            }
+        };
+
         function setTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
@@ -2837,22 +2854,6 @@
                         ctx.stroke();
                         ctx.restore();
                     }
-                }
-            };
-
-            // Plugin for Line Glow and Shadow (Enhanced 2026 Look)
-            const glowPlugin = {
-                id: 'glow',
-                beforeDatasetDraw: (chart, args) => {
-                    const { ctx } = chart;
-                    ctx.save();
-                    ctx.shadowBlur = 20;
-                    ctx.shadowColor = args.meta.dataset.options.borderColor;
-                    ctx.shadowOffsetX = 0;
-                    ctx.shadowOffsetY = 0;
-                },
-                afterDatasetDraw: (chart) => {
-                    chart.ctx.restore();
                 }
             };
 
@@ -3205,18 +3206,7 @@
                         }
                     }
                 },
-                plugins: [
-                    {
-                        id: 'customBg',
-                        beforeDraw: (c) => {
-                            const ctx = c.ctx;
-                            ctx.save();
-                            ctx.fillStyle = bgColor;
-                            ctx.fillRect(0, 0, c.width, c.height);
-                            ctx.restore();
-                        }
-                    }
-                ]
+                plugins: [glowPlugin]
             });
 
             // Wait for chart to be ready (even without animation, Chart.js might need a tick)
