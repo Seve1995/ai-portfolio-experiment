@@ -869,7 +869,7 @@
     "ChatGPT": {
       "equity": 955.0,
       "cash": 495.56,
-      "buying_power": 495.56,
+      "buying_power": 370.25,
       "positions": [
         {
           "ticker": "APLD",
@@ -971,7 +971,7 @@
     "Claude": {
       "equity": 915.05,
       "cash": 756.27,
-      "buying_power": 756.27,
+      "buying_power": 547.16,
       "positions": [
         {
           "ticker": "RXRX",
