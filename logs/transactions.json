@@ -303,6 +303,15 @@
     },
     {
       "symbol": "RXRX",
+      "side": "sell",
+      "qty": 34.0,
+      "price": 4.4,
+      "timestamp": "2026-01-20T20:38:46.663702+00:00",
+      "type": "stop",
+      "id": "b296cbff-1db2-4598-b74a-f719096c2dc1"
+    },
+    {
+      "symbol": "RXRX",
       "side": "buy",
       "qty": 34.0,
       "price": 4.75,
