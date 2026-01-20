@@ -148,6 +148,15 @@
     },
     {
       "symbol": "WULF",
+      "side": "sell",
+      "qty": 13.0,
+      "price": 13.14,
+      "timestamp": "2026-01-20T15:03:03.045177+00:00",
+      "type": "stop",
+      "id": "677fd1b8-d8a5-4ac2-a51d-c94b11e77375"
+    },
+    {
+      "symbol": "WULF",
       "side": "buy",
       "qty": 13.0,
       "price": 13.648462,
