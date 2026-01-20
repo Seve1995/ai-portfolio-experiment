@@ -1,6 +1,24 @@
 {
   "ChatGPT": [
     {
+      "symbol": "SLS",
+      "side": "buy",
+      "qty": 29.0,
+      "price": 3.83,
+      "timestamp": "2026-01-20T14:31:42.233623+00:00",
+      "type": "limit",
+      "id": "1b618cb2-d653-48ff-924c-68fb9bf3868c"
+    },
+    {
+      "symbol": "SOUN",
+      "side": "sell",
+      "qty": 8.0,
+      "price": 10.53,
+      "timestamp": "2026-01-20T14:33:17.672689+00:00",
+      "type": "market",
+      "id": "f53c25f8-65a5-4565-b283-2ec308b6e806"
+    },
+    {
       "symbol": "NTLA",
       "side": "sell",
       "qty": 6.0,
@@ -119,6 +137,15 @@
     }
   ],
   "Gemini": [
+    {
+      "symbol": "CORZ",
+      "side": "buy",
+      "qty": 10.0,
+      "price": 18.184,
+      "timestamp": "2026-01-20T14:34:37.353910+00:00",
+      "type": "limit",
+      "id": "8b27fdbb-b885-4da9-8f2c-77c2bafb3937"
+    },
     {
       "symbol": "WULF",
       "side": "buy",
@@ -257,6 +284,15 @@
   ],
   "Claude": [
     {
+      "symbol": "BBAI",
+      "side": "buy",
+      "qty": 34.0,
+      "price": 5.89,
+      "timestamp": "2026-01-20T14:35:53.540173+00:00",
+      "type": "limit",
+      "id": "93385f31-f9b5-4e4b-a12c-3f61c4b708ec"
+    },
+    {
       "symbol": "RXRX",
       "side": "buy",
       "qty": 34.0,
@@ -285,6 +321,15 @@
     }
   ],
   "Perplexity": [
+    {
+      "symbol": "VERA",
+      "side": "buy",
+      "qty": 3.0,
+      "price": 45.716667,
+      "timestamp": "2026-01-20T14:33:44.860166+00:00",
+      "type": "limit",
+      "id": "e208781c-e020-4dc0-9ad7-e5c43ba5c3b9"
+    },
     {
       "symbol": "APLD",
       "side": "sell",

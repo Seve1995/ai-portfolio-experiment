@@ -992,5 +992,167 @@
       "buying_power": 1023.79,
       "positions": []
     }
+  },
+  "2026-01-20": {
+    "ChatGPT": {
+      "equity": 945.06,
+      "cash": 468.73,
+      "buying_power": 343.42,
+      "positions": [
+        {
+          "ticker": "APLD",
+          "qty": 3.0,
+          "avg_cost": 35.06,
+          "current_price": 34.915,
+          "market_value": 104.745,
+          "unrealized_pl": -0.435,
+          "unrealized_pl_pct": -0.41357672561322995,
+          "sector": "Technology",
+          "industry": "Information Technology Services"
+        },
+        {
+          "ticker": "NVAX",
+          "qty": 14.0,
+          "avg_cost": 7.44,
+          "current_price": 8.3827,
+          "market_value": 117.3578,
+          "unrealized_pl": 13.1978,
+          "unrealized_pl_pct": 12.67069892473118,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "RXRX",
+          "qty": 14.0,
+          "avg_cost": 4.7,
+          "current_price": 4.455,
+          "market_value": 62.37,
+          "unrealized_pl": -3.43,
+          "unrealized_pl_pct": -5.21276595744681,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "SLS",
+          "qty": 29.0,
+          "avg_cost": 3.83,
+          "current_price": 3.84,
+          "market_value": 111.36,
+          "unrealized_pl": 0.29,
+          "unrealized_pl_pct": 0.26109660574413,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "UAA",
+          "qty": 14.0,
+          "avg_cost": 5.78,
+          "current_price": 5.75,
+          "market_value": 80.5,
+          "unrealized_pl": -0.42,
+          "unrealized_pl_pct": -0.51903114186851,
+          "sector": "Consumer Cyclical",
+          "industry": "Apparel Manufacturing"
+        }
+      ]
+    },
+    "Gemini": {
+      "equity": 1001.75,
+      "cash": 223.88,
+      "buying_power": 223.88,
+      "positions": [
+        {
+          "ticker": "CORZ",
+          "qty": 10.0,
+          "avg_cost": 18.184,
+          "current_price": 18.0,
+          "market_value": 180.0,
+          "unrealized_pl": -1.84,
+          "unrealized_pl_pct": -1.0118785745710501,
+          "sector": "Technology",
+          "industry": "Software - Infrastructure"
+        },
+        {
+          "ticker": "RIOT",
+          "qty": 13.0,
+          "avg_cost": 15.25,
+          "current_price": 18.315,
+          "market_value": 238.095,
+          "unrealized_pl": 39.845,
+          "unrealized_pl_pct": 20.0983606557377,
+          "sector": "Financial Services",
+          "industry": "Capital Markets"
+        },
+        {
+          "ticker": "UPST",
+          "qty": 4.0,
+          "avg_cost": 50.1,
+          "current_price": 46.295,
+          "market_value": 185.18,
+          "unrealized_pl": -15.22,
+          "unrealized_pl_pct": -7.594810379241521,
+          "sector": "Financial Services",
+          "industry": "Credit Services"
+        },
+        {
+          "ticker": "WULF",
+          "qty": 13.0,
+          "avg_cost": 13.648462,
+          "current_price": 13.43,
+          "market_value": 174.59,
+          "unrealized_pl": -2.84,
+          "unrealized_pl_pct": -1.60063123485318,
+          "sector": "Financial Services",
+          "industry": "Capital Markets"
+        }
+      ]
+    },
+    "Claude": {
+      "equity": 909.98,
+      "cash": 556.01,
+      "buying_power": 556.01,
+      "positions": [
+        {
+          "ticker": "BBAI",
+          "qty": 34.0,
+          "avg_cost": 5.89,
+          "current_price": 5.9546,
+          "market_value": 202.4564,
+          "unrealized_pl": 2.1964,
+          "unrealized_pl_pct": 1.09677419354839,
+          "sector": "Technology",
+          "industry": "Information Technology Services"
+        },
+        {
+          "ticker": "RXRX",
+          "qty": 34.0,
+          "avg_cost": 4.75,
+          "current_price": 4.455,
+          "market_value": 151.47,
+          "unrealized_pl": -10.03,
+          "unrealized_pl_pct": -6.21052631578947,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    },
+    "Perplexity": {
+      "equity": 1024.13,
+      "cash": 886.64,
+      "buying_power": 886.64,
+      "positions": [
+        {
+          "ticker": "VERA",
+          "qty": 3.0,
+          "avg_cost": 45.716667,
+          "current_price": 45.83,
+          "market_value": 137.49,
+          "unrealized_pl": 0.34,
+          "unrealized_pl_pct": 0.24790375501276002,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    }
   }
 }
