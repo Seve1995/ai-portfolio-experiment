@@ -1132,5 +1132,145 @@
         }
       ]
     }
+  },
+  "2026-01-21": {
+    "ChatGPT": {
+      "equity": 959.8,
+      "cash": 468.71,
+      "buying_power": 343.4,
+      "positions": [
+        {
+          "ticker": "APLD",
+          "qty": 3.0,
+          "avg_cost": 35.06,
+          "current_price": 35.08,
+          "market_value": 105.24,
+          "unrealized_pl": 0.06,
+          "unrealized_pl_pct": 0.05704506560183,
+          "sector": "Unknown",
+          "industry": "Unknown"
+        },
+        {
+          "ticker": "NVAX",
+          "qty": 14.0,
+          "avg_cost": 7.44,
+          "current_price": 8.38,
+          "market_value": 117.32,
+          "unrealized_pl": 13.16,
+          "unrealized_pl_pct": 12.63440860215054,
+          "sector": "Unknown",
+          "industry": "Unknown"
+        },
+        {
+          "ticker": "RXRX",
+          "qty": 14.0,
+          "avg_cost": 4.7,
+          "current_price": 4.35,
+          "market_value": 60.9,
+          "unrealized_pl": -4.9,
+          "unrealized_pl_pct": -7.4468085106383,
+          "sector": "Unknown",
+          "industry": "Unknown"
+        },
+        {
+          "ticker": "SLS",
+          "qty": 29.0,
+          "avg_cost": 3.83,
+          "current_price": 4.35,
+          "market_value": 126.15,
+          "unrealized_pl": 15.08,
+          "unrealized_pl_pct": 13.57702349869452,
+          "sector": "Unknown",
+          "industry": "Unknown"
+        },
+        {
+          "ticker": "UAA",
+          "qty": 14.0,
+          "avg_cost": 5.78,
+          "current_price": 5.82,
+          "market_value": 81.48,
+          "unrealized_pl": 0.56,
+          "unrealized_pl_pct": 0.69204152249135,
+          "sector": "Unknown",
+          "industry": "Unknown"
+        }
+      ]
+    },
+    "Gemini": {
+      "equity": 991.42,
+      "cash": 394.68,
+      "buying_power": 394.68,
+      "positions": [
+        {
+          "ticker": "CORZ",
+          "qty": 10.0,
+          "avg_cost": 18.184,
+          "current_price": 18.295,
+          "market_value": 182.95,
+          "unrealized_pl": 1.11,
+          "unrealized_pl_pct": 0.6104267487901499,
+          "sector": "Unknown",
+          "industry": "Unknown"
+        },
+        {
+          "ticker": "RIOT",
+          "qty": 13.0,
+          "avg_cost": 15.25,
+          "current_price": 18.025,
+          "market_value": 234.325,
+          "unrealized_pl": 36.075,
+          "unrealized_pl_pct": 18.19672131147541,
+          "sector": "Unknown",
+          "industry": "Unknown"
+        },
+        {
+          "ticker": "UPST",
+          "qty": 4.0,
+          "avg_cost": 50.1,
+          "current_price": 44.865,
+          "market_value": 179.46,
+          "unrealized_pl": -20.94,
+          "unrealized_pl_pct": -10.44910179640719,
+          "sector": "Unknown",
+          "industry": "Unknown"
+        }
+      ]
+    },
+    "Claude": {
+      "equity": 908.74,
+      "cash": 705.59,
+      "buying_power": 705.59,
+      "positions": [
+        {
+          "ticker": "BBAI",
+          "qty": 34.0,
+          "avg_cost": 5.89,
+          "current_price": 5.975,
+          "market_value": 203.15,
+          "unrealized_pl": 2.89,
+          "unrealized_pl_pct": 1.4431239388794599,
+          "sector": "Unknown",
+          "industry": "Unknown"
+        }
+      ]
+    },
+    "Perplexity": {
+      "equity": 1022.02,
+      "cash": 886.63,
+      "buying_power": 886.63,
+      "positions": [
+        {
+          "ticker": "VERA",
+          "qty": 3.0,
+          "avg_cost": 45.716667,
+          "current_price": 45.13,
+          "market_value": 135.39,
+          "unrealized_pl": -1.76,
+          "unrealized_pl_pct": -1.28326649653664,
+          "sector": "Unknown",
+          "industry": "Unknown"
+        }
+      ]
+    }
   }
 }
