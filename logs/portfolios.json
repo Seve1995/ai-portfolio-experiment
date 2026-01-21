@@ -992,5 +992,284 @@
       "buying_power": 1023.79,
       "positions": []
     }
+  },
+  "2026-01-20": {
+    "ChatGPT": {
+      "equity": 959.25,
+      "cash": 468.73,
+      "buying_power": 343.42,
+      "positions": [
+        {
+          "ticker": "APLD",
+          "qty": 3.0,
+          "avg_cost": 35.06,
+          "current_price": 35.4527,
+          "market_value": 106.3581,
+          "unrealized_pl": 1.1781,
+          "unrealized_pl_pct": 1.12007986309184,
+          "sector": "Technology",
+          "industry": "Information Technology Services"
+        },
+        {
+          "ticker": "NVAX",
+          "qty": 14.0,
+          "avg_cost": 7.44,
+          "current_price": 8.165,
+          "market_value": 114.31,
+          "unrealized_pl": 10.15,
+          "unrealized_pl_pct": 9.74462365591398,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "RXRX",
+          "qty": 14.0,
+          "avg_cost": 4.7,
+          "current_price": 4.411,
+          "market_value": 61.754,
+          "unrealized_pl": -4.046,
+          "unrealized_pl_pct": -6.14893617021277,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "SLS",
+          "qty": 29.0,
+          "avg_cost": 3.83,
+          "current_price": 4.39,
+          "market_value": 127.31,
+          "unrealized_pl": 16.24,
+          "unrealized_pl_pct": 14.621409921671018,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "UAA",
+          "qty": 14.0,
+          "avg_cost": 5.78,
+          "current_price": 5.7706,
+          "market_value": 80.7884,
+          "unrealized_pl": -0.1316,
+          "unrealized_pl_pct": -0.16262975778546998,
+          "sector": "Consumer Cyclical",
+          "industry": "Apparel Manufacturing"
+        }
+      ]
+    },
+    "Gemini": {
+      "equity": 994.05,
+      "cash": 394.7,
+      "buying_power": 394.7,
+      "positions": [
+        {
+          "ticker": "CORZ",
+          "qty": 10.0,
+          "avg_cost": 18.184,
+          "current_price": 18.36,
+          "market_value": 183.6,
+          "unrealized_pl": 1.76,
+          "unrealized_pl_pct": 0.96788385393753,
+          "sector": "Technology",
+          "industry": "Software - Infrastructure"
+        },
+        {
+          "ticker": "RIOT",
+          "qty": 13.0,
+          "avg_cost": 15.25,
+          "current_price": 18.225,
+          "market_value": 236.925,
+          "unrealized_pl": 38.675,
+          "unrealized_pl_pct": 19.50819672131148,
+          "sector": "Financial Services",
+          "industry": "Capital Markets"
+        },
+        {
+          "ticker": "UPST",
+          "qty": 4.0,
+          "avg_cost": 50.1,
+          "current_price": 44.705,
+          "market_value": 178.82,
+          "unrealized_pl": -21.58,
+          "unrealized_pl_pct": -10.768463073852299,
+          "sector": "Financial Services",
+          "industry": "Credit Services"
+        }
+      ]
+    },
+    "Claude": {
+      "equity": 906.72,
+      "cash": 705.61,
+      "buying_power": 705.61,
+      "positions": [
+        {
+          "ticker": "BBAI",
+          "qty": 34.0,
+          "avg_cost": 5.89,
+          "current_price": 5.915,
+          "market_value": 201.11,
+          "unrealized_pl": 0.85,
+          "unrealized_pl_pct": 0.42444821731749,
+          "sector": "Technology",
+          "industry": "Information Technology Services"
+        }
+      ]
+    },
+    "Perplexity": {
+      "equity": 1021.54,
+      "cash": 886.64,
+      "buying_power": 886.64,
+      "positions": [
+        {
+          "ticker": "VERA",
+          "qty": 3.0,
+          "avg_cost": 45.716667,
+          "current_price": 44.965,
+          "market_value": 134.895,
+          "unrealized_pl": -2.255,
+          "unrealized_pl_pct": -1.64418519868757,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    }
+  },
+  "2026-01-21": {
+    "ChatGPT": {
+      "equity": 973.23,
+      "cash": 468.71,
+      "buying_power": 343.4,
+      "positions": [
+        {
+          "ticker": "APLD",
+          "qty": 3.0,
+          "avg_cost": 35.06,
+          "current_price": 35.08,
+          "market_value": 105.24,
+          "unrealized_pl": 0.06,
+          "unrealized_pl_pct": 0.05704506560183,
+          "sector": "Technology",
+          "industry": "Information Technology Services"
+        },
+        {
+          "ticker": "NVAX",
+          "qty": 14.0,
+          "avg_cost": 7.44,
+          "current_price": 9.0155,
+          "market_value": 126.217,
+          "unrealized_pl": 22.057,
+          "unrealized_pl_pct": 21.1760752688172,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "RXRX",
+          "qty": 14.0,
+          "avg_cost": 4.7,
+          "current_price": 4.525,
+          "market_value": 63.35,
+          "unrealized_pl": -2.45,
+          "unrealized_pl_pct": -3.72340425531915,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "SLS",
+          "qty": 29.0,
+          "avg_cost": 3.83,
+          "current_price": 4.325,
+          "market_value": 125.425,
+          "unrealized_pl": 14.355,
+          "unrealized_pl_pct": 12.924281984334199,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "UAA",
+          "qty": 14.0,
+          "avg_cost": 5.78,
+          "current_price": 6.0208,
+          "market_value": 84.2912,
+          "unrealized_pl": 3.3712,
+          "unrealized_pl_pct": 4.16608996539792,
+          "sector": "Consumer Cyclical",
+          "industry": "Apparel Manufacturing"
+        }
+      ]
+    },
+    "Gemini": {
+      "equity": 1000.89,
+      "cash": 394.68,
+      "buying_power": 394.68,
+      "positions": [
+        {
+          "ticker": "CORZ",
+          "qty": 10.0,
+          "avg_cost": 18.184,
+          "current_price": 18.71,
+          "market_value": 187.1,
+          "unrealized_pl": 5.26,
+          "unrealized_pl_pct": 2.8926528816542,
+          "sector": "Technology",
+          "industry": "Software - Infrastructure"
+        },
+        {
+          "ticker": "RIOT",
+          "qty": 13.0,
+          "avg_cost": 15.25,
+          "current_price": 18.11,
+          "market_value": 235.43,
+          "unrealized_pl": 37.18,
+          "unrealized_pl_pct": 18.754098360655743,
+          "sector": "Financial Services",
+          "industry": "Capital Markets"
+        },
+        {
+          "ticker": "UPST",
+          "qty": 4.0,
+          "avg_cost": 50.1,
+          "current_price": 45.92,
+          "market_value": 183.68,
+          "unrealized_pl": -16.72,
+          "unrealized_pl_pct": -8.34331337325349,
+          "sector": "Financial Services",
+          "industry": "Credit Services"
+        }
+      ]
+    },
+    "Claude": {
+      "equity": 901.09,
+      "cash": 901.09,
+      "buying_power": 901.09,
+      "positions": []
+    },
+    "Perplexity": {
+      "equity": 1022.23,
+      "cash": 861.91,
+      "buying_power": 861.91,
+      "positions": [
+        {
+          "ticker": "IBRX",
+          "qty": 4.0,
+          "avg_cost": 6.18,
+          "current_price": 6.175,
+          "market_value": 24.7,
+          "unrealized_pl": -0.02,
+          "unrealized_pl_pct": -0.08090614886731,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "VERA",
+          "qty": 3.0,
+          "avg_cost": 45.716667,
+          "current_price": 45.2075,
+          "market_value": 135.6225,
+          "unrealized_pl": -1.5275,
+          "unrealized_pl_pct": -1.11374407582938,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    }
   }
 }
