@@ -1,6 +1,15 @@
 {
   "ChatGPT": [
     {
+      "symbol": "SMCI",
+      "side": "buy",
+      "qty": 7.0,
+      "price": 32.0,
+      "timestamp": "2026-01-21T16:31:11.479701+00:00",
+      "type": "limit",
+      "id": "7ded684f-9a17-4a5d-b165-b251cbeba374"
+    },
+    {
       "symbol": "SLS",
       "side": "buy",
       "qty": 29.0,
@@ -137,6 +146,15 @@
     }
   ],
   "Gemini": [
+    {
+      "symbol": "CLSK",
+      "side": "buy",
+      "qty": 30.0,
+      "price": 12.85,
+      "timestamp": "2026-01-21T16:24:00.369733+00:00",
+      "type": "limit",
+      "id": "b796139b-0b6c-47fa-8e50-f02ba9a49b27"
+    },
     {
       "symbol": "CORZ",
       "side": "buy",
