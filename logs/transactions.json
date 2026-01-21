@@ -294,6 +294,15 @@
   "Claude": [
     {
       "symbol": "BBAI",
+      "side": "sell",
+      "qty": 34.0,
+      "price": 5.75,
+      "timestamp": "2026-01-21T15:28:10.595072+00:00",
+      "type": "stop",
+      "id": "dcfc085b-fc25-465b-b50e-c54337b571a3"
+    },
+    {
+      "symbol": "BBAI",
       "side": "buy",
       "qty": 34.0,
       "price": 5.89,
@@ -339,6 +348,15 @@
     }
   ],
   "Perplexity": [
+    {
+      "symbol": "IBRX",
+      "side": "buy",
+      "qty": 4.0,
+      "price": 6.18,
+      "timestamp": "2026-01-21T15:36:29.243312+00:00",
+      "type": "limit",
+      "id": "61017e08-84f6-4b65-ab47-436d4cb47ebf"
+    },
     {
       "symbol": "VERA",
       "side": "buy",
