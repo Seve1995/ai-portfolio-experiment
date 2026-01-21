@@ -1,16 +1,15 @@
-# AI Portfolio Experiment: ChatGPT vs Gemini vs Claude vs Perplexity
+# AI Portfolio Experiment: LLM Comparative Trading Study
 
-A live performance battle between 4 leading AI models acting as Portfolio Managers. This project uses Python, [Alpaca Trade API](https://alpaca.markets/), and a strict rules-based framework to compare their decision-making skills in the stock market.
+A Python-based framework for benchmarking Large Language Models (LLMs) in algorithmic trading. This project imposes a strict, rules-based environment to evaluate the financial decision-making capabilities of **ChatGPT (4o)**, **Gemini (2.0 Flash)**, **Claude (3.5 Sonnet)**, and **Perplexity**.
 
 ## Overview
 
-**Who picks the best stocks?**
-We gave **ChatGPT (4o)**, **Gemini (2.0 Flash)**, **Claude (3.5 Sonnet)**, and **Perplexity** an initial $1,000 budget each. Every day, they analyze market data and make independent trading decisions based on the same set of strict risk-management rules.
+This experiment eliminates prompting variability to isolate model performance. Each model acts as an autonomous Portfolio Manager starting with $1,000, operating under identical constraints.
 
-This project implements the semi-automated workflow ensuring fairness:
-1.  **Analyze**: Current portfolio data and standardized macro indicators (10Y Yield, Dollar Index) are gathered.
-2.  **Prompt**: A structured, identical prompt is generated for each AI to evaluate trades.
-3.  **Execute**: Trade recommendations are parsed and executed on Alpaca Paper Trading.
+**Architecture:**
+1.  **Data Pipeline**: Fetches real-time portfolio state (Alpaca API) and market data (Yahoo Finance).
+2.  **Prompt Engineering**: Generates a deterministic, context-rich prompt containing standardized macro/technical indicators.
+3.  **Execution Engine**: Parses structured model outputs (Markdown/CSV) and routes orders to Alpaca Paper Trading.
 
 ## Project Structure
 
