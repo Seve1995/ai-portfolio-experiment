@@ -1,6 +1,6 @@
 # AI Portfolio Experiment: LLM Comparative Trading Study
 
-A Python-based framework for benchmarking Large Language Models (LLMs) in algorithmic trading. This project imposes a strict, rules-based environment to evaluate the financial decision-making capabilities of **ChatGPT (4o)**, **Gemini (2.0 Flash)**, **Claude (3.5 Sonnet)**, and **Perplexity**.
+A Python-based framework for benchmarking Large Language Models (LLMs) in algorithmic trading. This project imposes a strict, rules-based environment to evaluate the financial decision-making capabilities of **ChatGPT (5.2)**, **Gemini (3 Pro)**, **Claude (4.5 Opus)**, and **Perplexity (Pro)**.
 
 ## Overview
 
