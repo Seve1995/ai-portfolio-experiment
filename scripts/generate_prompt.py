@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from datetime import date
 import json
 import pathlib
+import pandas as pd
 
 # Experiment Configuration
 EXPERIMENT_END_DATE = date(2026, 3, 31)
@@ -23,89 +24,140 @@ import config
 model_info = config.select_model()
 api = config.get_alpaca_api(model_info)
 
+# -------------------------------------------------
+# Market Data Fetching (Batched)
+# -------------------------------------------------
+def fetch_all_market_data(symbols: list) -> dict:
+    """
+    Fetches data for all holdings + Macro tickers in one go.
+    Returns a dict of DataFrames keyed by symbol.
+    """
+    macro_tickers = ["^TNX", "DX-Y.NYB", "UUP"]
+    all_tickers = list(set(symbols + macro_tickers))
+    
+    if not all_tickers:
+        return {}
+
+    print(f"   ... Bulk fetching data for {len(all_tickers)} tickers ...")
+    try:
+        # group_by='ticker' ensures we get a dict-like structure or MultiIndex
+        # auto_adjust=False ensures we get 'Adj Close' if needed, though 'Close' is standard now
+        # threads=True is default
+        data = yf.download(all_tickers, period="6mo", group_by='ticker', threads=True, progress=False)
+        return data
+    except Exception as e:
+        print(f"❌ Batch Download Error: {e}")
+        return {}
+
+def extract_ticker_data(data, symbol):
+    """
+    Helper to safely extract a single ticker's DataFrame from the batched object.
+    yfinance returns a MultiIndex DataFrame if >1 ticker, or single DataFrame if 1 ticker.
+    """
+    try:
+        # If 'data' is a MultiIndex DataFrame with tickers as top level columns:
+        if isinstance(data.columns, pd.MultiIndex):
+            return data[symbol]
+        # If it's a single DataFrame (shouldn't happen with our macro mix, but safety first):
+        return data
+    except KeyError:
+        return None
+    except Exception:
+        return None
+
+# -------------------------------------------------
 # Macro Data
+# -------------------------------------------------
 MACRO_CACHE_DIR = config.MACRO_CACHE_DIR
 
-def get_macro_data():
+def get_macro_data(batch_data):
     """
-    Fetches standardized macro data. Caches results for the day to avoid redundant calls.
+    Extracts TNX and DXY from the batched data. 
+    Caches the *result string* to avoid re-processing if needed, 
+    but strictly we just want to avoid the API call which is now done in batch.
     """
     today_str = date.today().isoformat()
     cache_file = MACRO_CACHE_DIR / f"{today_str}.json"
 
-    if cache_file.exists():
-        try:
-            with open(cache_file, "r") as f:
-                data = json.load(f)
-                print(f"   🏠 Loaded Macro Data from cache ({today_str})")
-                return data["tnx"], data["dxy"]
-        except Exception as e:
-            print(f"⚠️ Cache read error: {e}. Re-fetching...")
-
+    # Optimization: If we have fresh batch_data, use it. 
+    # If fetch failed, try cache.
+    
+    tnx_str = "TNX: Data Error (Batch failed)"
+    dxy_str = "DXY: Data Error (Batch failed)"
+    
     # --- TNX ---
     try:
-        tnx = yf.Ticker("^TNX").history(period="5d")
-        if len(tnx) >= 2:
-            prev = float(tnx["Close"].iloc[-2])
-            last = float(tnx["Close"].iloc[-1])
-            pct = ((last - prev) / prev) * 100 if prev else 0.0
-            tnx_str = f"TNX: {last:.2f} ({pct:+.2f}% vs prior close)"
+        # Handle MultiIndex extraction
+        if isinstance(batch_data.columns, pd.MultiIndex):
+            tnx = batch_data["^TNX"]
         else:
-            tnx_str = "TNX: Not enough data"
+             # Fallback if only one ticker requested (unlikely)
+             tnx = batch_data if "^TNX" in batch_data.columns else None # Simplified
+
+        if tnx is not None and not tnx.empty:
+            hist = tnx.dropna()
+            if len(hist) >= 2:
+                prev = float(hist["Close"].iloc[-2])
+                last = float(hist["Close"].iloc[-1])
+                pct = ((last - prev) / prev) * 100 if prev else 0.0
+                tnx_str = f"TNX: {last:.2f} ({pct:+.2f}% vs prior close)"
+            else:
+                tnx_str = "TNX: Not enough data"
     except Exception as e:
         tnx_str = f"TNX: Data Error ({e})"
 
     # --- DXY (fallback to UUP) ---
     try:
+        # Try DX-Y.NYB
+        dxy = None
         source = "DX-Y.NYB"
-        dxy = yf.Ticker(source).history(period="5d")
-
+        if isinstance(batch_data.columns, pd.MultiIndex):
+            if source in batch_data.columns.levels[0]:
+                dxy = batch_data[source]
+        
+        # Fallback to UUP
         if dxy is None or dxy.empty or len(dxy) < 2:
             source = "UUP"
-            dxy = yf.Ticker(source).history(period="5d")
+            if isinstance(batch_data.columns, pd.MultiIndex):
+                if source in batch_data.columns.levels[0]:
+                    dxy = batch_data[source]
 
-        if dxy is not None and not dxy.empty and len(dxy) >= 2:
-            col = "Adj Close" if "Adj Close" in dxy.columns else "Close"
-            prev = float(dxy[col].iloc[-2])
-            last = float(dxy[col].iloc[-1])
+        if dxy is not None and not dxy.empty:
+            hist = dxy.dropna()
+            if len(hist) >= 2:
+                col = "Adj Close" if "Adj Close" in hist.columns else "Close"
+                prev = float(hist[col].iloc[-2])
+                last = float(hist[col].iloc[-1])
 
-            direction = "UP" if last > prev else ("DOWN" if last < prev else "FLAT")
-            pct = ((last - prev) / prev) * 100 if prev else 0.0
+                direction = "UP" if last > prev else ("DOWN" if last < prev else "FLAT")
+                pct = ((last - prev) / prev) * 100 if prev else 0.0
 
-            dxy_str = f"DXY: {direction} ({pct:+.2f}% vs prior close, source={source})"
+                dxy_str = f"DXY: {direction} ({pct:+.2f}% vs prior close, source={source})"
+            else:
+                 dxy_str = f"DXY: Not enough data ({source})"
         else:
-            dxy_str = "DXY: Not enough data"
+             dxy_str = "DXY: Not enough data"
+
     except Exception as e:
         dxy_str = f"DXY: Data Error ({e})"
-
-    # Save to cache ONLY if data is valid (not errors)
-    tnx_valid = "Not enough data" not in tnx_str and "Data Error" not in tnx_str
-    dxy_valid = "Not enough data" not in dxy_str and "Data Error" not in dxy_str
-    
-    if tnx_valid and dxy_valid:
-        try:
-            MACRO_CACHE_DIR.mkdir(parents=True, exist_ok=True)
-            with open(cache_file, "w") as f:
-                json.dump({"tnx": tnx_str, "dxy": dxy_str}, f)
-            print(f"   💾 Macro Data cached for {today_str}")
-        except Exception as e:
-            print(f"⚠️ Cache write error: {e}")
-    else:
-        print(f"   ⚠️ Macro Data NOT cached (errors detected, will retry next run)")
 
     return tnx_str, dxy_str
 
 # -------------------------------------------------
 # Technical Data for Holdings
 # -------------------------------------------------
-def get_technical_data(symbol: str) -> tuple:
+def get_technical_data(symbol: str, batch_data) -> tuple:
     """
-    Uses last daily close + 20SMA + 50SMA.
-    Data source: Yahoo Finance, daily bars only.
-    Returns: (tech_string, last_close) tuple
+    Extracts technicals from batched data.
     """
     try:
-        hist = yf.Ticker(symbol).history(period="6mo")
+        if isinstance(batch_data.columns, pd.MultiIndex):
+             if symbol not in batch_data.columns.levels[0]:
+                 return f"N/A (Symbol {symbol} not in batch)", None
+             hist = batch_data[symbol]
+        else:
+             hist = batch_data # Fallback
+
         if hist is None or len(hist) < 55:
             return "N/A (Insufficient history)", None
 
@@ -155,16 +207,21 @@ def generate_daily_prompt():
     equity = float(account.equity)
     max_risk = equity * 0.015
 
+    # Fetch All Market Data
+    holding_symbols = [p.symbol for p in positions] if positions else []
+    
+    batch_data = fetch_all_market_data(holding_symbols)
+
     # Macro
-    print("   ... Fetching Macro Data ...")
-    tnx_str, dxy_str = get_macro_data()
+    print("   ... (Processed in Batch) Fetching Macro Data ...")
+    tnx_str, dxy_str = get_macro_data(batch_data)
 
     # Holdings
     holdings_lines = []
     if positions:
-        print(f"   ... Fetching Technicals for {len(positions)} positions ...")
+        print(f"   ... Processing Technicals for {len(positions)} positions ...")
         for p in positions:
-            tech_str, last_close = get_technical_data(p.symbol)
+            tech_str, last_close = get_technical_data(p.symbol, batch_data)
             entry_price = float(p.avg_entry_price)
             # Calculate PnL from entry price vs last close (more reliable than Alpaca's unrealized_plpc)
             if last_close and entry_price > 0:
