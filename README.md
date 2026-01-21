@@ -1,13 +1,16 @@
-# AI Portfolio Experiment
+# AI Portfolio Experiment: ChatGPT vs Gemini vs Claude vs Perplexity
 
-A rules-based algorithmic trading experiment using Python, [Alpaca Trade API](https://alpaca.markets/), and AI-assisted decision making.
+A live performance battle between 4 leading AI models acting as Portfolio Managers. This project uses Python, [Alpaca Trade API](https://alpaca.markets/), and a strict rules-based framework to compare their decision-making skills in the stock market.
 
 ## Overview
 
-This project implements a semi-automated trading workflow:
-1. **Analyze**: Current portfolio data and macro indicators (10Y Yield, Dollar Index) are gathered.
-2. **Prompt**: A structured prompt is generated for an AI (ChatGPT, Claude, etc.) to evaluate trades based on specific rules.
-3. **Execute**: Trade recommendations from the AI are parsed from the clipboard and executed on Alpaca Paper Trading.
+**Who picks the best stocks?**
+We gave **ChatGPT (4o)**, **Gemini (2.0 Flash)**, **Claude (3.5 Sonnet)**, and **Perplexity** an initial $1,000 budget each. Every day, they analyze market data and make independent trading decisions based on the same set of strict risk-management rules.
+
+This project implements the semi-automated workflow ensuring fairness:
+1.  **Analyze**: Current portfolio data and standardized macro indicators (10Y Yield, Dollar Index) are gathered.
+2.  **Prompt**: A structured, identical prompt is generated for each AI to evaluate trades.
+3.  **Execute**: Trade recommendations are parsed and executed on Alpaca Paper Trading.
 
 ## Project Structure
 
