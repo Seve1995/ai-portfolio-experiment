@@ -116,6 +116,11 @@ def log_all_performance():
 if __name__ == "__main__":
     log_all_performance()
     
+    # Update S&P 500 baseline
+    from update_baseline import main as update_baseline
+    print("\n" + "=" * 50)
+    update_baseline()
+    
     # Also log current portfolio holdings
     from log_portfolios import log_all_portfolios
     log_all_portfolios()

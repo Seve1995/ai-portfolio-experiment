@@ -2518,14 +2518,16 @@
             'ChatGPT': '#58a6ff',
             'Gemini': '#bc8cff',
             'Claude': '#3fb950',
-            'Perplexity': '#f85149'
+            'Perplexity': '#f85149',
+            'SP500': '#888888'  // Neutral gray for baseline
         };
 
         const modelVersions = {
             'ChatGPT': 'ChatGPT 5.2',
             'Gemini': 'Gemini 3 Pro',
             'Claude': 'Claude 4.5 Opus',
-            'Perplexity': 'Perplexity Pro'
+            'Perplexity': 'Perplexity Pro',
+            'SP500': 'S&P 500 (Baseline)'
         };
 
         const initialCapital = 1000;
@@ -2790,6 +2792,28 @@
                     borderWidth: 3
                 };
             });
+
+            // Add S&P 500 baseline if data exists
+            if (cleanData[0].SP500 !== undefined) {
+                datasets.push({
+                    label: 'SP500',
+                    data: cleanData.map(row => row.SP500),
+                    borderColor: colors['SP500'],
+                    backgroundColor: 'transparent',
+                    fill: false,
+                    borderDash: [8, 4],  // Dashed line to distinguish baseline
+                    cubicInterpolationMode: 'monotone',
+                    tension: 0.4,
+                    pointRadius: 0,
+                    pointHoverRadius: 4,
+                    pointHitRadius: 15,
+                    pointHoverBackgroundColor: colors['SP500'],
+                    pointHoverBorderColor: '#ffffff',
+                    pointHoverBorderWidth: 2,
+                    borderWidth: 2,
+                    order: 1  // Draw baseline behind AI lines
+                });
+            }
 
             renderChart(labels, datasets);
             updateStats(latestRow);
