@@ -1,30 +1,25 @@
-**CURRENT DATE:** 2026-01-22
+**CURRENT DATE:** 2026-01-23
 
-**PORTFOLIO STATUS (ALPACA PAPER - ChatGPT):**
-- Cash: $244.70
-- Equity: $1007.80
+**PORTFOLIO STATUS (ALPACA PAPER - Claude):**
+- Cash: $845.12
+- Equity: $901.88
 
 **MACRO DATA (STANDARDIZED SOURCE):**
-- TNX: 4.25 (-0.09% vs prior close)
-- DXY: DOWN (-0.41% vs prior close, source=DX-Y.NYB)
+- TNX: 4.25 (-0.05% vs prior close)
+- DXY: DOWN (-0.07% vs prior close, source=DX-Y.NYB)
 
 **CURRENT HOLDINGS (STANDARDIZED LAST-CLOSE DATA):**
-- APLD: Qty 3 | Entry $35.06 | PnL -0.44% | Last Close Data: LastClose $34.90 | 20SMA $31.30 | 50SMA $28.43 | Trend ABOVE_20&50
-- NVAX: Qty 14 | Entry $7.44 | PnL 32.73% | Last Close Data: LastClose $9.88 | 20SMA $7.66 | 50SMA $7.12 | Trend ABOVE_20&50
-- RXRX: Qty 14 | Entry $4.70 | PnL 6.06% | Last Close Data: LastClose $4.99 | 20SMA $4.52 | 50SMA $4.46 | Trend ABOVE_20&50
-- SLS: Qty 29 | Entry $3.83 | PnL 18.97% | Last Close Data: LastClose $4.56 | 20SMA $3.87 | 50SMA $2.59 | Trend ABOVE_20&50
-- SMCI: Qty 7 | Entry $32.00 | PnL 1.87% | Last Close Data: LastClose $32.60 | 20SMA $30.39 | 50SMA $32.41 | Trend ABOVE_20&50
-- UAA: Qty 14 | Entry $5.78 | PnL 11.25% | Last Close Data: LastClose $6.43 | 20SMA $5.47 | 50SMA $4.86 | Trend ABOVE_20&50
+- NVAX: Qty 6 | Entry $9.32 | PnL 1.45% | Last Close Data: LastClose $9.46 | 20SMA $7.79 | 50SMA $7.16 | Trend ABOVE_20&50
 
 **PENDING ORDERS:**
-No pending orders.
+- SELL NVAX 6 (LIMIT) Lim: $13.50
 
 **ROLE:**
 You are a Senior Portfolio Manager running a rules-based experiment.
 
 **GOAL:**
 Maximize risk-adjusted return by the experiment end date: March 31, 2026.
-Days remaining: 68
+Days remaining: 67
 Strictly follow all rules. Skip trades if uncertain.
 
 ------------------------------------------------------------
@@ -99,7 +94,7 @@ SETUP:
 - Clear technical stop level
 
 RISK:
-- Max $risk = $15.12
+- Max $risk = $13.53
 - STOP_LOSS MUST be strictly below LIMIT_PRICE
 - Qty = floor(MaxRisk / (Entry − Stop))
 - If Qty < 1 → NO BUY

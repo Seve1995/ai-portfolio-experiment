@@ -1,30 +1,31 @@
-**CURRENT DATE:** 2026-01-22
+**CURRENT DATE:** 2026-01-23
 
-**PORTFOLIO STATUS (ALPACA PAPER - ChatGPT):**
-- Cash: $244.70
-- Equity: $1007.80
+**PORTFOLIO STATUS (ALPACA PAPER - Gemini):**
+- Cash: $9.17
+- Equity: $977.48
 
 **MACRO DATA (STANDARDIZED SOURCE):**
-- TNX: 4.25 (-0.09% vs prior close)
-- DXY: DOWN (-0.41% vs prior close, source=DX-Y.NYB)
+- TNX: 4.25 (-0.05% vs prior close)
+- DXY: DOWN (-0.07% vs prior close, source=DX-Y.NYB)
 
 **CURRENT HOLDINGS (STANDARDIZED LAST-CLOSE DATA):**
-- APLD: Qty 3 | Entry $35.06 | PnL -0.44% | Last Close Data: LastClose $34.90 | 20SMA $31.30 | 50SMA $28.43 | Trend ABOVE_20&50
-- NVAX: Qty 14 | Entry $7.44 | PnL 32.73% | Last Close Data: LastClose $9.88 | 20SMA $7.66 | 50SMA $7.12 | Trend ABOVE_20&50
-- RXRX: Qty 14 | Entry $4.70 | PnL 6.06% | Last Close Data: LastClose $4.99 | 20SMA $4.52 | 50SMA $4.46 | Trend ABOVE_20&50
-- SLS: Qty 29 | Entry $3.83 | PnL 18.97% | Last Close Data: LastClose $4.56 | 20SMA $3.87 | 50SMA $2.59 | Trend ABOVE_20&50
-- SMCI: Qty 7 | Entry $32.00 | PnL 1.87% | Last Close Data: LastClose $32.60 | 20SMA $30.39 | 50SMA $32.41 | Trend ABOVE_20&50
-- UAA: Qty 14 | Entry $5.78 | PnL 11.25% | Last Close Data: LastClose $6.43 | 20SMA $5.47 | 50SMA $4.86 | Trend ABOVE_20&50
+- CLSK: Qty 30 | Entry $12.85 | PnL 1.36% | Last Close Data: LastClose $13.02 | 20SMA $12.03 | 50SMA $12.38 | Trend ABOVE_20&50
+- CORZ: Qty 10 | Entry $18.18 | PnL -2.72% | Last Close Data: LastClose $17.69 | 20SMA $16.87 | 50SMA $16.31 | Trend ABOVE_20&50
+- RIOT: Qty 13 | Entry $15.25 | PnL 10.16% | Last Close Data: LastClose $16.80 | 20SMA $15.56 | 50SMA $14.93 | Trend ABOVE_20&50
+- UPST: Qty 4 | Entry $50.10 | PnL -9.05% | Last Close Data: LastClose $45.56 | 20SMA $47.28 | 50SMA $44.98 | Trend BELOW_20
 
 **PENDING ORDERS:**
-No pending orders.
+- SELL CLSK 30 (LIMIT) Lim: $15.55
+- SELL RIOT 13 (STOP) Stop: $16.50
+- SELL CORZ 10 (LIMIT) Lim: $21.90
+- SELL UPST 4 (STOP) Stop: $43.95
 
 **ROLE:**
 You are a Senior Portfolio Manager running a rules-based experiment.
 
 **GOAL:**
 Maximize risk-adjusted return by the experiment end date: March 31, 2026.
-Days remaining: 68
+Days remaining: 67
 Strictly follow all rules. Skip trades if uncertain.
 
 ------------------------------------------------------------
@@ -99,7 +100,7 @@ SETUP:
 - Clear technical stop level
 
 RISK:
-- Max $risk = $15.12
+- Max $risk = $14.66
 - STOP_LOSS MUST be strictly below LIMIT_PRICE
 - Qty = floor(MaxRisk / (Entry − Stop))
 - If Qty < 1 → NO BUY
