@@ -460,6 +460,75 @@
             margin-bottom: 25px;
         }
 
+        /* Market Status & Next Update Styles */
+        .market-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .market-indicator.open {
+            background: #3fb950;
+            box-shadow: 0 0 8px rgba(63, 185, 80, 0.6);
+            animation: marketPulse 2s ease-in-out infinite;
+        }
+
+        .market-indicator.closed {
+            background: #6e7681;
+        }
+
+        @keyframes marketPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        .status-separator {
+            margin: 0 6px;
+            color: var(--text-dim);
+            opacity: 0.5;
+        }
+
+        .next-update {
+            color: var(--text-dim);
+            font-size: 0.75rem;
+        }
+
+        .update-soon {
+            color: #58a6ff;
+            font-weight: 500;
+            animation: updatePulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes updatePulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .next-update,
+            .status-separator:last-of-type {
+                display: none;
+            }
+        }
+
         .chart-wrapper {
             position: relative;
             height: 480px;
@@ -2024,6 +2093,26 @@
             color: var(--text-value);
         }
 
+        /* Sell performance indicator */
+        .activity-performance {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 6px;
+        }
+
+        .activity-performance.positive {
+            color: #3fb950;
+            background: rgba(63, 185, 80, 0.15);
+        }
+
+        .activity-performance.negative {
+            color: #f85149;
+            background: rgba(248, 81, 73, 0.15);
+        }
+
         .activity-details {
             display: flex;
             align-items: center;
@@ -2345,7 +2434,7 @@
             <!-- Removed default pill, moved to ticker -->
             <h1>AI Portfolio Experiment</h1>
             <p class="subtitle">
-                LLM Comparative Trading Study: Benchmarking Financial Decision-Making
+                Comparing four $1,000 investment portfolios managed by AI.
                 <span class="header-links">
                     <a href="https://aiportfolioexperiment.substack.com/" target="_blank" rel="noopener">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -2688,8 +2777,131 @@
             const indicatorClass = marketStatus.isOpen ? 'open' : 'closed';
             const statusText = marketStatus.isOpen ? 'Market Open' : 'Market Closed';
 
+            // Calculate next update time
+            const nextUpdate = getNextUpdateTime();
+
             document.getElementById('lastSync').innerHTML =
-                `<span class="market-indicator ${indicatorClass}"></span>${statusText} · Last updated: ${timeAgo}`;
+                `<span class="market-indicator ${indicatorClass}"></span>${statusText}<span class="status-separator">·</span>Last updated: ${timeAgo}` +
+                `<span class="status-separator">·</span>` +
+                `<span class="next-update">Next update: ${nextUpdate}</span>`;
+        }
+
+        // Calculate the next data refresh time
+        function getNextUpdateTime() {
+            const now = new Date();
+
+            // Get current time in ET
+            const etFormatter = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'America/New_York',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                weekday: 'short',
+                hour12: false
+            });
+
+            const parts = etFormatter.formatToParts(now);
+            const getPart = (type) => parts.find(p => p.type === type)?.value;
+
+            const etWeekday = getPart('weekday');
+            const etHours = parseInt(getPart('hour'));
+            const etMinutes = parseInt(getPart('minute'));
+            const etMonth = parseInt(getPart('month'));
+            const etDay = parseInt(getPart('day'));
+
+            const timeInMinutes = etHours * 60 + etMinutes;
+            const marketOpen = 9 * 60 + 30;  // 9:30 AM
+            const marketClose = 16 * 60;      // 4:00 PM
+
+            const weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+            const weekdayIndex = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(etWeekday);
+            const isWeekday = weekdays.includes(etWeekday);
+
+            // Holidays for 2026
+            const holidays2026 = ['01-01', '01-19', '02-16', '04-03', '05-25', '06-19', '07-03', '09-07', '11-26', '12-25'];
+            const monthStr = String(etMonth).padStart(2, '0');
+            const dayStr = String(etDay).padStart(2, '0');
+            const isHoliday = holidays2026.includes(`${monthStr}-${dayStr}`);
+
+            // If market is open: next update is at next :00 or :30
+            if (isWeekday && !isHoliday && timeInMinutes >= marketOpen && timeInMinutes < marketClose) {
+                // Calculate minutes until next :00 or :30
+                const currentSlot = etMinutes < 30 ? 0 : 30;
+                const nextSlot = currentSlot === 0 ? 30 : 60;
+                let minsUntilNext = nextSlot - etMinutes;
+
+                // If we just passed a slot (within first 2 mins), show the one after
+                if (minsUntilNext <= 0) minsUntilNext += 30;
+
+                // Check if next slot would be after market close
+                const nextUpdateTimeInMins = timeInMinutes + minsUntilNext;
+                if (nextUpdateTimeInMins >= marketClose) {
+                    return getNextMarketDay(weekdayIndex, isHoliday);
+                }
+
+                if (minsUntilNext <= 1) {
+                    return '<span class="update-soon">~1 min</span>';
+                } else if (minsUntilNext <= 5) {
+                    return `<span class="update-soon">~${minsUntilNext} mins</span>`;
+                } else {
+                    return `~${minsUntilNext} mins`;
+                }
+            }
+
+            // Market is closed - find next trading day
+            return getNextMarketDay(weekdayIndex, isHoliday);
+        }
+
+        function getNextMarketDay(currentWeekdayIndex, isTodayHoliday) {
+            const now = new Date();
+
+            // Get current ET time details
+            const etFormatter = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'America/New_York',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: false
+            });
+            const parts = etFormatter.formatToParts(now);
+            const etHours = parseInt(parts.find(p => p.type === 'hour')?.value || 0);
+            const etMinutes = parseInt(parts.find(p => p.type === 'minute')?.value || 0);
+            const timeInMinutes = etHours * 60 + etMinutes;
+            const marketOpen = 9 * 60 + 30;
+
+            // Days until next market day
+            let daysToAdd = 0;
+
+            if (currentWeekdayIndex === 0) { // Sunday
+                daysToAdd = 1;
+            } else if (currentWeekdayIndex === 6) { // Saturday
+                daysToAdd = 2;
+            } else if (currentWeekdayIndex === 5 && timeInMinutes >= 16 * 60) { // Friday after close
+                daysToAdd = 3;
+            } else if (timeInMinutes >= 16 * 60) { // Weekday after market close
+                daysToAdd = 1;
+            } else if (timeInMinutes < marketOpen) { // Weekday before market open
+                daysToAdd = 0;
+            }
+
+            // Format the response
+            if (daysToAdd === 0) {
+                // Today, before market open
+                const minsUntilOpen = marketOpen - timeInMinutes;
+                if (minsUntilOpen <= 60) {
+                    return `~${minsUntilOpen} mins (9:30 AM ET)`;
+                } else {
+                    const hoursUntil = Math.floor(minsUntilOpen / 60);
+                    return `~${hoursUntil}h (9:30 AM ET)`;
+                }
+            } else if (daysToAdd === 1) {
+                const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                const nextDay = (currentWeekdayIndex + 1) % 7;
+                return `${dayNames[nextDay]} 9:30 AM ET`;
+            } else {
+                return `Monday 9:30 AM ET`;
+            }
         }
 
         function getMarketStatus() {
@@ -3660,6 +3872,22 @@ https://seve1995.github.io/ai-portfolio-experiment/`;
                 groups[dateKey].push(tx);
             });
 
+            // Helper: Find the buy price for a sell transaction
+            function findBuyPrice(sellTx) {
+                const modelTxs = transactions[sellTx.model] || [];
+                // Find the most recent BUY of this symbol BEFORE the sell timestamp
+                const sellTime = new Date(sellTx.timestamp);
+                const matchingBuys = modelTxs.filter(tx =>
+                    tx.side === 'buy' &&
+                    tx.symbol === sellTx.symbol &&
+                    new Date(tx.timestamp) < sellTime
+                );
+                if (matchingBuys.length === 0) return null;
+                // Get the most recent buy (closest to sell date)
+                matchingBuys.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+                return matchingBuys[0].price;
+            }
+
             let animationIndex = 0;
 
             // Render grouped transactions
@@ -3676,6 +3904,18 @@ https://seve1995.github.io/ai-portfolio-experiment/`;
                     const tradeValue = (tx.qty * tx.price).toFixed(2);
                     const modelClass = tx.model.toLowerCase().replace(/\s+/g, '');
                     const orderType = tx.type || 'market';
+
+                    // Calculate performance for sells
+                    let performanceHtml = '';
+                    if (!isBuy) {
+                        const buyPrice = findBuyPrice(tx);
+                        if (buyPrice !== null) {
+                            const perfPct = ((tx.price - buyPrice) / buyPrice * 100).toFixed(1);
+                            const perfClass = parseFloat(perfPct) >= 0 ? 'positive' : 'negative';
+                            const perfSign = parseFloat(perfPct) >= 0 ? '+' : '';
+                            performanceHtml = `<span class="activity-performance ${perfClass}">${perfSign}${perfPct}%</span>`;
+                        }
+                    }
 
                     const item = document.createElement('div');
                     item.className = 'activity-item';
@@ -3696,6 +3936,7 @@ https://seve1995.github.io/ai-portfolio-experiment/`;
                                 <span class="activity-action">${isBuy ? 'bought' : 'sold'}</span>
                                 <span class="activity-ticker">${tx.qty} ${tx.symbol}</span>
                                 <span class="activity-action">at $${tx.price.toFixed(2)}</span>
+                                ${performanceHtml}
                             </div>
                             <div class="activity-details">
                                 <span class="activity-value">$${tradeValue} trade</span>
