@@ -183,6 +183,15 @@
       "id": "b796139b-0b6c-47fa-8e50-f02ba9a49b27"
     },
     {
+      "symbol": "RIOT",
+      "side": "sell",
+      "qty": 13.0,
+      "price": 16.496923,
+      "timestamp": "2026-01-26T14:50:04.593979+00:00",
+      "type": "stop",
+      "id": "4fdab6e8-a335-482e-acb5-d0ab78fab514"
+    },
+    {
       "symbol": "CORZ",
       "side": "buy",
       "qty": 10.0,
