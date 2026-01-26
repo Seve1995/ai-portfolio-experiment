@@ -175,6 +175,15 @@
   "Gemini": [
     {
       "symbol": "CLSK",
+      "side": "sell",
+      "qty": 30.0,
+      "price": 12.35,
+      "timestamp": "2026-01-26T15:40:04.933371+00:00",
+      "type": "stop",
+      "id": "1f22173f-f451-43c1-86c9-7741c8db456d"
+    },
+    {
+      "symbol": "CLSK",
       "side": "buy",
       "qty": 30.0,
       "price": 12.85,
