@@ -1,6 +1,33 @@
 {
   "ChatGPT": [
     {
+      "symbol": "CLSK",
+      "side": "sell",
+      "qty": 14.0,
+      "price": 12.74,
+      "timestamp": "2026-01-26T14:32:53.630990+00:00",
+      "type": "stop",
+      "id": "6b973f25-8399-4c45-9ec8-bd24de3b7348"
+    },
+    {
+      "symbol": "CLSK",
+      "side": "buy",
+      "qty": 14.0,
+      "price": 13.0,
+      "timestamp": "2026-01-26T14:31:19.909537+00:00",
+      "type": "limit",
+      "id": "63a541e9-218d-46eb-9a9d-4c567dcd4970"
+    },
+    {
+      "symbol": "SMCI",
+      "side": "sell",
+      "qty": 7.0,
+      "price": 31.41,
+      "timestamp": "2026-01-26T14:30:38.798209+00:00",
+      "type": "market",
+      "id": "2653f0c7-96b8-45c8-a4e9-161f2ea1a000"
+    },
+    {
       "symbol": "SMCI",
       "side": "buy",
       "qty": 7.0,
@@ -148,12 +175,30 @@
   "Gemini": [
     {
       "symbol": "CLSK",
+      "side": "sell",
+      "qty": 30.0,
+      "price": 12.35,
+      "timestamp": "2026-01-26T15:40:04.933371+00:00",
+      "type": "stop",
+      "id": "1f22173f-f451-43c1-86c9-7741c8db456d"
+    },
+    {
+      "symbol": "CLSK",
       "side": "buy",
       "qty": 30.0,
       "price": 12.85,
       "timestamp": "2026-01-21T16:24:00.369733+00:00",
       "type": "limit",
       "id": "b796139b-0b6c-47fa-8e50-f02ba9a49b27"
+    },
+    {
+      "symbol": "RIOT",
+      "side": "sell",
+      "qty": 13.0,
+      "price": 16.496923,
+      "timestamp": "2026-01-26T14:50:04.593979+00:00",
+      "type": "stop",
+      "id": "4fdab6e8-a335-482e-acb5-d0ab78fab514"
     },
     {
       "symbol": "CORZ",
@@ -375,6 +420,15 @@
     }
   ],
   "Perplexity": [
+    {
+      "symbol": "NTLA",
+      "side": "buy",
+      "qty": 3.0,
+      "price": 14.24,
+      "timestamp": "2026-01-26T14:31:07.031777+00:00",
+      "type": "limit",
+      "id": "1f831d1d-ee62-40f2-9111-7a38323e061c"
+    },
     {
       "symbol": "IBRX",
       "side": "buy",
