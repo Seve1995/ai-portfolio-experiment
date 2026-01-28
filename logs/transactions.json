@@ -264,6 +264,15 @@
       "id": "b0411738-79e5-4cbd-bc2e-14e7d4a87683"
     },
     {
+      "symbol": "UPST",
+      "side": "sell",
+      "qty": 4.0,
+      "price": 43.93,
+      "timestamp": "2026-01-28T16:18:24.592177+00:00",
+      "type": "stop",
+      "id": "e448005d-1f30-415e-92cd-019a97b64f2c"
+    },
+    {
       "symbol": "ENVX",
       "side": "sell",
       "qty": 16.0,
