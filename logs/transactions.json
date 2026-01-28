@@ -1,6 +1,24 @@
 {
   "ChatGPT": [
     {
+      "symbol": "SLS",
+      "side": "sell",
+      "qty": 29.0,
+      "price": 4.06,
+      "timestamp": "2026-01-28T18:53:52.660433+00:00",
+      "type": "stop",
+      "id": "28289833-5d02-4cc8-b90e-92a019e6ed4e"
+    },
+    {
+      "symbol": "RXRX",
+      "side": "sell",
+      "qty": 14.0,
+      "price": 4.444286,
+      "timestamp": "2026-01-28T19:29:41.664730+00:00",
+      "type": "stop",
+      "id": "c563927f-ab93-43ac-96df-6a5a43ce4861"
+    },
+    {
       "symbol": "CLSK",
       "side": "sell",
       "qty": 14.0,
@@ -161,15 +179,6 @@
       "timestamp": "2026-01-07T14:58:41.507808+00:00",
       "type": "limit",
       "id": "8e658c3e-5ef2-4c81-8e51-046530939d89"
-    },
-    {
-      "symbol": "AQST",
-      "side": "buy",
-      "qty": 23.0,
-      "price": 6.45,
-      "timestamp": "2026-01-05T14:33:38.269778+00:00",
-      "type": "limit",
-      "id": "5efb9c63-324d-47ac-89e0-b661eaa70354"
     }
   ],
   "Gemini": [
