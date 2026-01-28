@@ -5,7 +5,7 @@ on:
   # GitHub Actions uses UTC, so 9:30 AM ET = 14:30 UTC, 4:00 PM ET = 21:00 UTC
   # Note: This is approximate - we run at :00 and :30 each hour during market window
   schedule:
-    - cron: '0,30 14-20 * * 1-5'   # Mon-Fri, 2:30 PM - 8:30 PM UTC (covers 9:30 AM - 4 PM ET)
+    - cron: '0,30 14-21 * * 1-5'   # Mon-Fri, 2:00 PM - 9:30 PM UTC (covers 9:00 AM - 4:30 PM ET)
   
   # Allow manual trigger for testing
   workflow_dispatch:

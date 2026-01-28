@@ -2778,7 +2778,7 @@
             const statusText = marketStatus.isOpen ? 'Market Open' : 'Market Closed';
 
             // Calculate next update time
-            const nextUpdate = getNextUpdateTime();
+            const nextUpdate = getNextUpdateTime(syncTime);
 
             document.getElementById('lastSync').innerHTML =
                 `<span class="market-indicator ${indicatorClass}"></span>${statusText}<span class="status-separator">·</span>Last updated: ${timeAgo}` +
@@ -2787,7 +2787,7 @@
         }
 
         // Calculate the next data refresh time
-        function getNextUpdateTime() {
+        function getNextUpdateTime(lastSync) {
             const now = new Date();
 
             // Get current time in ET
@@ -2825,21 +2825,23 @@
             const dayStr = String(etDay).padStart(2, '0');
             const isHoliday = holidays2026.includes(`${monthStr}-${dayStr}`);
 
-            // If market is open: next update is at next :00 or :30
+            // If market is open: handle incremental updates
             if (isWeekday && !isHoliday && timeInMinutes >= marketOpen && timeInMinutes < marketClose) {
+                // Latest synchronization slot (updates run at :00 and :30)
+                const latestExpectedSlotMins = etMinutes < 30 ? (etHours * 60) : (etHours * 60 + 30);
+
+                // Buffer to allow GitHub Actions a few minutes to complete
+                const syncBufferMins = 5;
+                const isOverdue = lastSync && (new Date(lastSync).getTime() < (now.getTime() - (etMinutes % 30 + syncBufferMins) * 60000));
+
+                if (isOverdue && etMinutes % 30 > 2) {
+                    return '<span class="update-soon">Updating now...</span>';
+                }
+
                 // Calculate minutes until next :00 or :30
                 const currentSlot = etMinutes < 30 ? 0 : 30;
                 const nextSlot = currentSlot === 0 ? 30 : 60;
                 let minsUntilNext = nextSlot - etMinutes;
-
-                // If we just passed a slot (within first 2 mins), show the one after
-                if (minsUntilNext <= 0) minsUntilNext += 30;
-
-                // Check if next slot would be after market close
-                const nextUpdateTimeInMins = timeInMinutes + minsUntilNext;
-                if (nextUpdateTimeInMins >= marketClose) {
-                    return getNextMarketDay(weekdayIndex, isHoliday);
-                }
 
                 if (minsUntilNext <= 1) {
                     return '<span class="update-soon">~1 min</span>';
