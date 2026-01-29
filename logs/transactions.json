@@ -183,6 +183,24 @@
   ],
   "Gemini": [
     {
+      "symbol": "BBAI",
+      "side": "buy",
+      "qty": 41.0,
+      "price": 5.886098,
+      "timestamp": "2026-01-29T14:33:06.271841+00:00",
+      "type": "limit",
+      "id": "b2ac3257-18a9-4cea-ba87-d33f73500d64"
+    },
+    {
+      "symbol": "CORZ",
+      "side": "sell",
+      "qty": 10.0,
+      "price": 19.32,
+      "timestamp": "2026-01-29T14:32:02.033501+00:00",
+      "type": "market",
+      "id": "64ce5c11-65b6-4d2b-b154-e9a4924ab16f"
+    },
+    {
       "symbol": "CLSK",
       "side": "sell",
       "qty": 30.0,
@@ -334,42 +352,6 @@
       "timestamp": "2026-01-07T15:02:50.504682+00:00",
       "type": "stop",
       "id": "63689517-d74b-41cb-bd39-6c1fddc82321"
-    },
-    {
-      "symbol": "RIVN",
-      "side": "buy",
-      "qty": 18.0,
-      "price": 18.74,
-      "timestamp": "2026-01-07T15:02:48.429773+00:00",
-      "type": "limit",
-      "id": "c3fe46cf-7f58-4fa0-a5f0-e5206feb8d63"
-    },
-    {
-      "symbol": "SEDG",
-      "side": "buy",
-      "qty": 9.0,
-      "price": 31.38,
-      "timestamp": "2026-01-06T14:45:51.215940+00:00",
-      "type": "limit",
-      "id": "8277c47a-0c8b-4c78-a53e-cdc8e88c0b26"
-    },
-    {
-      "symbol": "WOLF",
-      "side": "sell",
-      "qty": 7.0,
-      "price": 18.74,
-      "timestamp": "2026-01-06T14:34:14.248146+00:00",
-      "type": "market",
-      "id": "8bba24c8-4bfa-43e1-b410-a99fa05de526"
-    },
-    {
-      "symbol": "WOLF",
-      "side": "buy",
-      "qty": 7.0,
-      "price": 18.93,
-      "timestamp": "2026-01-05T16:59:23.739662+00:00",
-      "type": "limit",
-      "id": "de302077-2db4-46fb-8683-526da863e970"
     }
   ],
   "Claude": [
