@@ -184,6 +184,15 @@
   "Gemini": [
     {
       "symbol": "BBAI",
+      "side": "sell",
+      "qty": 41.0,
+      "price": 5.75,
+      "timestamp": "2026-01-29T14:56:14.814308+00:00",
+      "type": "stop",
+      "id": "d07e15f3-0d27-4275-b80e-998313afe512"
+    },
+    {
+      "symbol": "BBAI",
       "side": "buy",
       "qty": 41.0,
       "price": 5.886098,
