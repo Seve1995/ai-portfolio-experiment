@@ -430,6 +430,15 @@
   ],
   "Perplexity": [
     {
+      "symbol": "RUN",
+      "side": "buy",
+      "qty": 12.0,
+      "price": 19.5,
+      "timestamp": "2026-01-29T15:51:05.358956+00:00",
+      "type": "limit",
+      "id": "87bb4c3f-6479-4254-88bb-a7ba50a2a18b"
+    },
+    {
       "symbol": "NTLA",
       "side": "buy",
       "qty": 3.0,
