@@ -2167,7 +2167,7 @@
   },
   "2026-01-30": {
     "ChatGPT": {
-      "equity": 956.41,
+      "equity": 951.05,
       "cash": 640.85,
       "buying_power": 640.85,
       "positions": [
@@ -2175,10 +2175,10 @@
           "ticker": "APLD",
           "qty": 3.0,
           "avg_cost": 35.06,
-          "current_price": 34.79,
-          "market_value": 104.37,
-          "unrealized_pl": -0.81,
-          "unrealized_pl_pct": -0.77010838562464,
+          "current_price": 33.74,
+          "market_value": 101.22,
+          "unrealized_pl": -3.96,
+          "unrealized_pl_pct": -3.7649743297204803,
           "sector": "Technology",
           "industry": "Information Technology Services"
         },
@@ -2186,10 +2186,10 @@
           "ticker": "NVAX",
           "qty": 14.0,
           "avg_cost": 7.44,
-          "current_price": 8.84,
-          "market_value": 123.76,
-          "unrealized_pl": 19.6,
-          "unrealized_pl_pct": 18.817204301075268,
+          "current_price": 8.7,
+          "market_value": 121.8,
+          "unrealized_pl": 17.64,
+          "unrealized_pl_pct": 16.93548387096774,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -2197,17 +2197,17 @@
           "ticker": "UAA",
           "qty": 14.0,
           "avg_cost": 5.78,
-          "current_price": 6.245,
-          "market_value": 87.43,
-          "unrealized_pl": 6.51,
-          "unrealized_pl_pct": 8.04498269896194,
+          "current_price": 6.225,
+          "market_value": 87.15,
+          "unrealized_pl": 6.23,
+          "unrealized_pl_pct": 7.69896193771626,
           "sector": "Consumer Cyclical",
           "industry": "Apparel Manufacturing"
         }
       ]
     },
     "Gemini": {
-      "equity": 957.23,
+      "equity": 956.21,
       "cash": 830.81,
       "buying_power": 830.81,
       "positions": [
@@ -2215,17 +2215,17 @@
           "ticker": "RXRX",
           "qty": 30.0,
           "avg_cost": 4.22,
-          "current_price": 4.214,
-          "market_value": 126.42,
-          "unrealized_pl": -0.18,
-          "unrealized_pl_pct": -0.14218009478673,
+          "current_price": 4.1799,
+          "market_value": 125.397,
+          "unrealized_pl": -1.203,
+          "unrealized_pl_pct": -0.95023696682464,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Claude": {
-      "equity": 898.15,
+      "equity": 897.31,
       "cash": 845.11,
       "buying_power": 845.11,
       "positions": [
@@ -2233,17 +2233,17 @@
           "ticker": "NVAX",
           "qty": 6.0,
           "avg_cost": 9.325,
-          "current_price": 8.84,
-          "market_value": 53.04,
-          "unrealized_pl": -2.91,
-          "unrealized_pl_pct": -5.20107238605898,
+          "current_price": 8.7,
+          "market_value": 52.2,
+          "unrealized_pl": -3.75,
+          "unrealized_pl_pct": -6.70241286863271,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Perplexity": {
-      "equity": 1005.75,
+      "equity": 1006.96,
       "cash": 716.11,
       "buying_power": 716.11,
       "positions": [
@@ -2251,10 +2251,10 @@
           "ticker": "IBRX",
           "qty": 4.0,
           "avg_cost": 6.18,
-          "current_price": 6.245,
-          "market_value": 24.98,
-          "unrealized_pl": 0.26,
-          "unrealized_pl_pct": 1.05177993527508,
+          "current_price": 6.285,
+          "market_value": 25.14,
+          "unrealized_pl": 0.42,
+          "unrealized_pl_pct": 1.6990291262135901,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -2262,10 +2262,10 @@
           "ticker": "NTLA",
           "qty": 3.0,
           "avg_cost": 14.24,
-          "current_price": 13.14,
-          "market_value": 39.42,
-          "unrealized_pl": -3.3,
-          "unrealized_pl_pct": -7.7247191011236005,
+          "current_price": 13.09,
+          "market_value": 39.27,
+          "unrealized_pl": -3.45,
+          "unrealized_pl_pct": -8.07584269662921,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -2273,10 +2273,10 @@
           "ticker": "RUN",
           "qty": 12.0,
           "avg_cost": 19.5,
-          "current_price": 18.77,
-          "market_value": 225.24,
-          "unrealized_pl": -8.76,
-          "unrealized_pl_pct": -3.7435897435897396,
+          "current_price": 18.87,
+          "market_value": 226.44,
+          "unrealized_pl": -7.56,
+          "unrealized_pl_pct": -3.23076923076923,
           "sector": "Technology",
           "industry": "Solar"
         }
