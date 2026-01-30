@@ -183,6 +183,15 @@
   ],
   "Gemini": [
     {
+      "symbol": "RXRX",
+      "side": "buy",
+      "qty": 30.0,
+      "price": 4.22,
+      "timestamp": "2026-01-30T18:27:59.720866604+00:00",
+      "type": "limit",
+      "id": "f3004136-714c-421b-809c-c570b1895392"
+    },
+    {
       "symbol": "BBAI",
       "side": "sell",
       "qty": 41.0,
@@ -352,15 +361,6 @@
       "timestamp": "2026-01-08T16:34:54.277257+00:00",
       "type": "market",
       "id": "ee3cb4ea-35b5-43e4-ad28-bca5bf76c7dc"
-    },
-    {
-      "symbol": "RIVN",
-      "side": "sell",
-      "qty": 18.0,
-      "price": 18.74,
-      "timestamp": "2026-01-07T15:02:50.504682+00:00",
-      "type": "stop",
-      "id": "63689517-d74b-41cb-bd39-6c1fddc82321"
     }
   ],
   "Claude": [
@@ -429,6 +429,15 @@
     }
   ],
   "Perplexity": [
+    {
+      "symbol": "VERA",
+      "side": "sell",
+      "qty": 3.0,
+      "price": 43.65,
+      "timestamp": "2026-01-30T18:17:27.456745831+00:00",
+      "type": "market",
+      "id": "50a54027-10d0-4cb3-bbcc-c3c8f54c529b"
+    },
     {
       "symbol": "RUN",
       "side": "buy",
