@@ -2282,5 +2282,101 @@
         }
       ]
     }
+  },
+  "2026-02-02": {
+    "ChatGPT": {
+      "equity": 944.46,
+      "cash": 640.85,
+      "buying_power": 640.85,
+      "positions": [
+        {
+          "ticker": "APLD",
+          "qty": 3.0,
+          "avg_cost": 35.06,
+          "current_price": 32.95,
+          "market_value": 98.85,
+          "unrealized_pl": -6.33,
+          "unrealized_pl_pct": -6.018,
+          "sector": "Technology",
+          "industry": "Information Technology Services"
+        },
+        {
+          "ticker": "NVAX",
+          "qty": 14.0,
+          "avg_cost": 7.44,
+          "current_price": 8.5058,
+          "market_value": 119.0812,
+          "unrealized_pl": 14.9212,
+          "unrealized_pl_pct": 14.325,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "UAA",
+          "qty": 14.0,
+          "avg_cost": 5.78,
+          "current_price": 6.12,
+          "market_value": 85.68,
+          "unrealized_pl": 4.76,
+          "unrealized_pl_pct": 5.882,
+          "sector": "Consumer Cyclical",
+          "industry": "Apparel Manufacturing"
+        }
+      ]
+    },
+    "Gemini": {
+      "equity": 954.25,
+      "cash": 830.8,
+      "buying_power": 830.8,
+      "positions": [
+        {
+          "ticker": "RXRX",
+          "qty": 30.0,
+          "avg_cost": 4.22,
+          "current_price": 4.115,
+          "market_value": 123.45,
+          "unrealized_pl": -3.15,
+          "unrealized_pl_pct": -2.488,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    },
+    "Claude": {
+      "equity": 896.14,
+      "cash": 845.11,
+      "buying_power": 845.11,
+      "positions": [
+        {
+          "ticker": "NVAX",
+          "qty": 6.0,
+          "avg_cost": 9.325,
+          "current_price": 8.5058,
+          "market_value": 51.0348,
+          "unrealized_pl": -4.9152,
+          "unrealized_pl_pct": -8.785,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    },
+    "Perplexity": {
+      "equity": 1001.87,
+      "cash": 977.16,
+      "buying_power": 977.16,
+      "positions": [
+        {
+          "ticker": "IBRX",
+          "qty": 4.0,
+          "avg_cost": 6.18,
+          "current_price": 6.1783,
+          "market_value": 24.7132,
+          "unrealized_pl": -0.0068,
+          "unrealized_pl_pct": -0.027999999999999997,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    }
   }
 }

@@ -187,7 +187,7 @@
       "side": "buy",
       "qty": 30.0,
       "price": 4.22,
-      "timestamp": "2026-01-30T18:27:59.720866604+00:00",
+      "timestamp": "2026-01-30T18:27:59.720867+00:00",
       "type": "limit",
       "id": "f3004136-714c-421b-809c-c570b1895392"
     },
@@ -343,24 +343,6 @@
       "timestamp": "2026-01-09T20:00:28.320399+00:00",
       "type": "limit",
       "id": "e711b985-43b3-4c14-931c-273d615561db"
-    },
-    {
-      "symbol": "UPST",
-      "side": "buy",
-      "qty": 4.0,
-      "price": 50.1,
-      "timestamp": "2026-01-09T14:49:07.161832+00:00",
-      "type": "limit",
-      "id": "9a64e234-453d-46e4-9e36-03033754d7db"
-    },
-    {
-      "symbol": "SEDG",
-      "side": "sell",
-      "qty": 9.0,
-      "price": 31.42,
-      "timestamp": "2026-01-08T16:34:54.277257+00:00",
-      "type": "market",
-      "id": "ee3cb4ea-35b5-43e4-ad28-bca5bf76c7dc"
     }
   ],
   "Claude": [
@@ -430,11 +412,29 @@
   ],
   "Perplexity": [
     {
+      "symbol": "RUN",
+      "side": "sell",
+      "qty": 12.0,
+      "price": 18.505834,
+      "timestamp": "2026-02-02T14:34:48.582396+00:00",
+      "type": "stop",
+      "id": "fe75ac17-d530-4e40-897f-12999175c0b7"
+    },
+    {
+      "symbol": "NTLA",
+      "side": "sell",
+      "qty": 3.0,
+      "price": 13.0,
+      "timestamp": "2026-02-02T14:33:19.787571+00:00",
+      "type": "market",
+      "id": "8d4163ac-13de-4b89-8293-e95d7f58256a"
+    },
+    {
       "symbol": "VERA",
       "side": "sell",
       "qty": 3.0,
       "price": 43.65,
-      "timestamp": "2026-01-30T18:17:27.456745831+00:00",
+      "timestamp": "2026-01-30T18:17:27.456746+00:00",
       "type": "market",
       "id": "50a54027-10d0-4cb3-bbcc-c3c8f54c529b"
     },
