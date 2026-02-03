@@ -1,6 +1,33 @@
 {
   "ChatGPT": [
     {
+      "symbol": "APLD",
+      "side": "sell",
+      "qty": 3.0,
+      "price": 35.256667,
+      "timestamp": "2026-02-03T14:47:10.137510+00:00",
+      "type": "market",
+      "id": "e4812ab4-5258-4ebe-8f78-8a36375ea221"
+    },
+    {
+      "symbol": "NVAX",
+      "side": "sell",
+      "qty": 14.0,
+      "price": 8.74,
+      "timestamp": "2026-02-03T14:47:07.198287+00:00",
+      "type": "market",
+      "id": "6b61851a-e43b-4ace-b7ee-b88c0fc1a9fc"
+    },
+    {
+      "symbol": "UAA",
+      "side": "sell",
+      "qty": 14.0,
+      "price": 6.27,
+      "timestamp": "2026-02-03T14:47:06.709769+00:00",
+      "type": "market",
+      "id": "a3aec3c0-fc28-46ea-8cff-11fe79ffe6f2"
+    },
+    {
       "symbol": "SLS",
       "side": "sell",
       "qty": 29.0,
@@ -161,27 +188,18 @@
       "timestamp": "2026-01-09T15:03:17.200752+00:00",
       "type": "limit",
       "id": "596b932a-33d7-4b91-ba0f-fda7e2f3ac77"
-    },
-    {
-      "symbol": "RIVN",
-      "side": "sell",
-      "qty": 18.0,
-      "price": 18.73,
-      "timestamp": "2026-01-07T14:58:41.890834+00:00",
-      "type": "stop",
-      "id": "afcb9c52-37ec-4517-b6b3-fd888a5fd47c"
-    },
-    {
-      "symbol": "RIVN",
-      "side": "buy",
-      "qty": 18.0,
-      "price": 18.74,
-      "timestamp": "2026-01-07T14:58:41.507808+00:00",
-      "type": "limit",
-      "id": "8e658c3e-5ef2-4c81-8e51-046530939d89"
     }
   ],
   "Gemini": [
+    {
+      "symbol": "RXRX",
+      "side": "sell",
+      "qty": 30.0,
+      "price": 4.21,
+      "timestamp": "2026-02-03T15:09:42.532025+00:00",
+      "type": "market",
+      "id": "2f7343dd-2a5d-467c-9053-5fa577909a7a"
+    },
     {
       "symbol": "RXRX",
       "side": "buy",
