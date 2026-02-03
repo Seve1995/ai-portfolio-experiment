@@ -2282,5 +2282,197 @@
         }
       ]
     }
+  },
+  "2026-02-02": {
+    "ChatGPT": {
+      "equity": 957.49,
+      "cash": 640.85,
+      "buying_power": 640.85,
+      "positions": [
+        {
+          "ticker": "APLD",
+          "qty": 3.0,
+          "avg_cost": 35.06,
+          "current_price": 35.78,
+          "market_value": 107.34,
+          "unrealized_pl": 2.16,
+          "unrealized_pl_pct": 2.054,
+          "sector": "Technology",
+          "industry": "Information Technology Services"
+        },
+        {
+          "ticker": "NVAX",
+          "qty": 14.0,
+          "avg_cost": 7.44,
+          "current_price": 8.82,
+          "market_value": 123.48,
+          "unrealized_pl": 19.32,
+          "unrealized_pl_pct": 18.548000000000002,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "UAA",
+          "qty": 14.0,
+          "avg_cost": 5.78,
+          "current_price": 6.13,
+          "market_value": 85.82,
+          "unrealized_pl": 4.9,
+          "unrealized_pl_pct": 6.055,
+          "sector": "Consumer Cyclical",
+          "industry": "Apparel Manufacturing"
+        }
+      ]
+    },
+    "Gemini": {
+      "equity": 958.15,
+      "cash": 830.8,
+      "buying_power": 830.8,
+      "positions": [
+        {
+          "ticker": "RXRX",
+          "qty": 30.0,
+          "avg_cost": 4.22,
+          "current_price": 4.245,
+          "market_value": 127.35,
+          "unrealized_pl": 0.75,
+          "unrealized_pl_pct": 0.592,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    },
+    "Claude": {
+      "equity": 898.03,
+      "cash": 845.11,
+      "buying_power": 845.11,
+      "positions": [
+        {
+          "ticker": "NVAX",
+          "qty": 6.0,
+          "avg_cost": 9.325,
+          "current_price": 8.82,
+          "market_value": 52.92,
+          "unrealized_pl": -3.03,
+          "unrealized_pl_pct": -5.416,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    },
+    "Perplexity": {
+      "equity": 1001.94,
+      "cash": 977.16,
+      "buying_power": 977.16,
+      "positions": [
+        {
+          "ticker": "IBRX",
+          "qty": 4.0,
+          "avg_cost": 6.18,
+          "current_price": 6.195,
+          "market_value": 24.78,
+          "unrealized_pl": 0.06,
+          "unrealized_pl_pct": 0.243,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    }
+  },
+  "2026-02-03": {
+    "ChatGPT": {
+      "equity": 955.9,
+      "cash": 640.85,
+      "buying_power": 640.85,
+      "positions": [
+        {
+          "ticker": "APLD",
+          "qty": 3.0,
+          "avg_cost": 35.06,
+          "current_price": 34.62,
+          "market_value": 103.86,
+          "unrealized_pl": -1.32,
+          "unrealized_pl_pct": -1.2550000000000001,
+          "sector": "Technology",
+          "industry": "Information Technology Services"
+        },
+        {
+          "ticker": "NVAX",
+          "qty": 14.0,
+          "avg_cost": 7.44,
+          "current_price": 8.8,
+          "market_value": 123.2,
+          "unrealized_pl": 19.04,
+          "unrealized_pl_pct": 18.279999999999998,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "UAA",
+          "qty": 14.0,
+          "avg_cost": 5.78,
+          "current_price": 6.285,
+          "market_value": 87.99,
+          "unrealized_pl": 7.07,
+          "unrealized_pl_pct": 8.737,
+          "sector": "Consumer Cyclical",
+          "industry": "Apparel Manufacturing"
+        }
+      ]
+    },
+    "Gemini": {
+      "equity": 957.75,
+      "cash": 830.8,
+      "buying_power": 830.8,
+      "positions": [
+        {
+          "ticker": "RXRX",
+          "qty": 30.0,
+          "avg_cost": 4.22,
+          "current_price": 4.2318,
+          "market_value": 126.954,
+          "unrealized_pl": 0.354,
+          "unrealized_pl_pct": 0.27999999999999997,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    },
+    "Claude": {
+      "equity": 897.91,
+      "cash": 845.11,
+      "buying_power": 845.11,
+      "positions": [
+        {
+          "ticker": "NVAX",
+          "qty": 6.0,
+          "avg_cost": 9.325,
+          "current_price": 8.8,
+          "market_value": 52.8,
+          "unrealized_pl": -3.15,
+          "unrealized_pl_pct": -5.63,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    },
+    "Perplexity": {
+      "equity": 1002.9,
+      "cash": 977.14,
+      "buying_power": 977.14,
+      "positions": [
+        {
+          "ticker": "IBRX",
+          "qty": 4.0,
+          "avg_cost": 6.18,
+          "current_price": 6.44,
+          "market_value": 25.76,
+          "unrealized_pl": 1.04,
+          "unrealized_pl_pct": 4.207000000000001,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    }
   }
 }
