@@ -2428,5 +2428,55 @@
         }
       ]
     }
+  },
+  "2026-02-04": {
+    "ChatGPT": {
+      "equity": 956.74,
+      "cash": 956.74,
+      "buying_power": 956.74,
+      "positions": []
+    },
+    "Gemini": {
+      "equity": 957.08,
+      "cash": 957.08,
+      "buying_power": 957.08,
+      "positions": []
+    },
+    "Claude": {
+      "equity": 895.93,
+      "cash": 845.11,
+      "buying_power": 845.11,
+      "positions": [
+        {
+          "ticker": "NVAX",
+          "qty": 6.0,
+          "avg_cost": 9.325,
+          "current_price": 8.47,
+          "market_value": 50.82,
+          "unrealized_pl": -5.13,
+          "unrealized_pl_pct": -9.168999999999999,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    },
+    "Perplexity": {
+      "equity": 1001.82,
+      "cash": 977.14,
+      "buying_power": 977.14,
+      "positions": [
+        {
+          "ticker": "IBRX",
+          "qty": 4.0,
+          "avg_cost": 6.18,
+          "current_price": 6.1699,
+          "market_value": 24.6796,
+          "unrealized_pl": -0.0404,
+          "unrealized_pl_pct": -0.163,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    }
   }
 }
