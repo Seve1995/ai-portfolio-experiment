@@ -2443,7 +2443,7 @@
       "positions": []
     },
     "Claude": {
-      "equity": 894.91,
+      "equity": 894.64,
       "cash": 845.11,
       "buying_power": 845.11,
       "positions": [
@@ -2451,17 +2451,17 @@
           "ticker": "NVAX",
           "qty": 6.0,
           "avg_cost": 9.325,
-          "current_price": 8.3,
-          "market_value": 49.8,
-          "unrealized_pl": -6.15,
-          "unrealized_pl_pct": -10.992,
+          "current_price": 8.255,
+          "market_value": 49.53,
+          "unrealized_pl": -6.42,
+          "unrealized_pl_pct": -11.475,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Perplexity": {
-      "equity": 1001.34,
+      "equity": 1000.84,
       "cash": 977.14,
       "buying_power": 977.14,
       "positions": [
@@ -2469,10 +2469,10 @@
           "ticker": "IBRX",
           "qty": 4.0,
           "avg_cost": 6.18,
-          "current_price": 6.05,
-          "market_value": 24.2,
-          "unrealized_pl": -0.52,
-          "unrealized_pl_pct": -2.104,
+          "current_price": 5.925,
+          "market_value": 23.7,
+          "unrealized_pl": -1.02,
+          "unrealized_pl_pct": -4.1259999999999994,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
