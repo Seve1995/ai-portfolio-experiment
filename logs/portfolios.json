@@ -2381,65 +2381,19 @@
   },
   "2026-02-03": {
     "ChatGPT": {
-      "equity": 955.9,
-      "cash": 640.85,
-      "buying_power": 640.85,
-      "positions": [
-        {
-          "ticker": "APLD",
-          "qty": 3.0,
-          "avg_cost": 35.06,
-          "current_price": 34.62,
-          "market_value": 103.86,
-          "unrealized_pl": -1.32,
-          "unrealized_pl_pct": -1.2550000000000001,
-          "sector": "Technology",
-          "industry": "Information Technology Services"
-        },
-        {
-          "ticker": "NVAX",
-          "qty": 14.0,
-          "avg_cost": 7.44,
-          "current_price": 8.8,
-          "market_value": 123.2,
-          "unrealized_pl": 19.04,
-          "unrealized_pl_pct": 18.279999999999998,
-          "sector": "Healthcare",
-          "industry": "Biotechnology"
-        },
-        {
-          "ticker": "UAA",
-          "qty": 14.0,
-          "avg_cost": 5.78,
-          "current_price": 6.285,
-          "market_value": 87.99,
-          "unrealized_pl": 7.07,
-          "unrealized_pl_pct": 8.737,
-          "sector": "Consumer Cyclical",
-          "industry": "Apparel Manufacturing"
-        }
-      ]
+      "equity": 956.76,
+      "cash": 956.76,
+      "buying_power": 956.76,
+      "positions": []
     },
     "Gemini": {
-      "equity": 957.75,
-      "cash": 830.8,
-      "buying_power": 830.8,
-      "positions": [
-        {
-          "ticker": "RXRX",
-          "qty": 30.0,
-          "avg_cost": 4.22,
-          "current_price": 4.2318,
-          "market_value": 126.954,
-          "unrealized_pl": 0.354,
-          "unrealized_pl_pct": 0.27999999999999997,
-          "sector": "Healthcare",
-          "industry": "Biotechnology"
-        }
-      ]
+      "equity": 957.1,
+      "cash": 957.1,
+      "buying_power": 957.1,
+      "positions": []
     },
     "Claude": {
-      "equity": 897.91,
+      "equity": 894.44,
       "cash": 845.11,
       "buying_power": 845.11,
       "positions": [
@@ -2447,17 +2401,17 @@
           "ticker": "NVAX",
           "qty": 6.0,
           "avg_cost": 9.325,
-          "current_price": 8.8,
-          "market_value": 52.8,
-          "unrealized_pl": -3.15,
-          "unrealized_pl_pct": -5.63,
+          "current_price": 8.2213,
+          "market_value": 49.3278,
+          "unrealized_pl": -6.6222,
+          "unrealized_pl_pct": -11.836,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Perplexity": {
-      "equity": 1002.9,
+      "equity": 1002.42,
       "cash": 977.14,
       "buying_power": 977.14,
       "positions": [
@@ -2465,10 +2419,60 @@
           "ticker": "IBRX",
           "qty": 4.0,
           "avg_cost": 6.18,
-          "current_price": 6.44,
-          "market_value": 25.76,
-          "unrealized_pl": 1.04,
-          "unrealized_pl_pct": 4.207000000000001,
+          "current_price": 6.32,
+          "market_value": 25.28,
+          "unrealized_pl": 0.56,
+          "unrealized_pl_pct": 2.265,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    }
+  },
+  "2026-02-04": {
+    "ChatGPT": {
+      "equity": 956.74,
+      "cash": 956.74,
+      "buying_power": 956.74,
+      "positions": []
+    },
+    "Gemini": {
+      "equity": 957.08,
+      "cash": 957.08,
+      "buying_power": 957.08,
+      "positions": []
+    },
+    "Claude": {
+      "equity": 894.85,
+      "cash": 845.11,
+      "buying_power": 845.11,
+      "positions": [
+        {
+          "ticker": "NVAX",
+          "qty": 6.0,
+          "avg_cost": 9.325,
+          "current_price": 8.29,
+          "market_value": 49.74,
+          "unrealized_pl": -6.21,
+          "unrealized_pl_pct": -11.099,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    },
+    "Perplexity": {
+      "equity": 1000.78,
+      "cash": 977.14,
+      "buying_power": 977.14,
+      "positions": [
+        {
+          "ticker": "IBRX",
+          "qty": 4.0,
+          "avg_cost": 6.18,
+          "current_price": 5.9099,
+          "market_value": 23.6396,
+          "unrealized_pl": -1.0804,
+          "unrealized_pl_pct": -4.3709999999999996,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
