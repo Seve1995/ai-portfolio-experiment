@@ -2487,25 +2487,13 @@
       "positions": []
     },
     "Gemini": {
-      "equity": 957.4,
-      "cash": 867.38,
-      "buying_power": 867.38,
-      "positions": [
-        {
-          "ticker": "APLD",
-          "qty": 3.0,
-          "avg_cost": 29.9,
-          "current_price": 30.0,
-          "market_value": 90.0,
-          "unrealized_pl": 0.3,
-          "unrealized_pl_pct": 0.334,
-          "sector": "Technology",
-          "industry": "Information Technology Services"
-        }
-      ]
+      "equity": 955.22,
+      "cash": 955.22,
+      "buying_power": 955.22,
+      "positions": []
     },
     "Claude": {
-      "equity": 893.17,
+      "equity": 893.38,
       "cash": 845.11,
       "buying_power": 845.11,
       "positions": [
@@ -2513,17 +2501,17 @@
           "ticker": "NVAX",
           "qty": 6.0,
           "avg_cost": 9.325,
-          "current_price": 8.01,
-          "market_value": 48.06,
-          "unrealized_pl": -7.89,
-          "unrealized_pl_pct": -14.102,
+          "current_price": 8.045,
+          "market_value": 48.27,
+          "unrealized_pl": -7.68,
+          "unrealized_pl_pct": -13.727,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Perplexity": {
-      "equity": 1000.85,
+      "equity": 1000.94,
       "cash": 977.14,
       "buying_power": 977.14,
       "positions": [
@@ -2531,10 +2519,10 @@
           "ticker": "IBRX",
           "qty": 4.0,
           "avg_cost": 6.18,
-          "current_price": 5.9274,
-          "market_value": 23.7096,
-          "unrealized_pl": -1.0104,
-          "unrealized_pl_pct": -4.087,
+          "current_price": 5.95,
+          "market_value": 23.8,
+          "unrealized_pl": -0.92,
+          "unrealized_pl_pct": -3.7220000000000004,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }

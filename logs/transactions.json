@@ -193,10 +193,19 @@
   "Gemini": [
     {
       "symbol": "APLD",
+      "side": "sell",
+      "qty": 3.0,
+      "price": 29.28,
+      "timestamp": "2026-02-05T17:10:55.804326+00:00",
+      "type": "stop",
+      "id": "c72024fc-1b80-4c84-b3d6-ace875f751cc"
+    },
+    {
+      "symbol": "APLD",
       "side": "buy",
       "qty": 3.0,
       "price": 29.9,
-      "timestamp": "2026-02-05T16:29:24.953717138+00:00",
+      "timestamp": "2026-02-05T16:29:24.953717+00:00",
       "type": "limit",
       "id": "5da9afeb-2517-4733-8ffb-f883df6ec91f"
     },
