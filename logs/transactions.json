@@ -375,6 +375,15 @@
   "Claude": [
     {
       "symbol": "NVAX",
+      "side": "sell",
+      "qty": 6.0,
+      "price": 7.84,
+      "timestamp": "2026-02-05T20:32:31.822220+00:00",
+      "type": "stop",
+      "id": "9f466d80-b730-4ddf-9191-91b3ab5c17a0"
+    },
+    {
+      "symbol": "NVAX",
       "side": "buy",
       "qty": 6.0,
       "price": 9.325,
