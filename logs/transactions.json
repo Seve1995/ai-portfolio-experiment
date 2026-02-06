@@ -192,6 +192,24 @@
   ],
   "Gemini": [
     {
+      "symbol": "APLD",
+      "side": "sell",
+      "qty": 3.0,
+      "price": 29.28,
+      "timestamp": "2026-02-05T17:10:55.804326+00:00",
+      "type": "stop",
+      "id": "c72024fc-1b80-4c84-b3d6-ace875f751cc"
+    },
+    {
+      "symbol": "APLD",
+      "side": "buy",
+      "qty": 3.0,
+      "price": 29.9,
+      "timestamp": "2026-02-05T16:29:24.953717+00:00",
+      "type": "limit",
+      "id": "5da9afeb-2517-4733-8ffb-f883df6ec91f"
+    },
+    {
       "symbol": "RXRX",
       "side": "sell",
       "qty": 30.0,
@@ -352,18 +370,18 @@
       "timestamp": "2026-01-12T14:32:11.754012+00:00",
       "type": "limit",
       "id": "6541f3d1-5ebc-4012-95ed-49ef09d82202"
-    },
-    {
-      "symbol": "RIOT",
-      "side": "buy",
-      "qty": 13.0,
-      "price": 15.25,
-      "timestamp": "2026-01-09T20:00:28.320399+00:00",
-      "type": "limit",
-      "id": "e711b985-43b3-4c14-931c-273d615561db"
     }
   ],
   "Claude": [
+    {
+      "symbol": "NVAX",
+      "side": "sell",
+      "qty": 6.0,
+      "price": 7.84,
+      "timestamp": "2026-02-05T20:32:31.822220+00:00",
+      "type": "stop",
+      "id": "9f466d80-b730-4ddf-9191-91b3ab5c17a0"
+    },
     {
       "symbol": "NVAX",
       "side": "buy",
