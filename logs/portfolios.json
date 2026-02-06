@@ -2537,7 +2537,7 @@
       "positions": []
     },
     "Perplexity": {
-      "equity": 1000.64,
+      "equity": 999.83,
       "cash": 977.14,
       "buying_power": 977.14,
       "positions": [
@@ -2545,10 +2545,10 @@
           "ticker": "IBRX",
           "qty": 4.0,
           "avg_cost": 6.18,
-          "current_price": 5.875,
-          "market_value": 23.5,
-          "unrealized_pl": -1.22,
-          "unrealized_pl_pct": -4.935,
+          "current_price": 5.6714,
+          "market_value": 22.6856,
+          "unrealized_pl": -2.0344,
+          "unrealized_pl_pct": -8.23,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
