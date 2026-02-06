@@ -2516,5 +2516,43 @@
         }
       ]
     }
+  },
+  "2026-02-06": {
+    "ChatGPT": {
+      "equity": 956.74,
+      "cash": 956.74,
+      "buying_power": 956.74,
+      "positions": []
+    },
+    "Gemini": {
+      "equity": 955.2,
+      "cash": 955.2,
+      "buying_power": 955.2,
+      "positions": []
+    },
+    "Claude": {
+      "equity": 892.13,
+      "cash": 892.13,
+      "buying_power": 892.13,
+      "positions": []
+    },
+    "Perplexity": {
+      "equity": 1000.64,
+      "cash": 977.14,
+      "buying_power": 977.14,
+      "positions": [
+        {
+          "ticker": "IBRX",
+          "qty": 4.0,
+          "avg_cost": 6.18,
+          "current_price": 5.875,
+          "market_value": 23.5,
+          "unrealized_pl": -1.22,
+          "unrealized_pl_pct": -4.935,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    }
   }
 }
