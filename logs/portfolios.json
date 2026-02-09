@@ -2563,7 +2563,7 @@
       "positions": []
     },
     "Gemini": {
-      "equity": 953.6,
+      "equity": 955.24,
       "cash": 523.3,
       "buying_power": 523.3,
       "positions": [
@@ -2571,10 +2571,10 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 24.61,
-          "market_value": 295.32,
-          "unrealized_pl": -3.22,
-          "unrealized_pl_pct": -1.079,
+          "current_price": 24.83,
+          "market_value": 297.96,
+          "unrealized_pl": -0.58,
+          "unrealized_pl_pct": -0.194,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         },
@@ -2582,17 +2582,17 @@
           "ticker": "SMCI",
           "qty": 4.0,
           "avg_cost": 33.34,
-          "current_price": 33.745,
-          "market_value": 134.98,
-          "unrealized_pl": 1.62,
-          "unrealized_pl_pct": 1.2149999999999999,
+          "current_price": 33.495,
+          "market_value": 133.98,
+          "unrealized_pl": 0.62,
+          "unrealized_pl_pct": 0.46499999999999997,
           "sector": "Technology",
           "industry": "Computer Hardware"
         }
       ]
     },
     "Claude": {
-      "equity": 893.29,
+      "equity": 895.17,
       "cash": 743.77,
       "buying_power": 640.26,
       "positions": [
@@ -2600,17 +2600,17 @@
           "ticker": "ENPH",
           "qty": 3.0,
           "avg_cost": 49.453333,
-          "current_price": 49.8399,
-          "market_value": 149.5197,
-          "unrealized_pl": 1.1597,
-          "unrealized_pl_pct": 0.782,
+          "current_price": 50.465,
+          "market_value": 151.395,
+          "unrealized_pl": 3.035,
+          "unrealized_pl_pct": 2.046,
           "sector": "Technology",
           "industry": "Solar"
         }
       ]
     },
     "Perplexity": {
-      "equity": 1003.56,
+      "equity": 1004.48,
       "cash": 977.14,
       "buying_power": 977.14,
       "positions": [
@@ -2618,10 +2618,10 @@
           "ticker": "IBRX",
           "qty": 4.0,
           "avg_cost": 6.18,
-          "current_price": 6.605,
-          "market_value": 26.42,
-          "unrealized_pl": 1.7,
-          "unrealized_pl_pct": 6.877,
+          "current_price": 6.835,
+          "market_value": 27.34,
+          "unrealized_pl": 2.62,
+          "unrealized_pl_pct": 10.599,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
