@@ -170,27 +170,27 @@
       "timestamp": "2026-01-09T14:30:57.781671+00:00",
       "type": "limit",
       "id": "3983b3db-595c-4613-9857-ad66bb6bdf78"
-    },
-    {
-      "symbol": "AQST",
-      "side": "sell",
-      "qty": 23.0,
-      "price": 4.011739,
-      "timestamp": "2026-01-09T14:31:36.126867+00:00",
-      "type": "market",
-      "id": "569eae5d-5072-4e96-b6f6-1d6a94b74266"
-    },
-    {
-      "symbol": "UAA",
-      "side": "buy",
-      "qty": 14.0,
-      "price": 5.78,
-      "timestamp": "2026-01-09T15:03:17.200752+00:00",
-      "type": "limit",
-      "id": "596b932a-33d7-4b91-ba0f-fda7e2f3ac77"
     }
   ],
   "Gemini": [
+    {
+      "symbol": "SMCI",
+      "side": "buy",
+      "qty": 4.0,
+      "price": 33.34,
+      "timestamp": "2026-02-09T14:32:04.011683+00:00",
+      "type": "limit",
+      "id": "aa7b5cda-7621-46d4-8c3c-082c3cc7aac0"
+    },
+    {
+      "symbol": "GME",
+      "side": "buy",
+      "qty": 12.0,
+      "price": 24.878334,
+      "timestamp": "2026-02-09T14:34:30.926136+00:00",
+      "type": "limit",
+      "id": "84cb7808-394b-4a4e-a3bc-605d2c8f754f"
+    },
     {
       "symbol": "APLD",
       "side": "sell",
@@ -373,6 +373,15 @@
     }
   ],
   "Claude": [
+    {
+      "symbol": "ENPH",
+      "side": "buy",
+      "qty": 3.0,
+      "price": 49.453333,
+      "timestamp": "2026-02-09T14:35:44.601556+00:00",
+      "type": "limit",
+      "id": "7a82570a-d676-49b0-b058-0030e8efefa2"
+    },
     {
       "symbol": "NVAX",
       "side": "sell",
