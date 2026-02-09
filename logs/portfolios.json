@@ -2563,7 +2563,7 @@
       "positions": []
     },
     "Gemini": {
-      "equity": 949.16,
+      "equity": 951.61,
       "cash": 523.3,
       "buying_power": 523.3,
       "positions": [
@@ -2571,10 +2571,10 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 24.3999,
-          "market_value": 292.7988,
-          "unrealized_pl": -5.7412,
-          "unrealized_pl_pct": -1.923,
+          "current_price": 24.43,
+          "market_value": 293.16,
+          "unrealized_pl": -5.38,
+          "unrealized_pl_pct": -1.802,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         },
@@ -2582,17 +2582,17 @@
           "ticker": "SMCI",
           "qty": 4.0,
           "avg_cost": 33.34,
-          "current_price": 33.265,
-          "market_value": 133.06,
-          "unrealized_pl": -0.3,
-          "unrealized_pl_pct": -0.22499999999999998,
+          "current_price": 33.7866,
+          "market_value": 135.1464,
+          "unrealized_pl": 1.7864,
+          "unrealized_pl_pct": 1.34,
           "sector": "Technology",
           "industry": "Computer Hardware"
         }
       ]
     },
     "Claude": {
-      "equity": 888.42,
+      "equity": 888.97,
       "cash": 743.77,
       "buying_power": 640.26,
       "positions": [
@@ -2600,17 +2600,17 @@
           "ticker": "ENPH",
           "qty": 3.0,
           "avg_cost": 49.453333,
-          "current_price": 48.215,
-          "market_value": 144.645,
-          "unrealized_pl": -3.715,
-          "unrealized_pl_pct": -2.504,
+          "current_price": 48.4,
+          "market_value": 145.2,
+          "unrealized_pl": -3.16,
+          "unrealized_pl_pct": -2.13,
           "sector": "Technology",
           "industry": "Solar"
         }
       ]
     },
     "Perplexity": {
-      "equity": 1000.88,
+      "equity": 1002.04,
       "cash": 977.14,
       "buying_power": 977.14,
       "positions": [
@@ -2618,10 +2618,10 @@
           "ticker": "IBRX",
           "qty": 4.0,
           "avg_cost": 6.18,
-          "current_price": 5.935,
-          "market_value": 23.74,
-          "unrealized_pl": -0.98,
-          "unrealized_pl_pct": -3.964,
+          "current_price": 6.225,
+          "market_value": 24.9,
+          "unrealized_pl": 0.18,
+          "unrealized_pl_pct": 0.728,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
