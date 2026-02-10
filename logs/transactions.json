@@ -352,27 +352,18 @@
       "timestamp": "2026-01-28T16:18:24.592177+00:00",
       "type": "stop",
       "id": "e448005d-1f30-415e-92cd-019a97b64f2c"
-    },
-    {
-      "symbol": "ENVX",
-      "side": "sell",
-      "qty": 16.0,
-      "price": 7.78,
-      "timestamp": "2026-01-12T14:32:35.879776+00:00",
-      "type": "stop",
-      "id": "6941ad63-84d0-471a-aac7-2040b3f7dbd5"
-    },
-    {
-      "symbol": "ENVX",
-      "side": "buy",
-      "qty": 16.0,
-      "price": 7.83875,
-      "timestamp": "2026-01-12T14:32:11.754012+00:00",
-      "type": "limit",
-      "id": "6541f3d1-5ebc-4012-95ed-49ef09d82202"
     }
   ],
   "Claude": [
+    {
+      "symbol": "WULF",
+      "side": "buy",
+      "qty": 4.0,
+      "price": 16.1975,
+      "timestamp": "2026-02-10T14:32:54.568633+00:00",
+      "type": "limit",
+      "id": "7f1fdb75-8687-4957-940f-d555f8d6a4b3"
+    },
     {
       "symbol": "ENPH",
       "side": "buy",
