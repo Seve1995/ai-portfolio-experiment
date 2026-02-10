@@ -2644,10 +2644,10 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 24.82,
-          "market_value": 297.84,
-          "unrealized_pl": -0.7,
-          "unrealized_pl_pct": -0.234,
+          "current_price": 24.8,
+          "market_value": 297.6,
+          "unrealized_pl": -0.94,
+          "unrealized_pl_pct": -0.315,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         },
@@ -2655,17 +2655,17 @@
           "ticker": "SMCI",
           "qty": 4.0,
           "avg_cost": 33.34,
-          "current_price": 33.17,
-          "market_value": 132.68,
-          "unrealized_pl": -0.68,
-          "unrealized_pl_pct": -0.51,
+          "current_price": 33.23,
+          "market_value": 132.92,
+          "unrealized_pl": -0.44,
+          "unrealized_pl_pct": -0.33,
           "sector": "Technology",
           "industry": "Computer Hardware"
         }
       ]
     },
     "Claude": {
-      "equity": 895.76,
+      "equity": 895.6,
       "cash": 678.97,
       "buying_power": 678.97,
       "positions": [
@@ -2673,10 +2673,10 @@
           "ticker": "ENPH",
           "qty": 3.0,
           "avg_cost": 49.453333,
-          "current_price": 50.2118,
-          "market_value": 150.6354,
-          "unrealized_pl": 2.2754,
-          "unrealized_pl_pct": 1.534,
+          "current_price": 50.1299,
+          "market_value": 150.3897,
+          "unrealized_pl": 2.0297,
+          "unrealized_pl_pct": 1.3679999999999999,
           "sector": "Technology",
           "industry": "Solar"
         },
@@ -2684,10 +2684,10 @@
           "ticker": "WULF",
           "qty": 4.0,
           "avg_cost": 16.1975,
-          "current_price": 16.5393,
-          "market_value": 66.1572,
-          "unrealized_pl": 1.3672,
-          "unrealized_pl_pct": 2.11,
+          "current_price": 16.56,
+          "market_value": 66.24,
+          "unrealized_pl": 1.45,
+          "unrealized_pl_pct": 2.238,
           "sector": "Financial Services",
           "industry": "Capital Markets"
         }
