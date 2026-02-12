@@ -175,6 +175,15 @@
   "Gemini": [
     {
       "symbol": "SMCI",
+      "side": "sell",
+      "qty": 4.0,
+      "price": 31.245,
+      "timestamp": "2026-02-12T15:42:09.507095+00:00",
+      "type": "stop",
+      "id": "30430d6c-cffa-4639-aad0-f28aecc7b950"
+    },
+    {
+      "symbol": "SMCI",
       "side": "buy",
       "qty": 4.0,
       "price": 33.34,
@@ -343,15 +352,6 @@
       "timestamp": "2026-01-13T14:31:35.461244+00:00",
       "type": "limit",
       "id": "b0411738-79e5-4cbd-bc2e-14e7d4a87683"
-    },
-    {
-      "symbol": "UPST",
-      "side": "sell",
-      "qty": 4.0,
-      "price": 43.93,
-      "timestamp": "2026-01-28T16:18:24.592177+00:00",
-      "type": "stop",
-      "id": "e448005d-1f30-415e-92cd-019a97b64f2c"
     }
   ],
   "Claude": [
