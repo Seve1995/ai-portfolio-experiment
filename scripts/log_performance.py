@@ -28,8 +28,21 @@ def log_all_performance():
         day = start_dt + timedelta(days=i)
         target_dates.append(day.strftime('%Y-%m-%d'))
     
-    # 2. Initialize master_data with default 1000.0 for all models on all target dates
-    master_data = {dt: {info['name']: 1000.0 for info in config.MODELS.values()} for dt in target_dates}
+    # 2. Load existing CSV data as baseline to preserve historical values
+    master_data = {}
+    if PERFORMANCE_LOG.exists():
+        with open(PERFORMANCE_LOG, 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                dt = row['Date']
+                master_data[dt] = {
+                    info['name']: float(row.get(info['name'], 1000.0))
+                    for info in config.MODELS.values()
+                }
+    # Fill any new/missing dates with default 1000.0
+    for dt in target_dates:
+        if dt not in master_data:
+            master_data[dt] = {info['name']: 1000.0 for info in config.MODELS.values()}
     
     # 3. Fetch actual data from Alpaca
     for key, info in config.MODELS.items():
@@ -38,8 +51,8 @@ def log_all_performance():
         
         try:
             api = config.get_alpaca_api(info)
-            # Fetch last 1 month of daily history
-            history = api.get_portfolio_history(period='1M', timeframe='1D')
+            # Fetch last 1 year of daily history
+            history = api.get_portfolio_history(period='1A', timeframe='1D')
             
             for ts, eq in zip(history.timestamp, history.equity):
                 dt_str = datetime.fromtimestamp(ts).strftime('%Y-%m-%d')
