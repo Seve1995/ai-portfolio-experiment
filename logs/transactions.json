@@ -356,6 +356,15 @@
   ],
   "Claude": [
     {
+      "symbol": "APLD",
+      "side": "buy",
+      "qty": 3.0,
+      "price": 34.196667,
+      "timestamp": "2026-02-17T14:32:53.553644+00:00",
+      "type": "limit",
+      "id": "c2bb807a-b45d-4993-91e2-f629e2545d57"
+    },
+    {
       "symbol": "WULF",
       "side": "buy",
       "qty": 4.0,
