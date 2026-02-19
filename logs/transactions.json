@@ -1,6 +1,15 @@
 {
   "ChatGPT": [
     {
+      "symbol": "PCT",
+      "side": "buy",
+      "qty": 15.0,
+      "price": 8.99,
+      "timestamp": "2026-02-19T17:29:40.445476973+00:00",
+      "type": "limit",
+      "id": "4749a496-02c7-4d0b-9225-1a4c225c9c61"
+    },
+    {
       "symbol": "IOVA",
       "side": "buy",
       "qty": 43.0,
@@ -170,15 +179,6 @@
       "timestamp": "2026-01-13T14:45:25.853493+00:00",
       "type": "limit",
       "id": "305c2b36-93fc-4f7c-a730-9c768eaf815f"
-    },
-    {
-      "symbol": "NVAX",
-      "side": "buy",
-      "qty": 14.0,
-      "price": 7.44,
-      "timestamp": "2026-01-09T14:30:57.781671+00:00",
-      "type": "limit",
-      "id": "3983b3db-595c-4613-9857-ad66bb6bdf78"
     }
   ],
   "Gemini": [
