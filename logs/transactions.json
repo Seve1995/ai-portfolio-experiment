@@ -1,6 +1,15 @@
 {
   "ChatGPT": [
     {
+      "symbol": "IOVA",
+      "side": "buy",
+      "qty": 43.0,
+      "price": 2.71,
+      "timestamp": "2026-02-19T14:33:11.813791+00:00",
+      "type": "limit",
+      "id": "d0ba0461-94a3-47b5-b32c-059ba443a04e"
+    },
+    {
       "symbol": "APLD",
       "side": "sell",
       "qty": 3.0,
