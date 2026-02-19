@@ -3207,7 +3207,7 @@
   },
   "2026-02-19": {
     "ChatGPT": {
-      "equity": 959.78,
+      "equity": 961.83,
       "cash": 705.36,
       "buying_power": 443.59,
       "positions": [
@@ -3215,10 +3215,10 @@
           "ticker": "IOVA",
           "qty": 43.0,
           "avg_cost": 2.71,
-          "current_price": 2.805,
-          "market_value": 120.615,
-          "unrealized_pl": 4.085,
-          "unrealized_pl_pct": 3.5060000000000002,
+          "current_price": 2.83,
+          "market_value": 121.69,
+          "unrealized_pl": 5.16,
+          "unrealized_pl_pct": 4.428,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -3226,17 +3226,17 @@
           "ticker": "PCT",
           "qty": 15.0,
           "avg_cost": 8.99,
-          "current_price": 8.92,
-          "market_value": 133.8,
-          "unrealized_pl": -1.05,
-          "unrealized_pl_pct": -0.779,
+          "current_price": 8.985,
+          "market_value": 134.775,
+          "unrealized_pl": -0.075,
+          "unrealized_pl_pct": -0.055999999999999994,
           "sector": "Industrials",
           "industry": "Pollution & Treatment Controls"
         }
       ]
     },
     "Gemini": {
-      "equity": 934.09,
+      "equity": 934.21,
       "cash": 648.25,
       "buying_power": 648.25,
       "positions": [
@@ -3244,17 +3244,17 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 23.82,
-          "market_value": 285.84,
-          "unrealized_pl": -12.699996,
-          "unrealized_pl_pct": -4.2540000000000004,
+          "current_price": 23.83,
+          "market_value": 285.96,
+          "unrealized_pl": -12.579996,
+          "unrealized_pl_pct": -4.2139999999999995,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         }
       ]
     },
     "Claude": {
-      "equity": 864.05,
+      "equity": 865.57,
       "cash": 489.96,
       "buying_power": 489.96,
       "positions": [
@@ -3262,10 +3262,10 @@
           "ticker": "APLD",
           "qty": 3.0,
           "avg_cost": 34.196667,
-          "current_price": 31.015,
-          "market_value": 93.045,
-          "unrealized_pl": -9.545001,
-          "unrealized_pl_pct": -9.304,
+          "current_price": 31.0099,
+          "market_value": 93.0297,
+          "unrealized_pl": -9.560301,
+          "unrealized_pl_pct": -9.318999999999999,
           "sector": "Technology",
           "industry": "Information Technology Services"
         },
@@ -3273,10 +3273,10 @@
           "ticker": "ENPH",
           "qty": 3.0,
           "avg_cost": 49.453333,
-          "current_price": 43.975,
-          "market_value": 131.925,
-          "unrealized_pl": -16.434999,
-          "unrealized_pl_pct": -11.078000000000001,
+          "current_price": 43.895,
+          "market_value": 131.685,
+          "unrealized_pl": -16.674999,
+          "unrealized_pl_pct": -11.24,
           "sector": "Technology",
           "industry": "Solar"
         },
@@ -3284,10 +3284,10 @@
           "ticker": "NVAX",
           "qty": 10.0,
           "avg_cost": 8.64,
-          "current_price": 8.8,
-          "market_value": 88.0,
-          "unrealized_pl": 1.6,
-          "unrealized_pl_pct": 1.8519999999999999,
+          "current_price": 8.95,
+          "market_value": 89.5,
+          "unrealized_pl": 3.1,
+          "unrealized_pl_pct": 3.588,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -3295,17 +3295,17 @@
           "ticker": "WULF",
           "qty": 4.0,
           "avg_cost": 16.1975,
-          "current_price": 15.28,
-          "market_value": 61.12,
-          "unrealized_pl": -3.67,
-          "unrealized_pl_pct": -5.664000000000001,
+          "current_price": 15.348,
+          "market_value": 61.392,
+          "unrealized_pl": -3.398,
+          "unrealized_pl_pct": -5.244999999999999,
           "sector": "Financial Services",
           "industry": "Capital Markets"
         }
       ]
     },
     "Perplexity": {
-      "equity": 1009.52,
+      "equity": 1010.98,
       "cash": 977.14,
       "buying_power": 977.14,
       "positions": [
@@ -3313,10 +3313,10 @@
           "ticker": "IBRX",
           "qty": 4.0,
           "avg_cost": 6.18,
-          "current_price": 8.095,
-          "market_value": 32.38,
-          "unrealized_pl": 7.66,
-          "unrealized_pl_pct": 30.987,
+          "current_price": 8.46,
+          "market_value": 33.84,
+          "unrealized_pl": 9.12,
+          "unrealized_pl_pct": 36.893,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
