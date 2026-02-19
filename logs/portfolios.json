@@ -3207,7 +3207,7 @@
   },
   "2026-02-19": {
     "ChatGPT": {
-      "equity": 964.41,
+      "equity": 966.68,
       "cash": 705.36,
       "buying_power": 443.59,
       "positions": [
@@ -3215,10 +3215,10 @@
           "ticker": "IOVA",
           "qty": 43.0,
           "avg_cost": 2.71,
-          "current_price": 2.85,
-          "market_value": 122.55,
-          "unrealized_pl": 6.02,
-          "unrealized_pl_pct": 5.1659999999999995,
+          "current_price": 2.84,
+          "market_value": 122.12,
+          "unrealized_pl": 5.59,
+          "unrealized_pl_pct": 4.797,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -3226,17 +3226,17 @@
           "ticker": "PCT",
           "qty": 15.0,
           "avg_cost": 8.99,
-          "current_price": 9.1,
-          "market_value": 136.5,
-          "unrealized_pl": 1.65,
-          "unrealized_pl_pct": 1.224,
+          "current_price": 9.28,
+          "market_value": 139.2,
+          "unrealized_pl": 4.35,
+          "unrealized_pl_pct": 3.2259999999999995,
           "sector": "Industrials",
           "industry": "Pollution & Treatment Controls"
         }
       ]
     },
     "Gemini": {
-      "equity": 935.29,
+      "equity": 933.97,
       "cash": 648.25,
       "buying_power": 648.25,
       "positions": [
@@ -3244,17 +3244,17 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 23.92,
-          "market_value": 287.04,
-          "unrealized_pl": -11.499996,
-          "unrealized_pl_pct": -3.852,
+          "current_price": 23.81,
+          "market_value": 285.72,
+          "unrealized_pl": -12.819996,
+          "unrealized_pl_pct": -4.294,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         }
       ]
     },
     "Claude": {
-      "equity": 870.78,
+      "equity": 869.79,
       "cash": 489.96,
       "buying_power": 489.96,
       "positions": [
@@ -3262,10 +3262,10 @@
           "ticker": "APLD",
           "qty": 3.0,
           "avg_cost": 34.196667,
-          "current_price": 31.58,
-          "market_value": 94.74,
-          "unrealized_pl": -7.850001,
-          "unrealized_pl_pct": -7.652,
+          "current_price": 31.3,
+          "market_value": 93.9,
+          "unrealized_pl": -8.690001,
+          "unrealized_pl_pct": -8.471,
           "sector": "Technology",
           "industry": "Information Technology Services"
         },
@@ -3284,10 +3284,10 @@
           "ticker": "NVAX",
           "qty": 10.0,
           "avg_cost": 8.64,
-          "current_price": 9.195,
-          "market_value": 91.95,
-          "unrealized_pl": 5.55,
-          "unrealized_pl_pct": 6.424,
+          "current_price": 9.15,
+          "market_value": 91.5,
+          "unrealized_pl": 5.1,
+          "unrealized_pl_pct": 5.903,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -3295,17 +3295,17 @@
           "ticker": "WULF",
           "qty": 4.0,
           "avg_cost": 16.1975,
-          "current_price": 15.315,
-          "market_value": 61.26,
-          "unrealized_pl": -3.53,
-          "unrealized_pl_pct": -5.448,
+          "current_price": 15.39,
+          "market_value": 61.56,
+          "unrealized_pl": -3.23,
+          "unrealized_pl_pct": -4.984999999999999,
           "sector": "Financial Services",
           "industry": "Capital Markets"
         }
       ]
     },
     "Perplexity": {
-      "equity": 1011.42,
+      "equity": 1010.94,
       "cash": 977.14,
       "buying_power": 977.14,
       "positions": [
@@ -3313,10 +3313,10 @@
           "ticker": "IBRX",
           "qty": 4.0,
           "avg_cost": 6.18,
-          "current_price": 8.565,
-          "market_value": 34.26,
-          "unrealized_pl": 9.54,
-          "unrealized_pl_pct": 38.592,
+          "current_price": 8.45,
+          "market_value": 33.8,
+          "unrealized_pl": 9.08,
+          "unrealized_pl_pct": 36.731,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
