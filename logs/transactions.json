@@ -5,7 +5,7 @@
       "side": "buy",
       "qty": 15.0,
       "price": 8.99,
-      "timestamp": "2026-02-19T17:29:40.445476973+00:00",
+      "timestamp": "2026-02-19T17:29:40.445477+00:00",
       "type": "limit",
       "id": "4749a496-02c7-4d0b-9225-1a4c225c9c61"
     },
@@ -364,6 +364,15 @@
     }
   ],
   "Claude": [
+    {
+      "symbol": "APLD",
+      "side": "sell",
+      "qty": 3.0,
+      "price": 30.873333,
+      "timestamp": "2026-02-20T14:32:00.377620+00:00",
+      "type": "market",
+      "id": "e78eabd3-9faf-42ef-bb00-974265412134"
+    },
     {
       "symbol": "NVAX",
       "side": "buy",
