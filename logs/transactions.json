@@ -19,6 +19,15 @@
       "id": "d0ba0461-94a3-47b5-b32c-059ba443a04e"
     },
     {
+      "symbol": "ACHC",
+      "side": "buy",
+      "qty": 16.0,
+      "price": 16.31,
+      "timestamp": "2026-02-20T14:44:34.959272+00:00",
+      "type": "limit",
+      "id": "fa6511b1-48ae-4729-954e-b7303e823b8b"
+    },
+    {
       "symbol": "APLD",
       "side": "sell",
       "qty": 3.0,
