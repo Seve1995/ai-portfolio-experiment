@@ -1,6 +1,15 @@
 {
   "ChatGPT": [
     {
+      "symbol": "PCT",
+      "side": "buy",
+      "qty": 15.0,
+      "price": 8.99,
+      "timestamp": "2026-02-19T17:29:40.445477+00:00",
+      "type": "limit",
+      "id": "4749a496-02c7-4d0b-9225-1a4c225c9c61"
+    },
+    {
       "symbol": "IOVA",
       "side": "buy",
       "qty": 43.0,
@@ -8,6 +17,15 @@
       "timestamp": "2026-02-19T14:33:11.813791+00:00",
       "type": "limit",
       "id": "d0ba0461-94a3-47b5-b32c-059ba443a04e"
+    },
+    {
+      "symbol": "ACHC",
+      "side": "buy",
+      "qty": 16.0,
+      "price": 16.31,
+      "timestamp": "2026-02-20T14:44:34.959272+00:00",
+      "type": "limit",
+      "id": "fa6511b1-48ae-4729-954e-b7303e823b8b"
     },
     {
       "symbol": "APLD",
@@ -170,15 +188,6 @@
       "timestamp": "2026-01-13T14:45:25.853493+00:00",
       "type": "limit",
       "id": "305c2b36-93fc-4f7c-a730-9c768eaf815f"
-    },
-    {
-      "symbol": "NVAX",
-      "side": "buy",
-      "qty": 14.0,
-      "price": 7.44,
-      "timestamp": "2026-01-09T14:30:57.781671+00:00",
-      "type": "limit",
-      "id": "3983b3db-595c-4613-9857-ad66bb6bdf78"
     }
   ],
   "Gemini": [
@@ -364,6 +373,15 @@
     }
   ],
   "Claude": [
+    {
+      "symbol": "APLD",
+      "side": "sell",
+      "qty": 3.0,
+      "price": 30.873333,
+      "timestamp": "2026-02-20T14:32:00.377620+00:00",
+      "type": "market",
+      "id": "e78eabd3-9faf-42ef-bb00-974265412134"
+    },
     {
       "symbol": "NVAX",
       "side": "buy",
