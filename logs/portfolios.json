@@ -3440,5 +3440,112 @@
         }
       ]
     }
+  },
+  "2026-02-23": {
+    "ChatGPT": {
+      "equity": 975.43,
+      "cash": 576.09,
+      "buying_power": 576.09,
+      "positions": [
+        {
+          "ticker": "ACHC",
+          "qty": 16.0,
+          "avg_cost": 16.31,
+          "current_price": 17.02,
+          "market_value": 272.32,
+          "unrealized_pl": 11.36,
+          "unrealized_pl_pct": 4.353,
+          "sector": "Healthcare",
+          "industry": "Medical Care Facilities"
+        },
+        {
+          "ticker": "IOVA",
+          "qty": 43.0,
+          "avg_cost": 2.71,
+          "current_price": 2.954,
+          "market_value": 127.022,
+          "unrealized_pl": 10.492,
+          "unrealized_pl_pct": 9.004,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    },
+    "Gemini": {
+      "equity": 923.95,
+      "cash": 648.25,
+      "buying_power": 648.25,
+      "positions": [
+        {
+          "ticker": "GME",
+          "qty": 12.0,
+          "avg_cost": 24.878333,
+          "current_price": 22.975,
+          "market_value": 275.7,
+          "unrealized_pl": -22.839996,
+          "unrealized_pl_pct": -7.651,
+          "sector": "Consumer Cyclical",
+          "industry": "Specialty Retail"
+        }
+      ]
+    },
+    "Claude": {
+      "equity": 875.67,
+      "cash": 582.57,
+      "buying_power": 452.97,
+      "positions": [
+        {
+          "ticker": "ENPH",
+          "qty": 3.0,
+          "avg_cost": 49.453333,
+          "current_price": 46.21,
+          "market_value": 138.63,
+          "unrealized_pl": -9.729999,
+          "unrealized_pl_pct": -6.558,
+          "sector": "Technology",
+          "industry": "Solar"
+        },
+        {
+          "ticker": "NVAX",
+          "qty": 10.0,
+          "avg_cost": 8.64,
+          "current_price": 9.495,
+          "market_value": 94.95,
+          "unrealized_pl": 8.55,
+          "unrealized_pl_pct": 9.896,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "WULF",
+          "qty": 4.0,
+          "avg_cost": 16.1975,
+          "current_price": 14.88,
+          "market_value": 59.52,
+          "unrealized_pl": -5.27,
+          "unrealized_pl_pct": -8.134,
+          "sector": "Financial Services",
+          "industry": "Capital Markets"
+        }
+      ]
+    },
+    "Perplexity": {
+      "equity": 1019.24,
+      "cash": 977.14,
+      "buying_power": 977.14,
+      "positions": [
+        {
+          "ticker": "IBRX",
+          "qty": 4.0,
+          "avg_cost": 6.18,
+          "current_price": 10.525,
+          "market_value": 42.1,
+          "unrealized_pl": 17.38,
+          "unrealized_pl_pct": 70.307,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    }
   }
 }

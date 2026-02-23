@@ -2,6 +2,15 @@
   "ChatGPT": [
     {
       "symbol": "PCT",
+      "side": "sell",
+      "qty": 15.0,
+      "price": 8.78,
+      "timestamp": "2026-02-23T14:39:07.319947+00:00",
+      "type": "stop",
+      "id": "33a3d5eb-4995-4aa8-a1f0-304ab25e4809"
+    },
+    {
+      "symbol": "PCT",
       "side": "buy",
       "qty": 15.0,
       "price": 8.99,
