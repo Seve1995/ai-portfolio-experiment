@@ -3443,7 +3443,7 @@
   },
   "2026-02-23": {
     "ChatGPT": {
-      "equity": 975.43,
+      "equity": 968.34,
       "cash": 576.09,
       "buying_power": 576.09,
       "positions": [
@@ -3451,10 +3451,10 @@
           "ticker": "ACHC",
           "qty": 16.0,
           "avg_cost": 16.31,
-          "current_price": 17.02,
-          "market_value": 272.32,
-          "unrealized_pl": 11.36,
-          "unrealized_pl_pct": 4.353,
+          "current_price": 16.695,
+          "market_value": 267.12,
+          "unrealized_pl": 6.16,
+          "unrealized_pl_pct": 2.3609999999999998,
           "sector": "Healthcare",
           "industry": "Medical Care Facilities"
         },
@@ -3462,17 +3462,17 @@
           "ticker": "IOVA",
           "qty": 43.0,
           "avg_cost": 2.71,
-          "current_price": 2.954,
-          "market_value": 127.022,
-          "unrealized_pl": 10.492,
-          "unrealized_pl_pct": 9.004,
+          "current_price": 2.91,
+          "market_value": 125.13,
+          "unrealized_pl": 8.6,
+          "unrealized_pl_pct": 7.380000000000001,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Gemini": {
-      "equity": 923.95,
+      "equity": 925.45,
       "cash": 648.25,
       "buying_power": 648.25,
       "positions": [
@@ -3480,17 +3480,17 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 22.975,
-          "market_value": 275.7,
-          "unrealized_pl": -22.839996,
-          "unrealized_pl_pct": -7.651,
+          "current_price": 23.1,
+          "market_value": 277.2,
+          "unrealized_pl": -21.339996,
+          "unrealized_pl_pct": -7.148000000000001,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         }
       ]
     },
     "Claude": {
-      "equity": 875.67,
+      "equity": 872.71,
       "cash": 582.57,
       "buying_power": 452.97,
       "positions": [
@@ -3498,10 +3498,10 @@
           "ticker": "ENPH",
           "qty": 3.0,
           "avg_cost": 49.453333,
-          "current_price": 46.21,
-          "market_value": 138.63,
-          "unrealized_pl": -9.729999,
-          "unrealized_pl_pct": -6.558,
+          "current_price": 45.6,
+          "market_value": 136.8,
+          "unrealized_pl": -11.559999,
+          "unrealized_pl_pct": -7.792000000000001,
           "sector": "Technology",
           "industry": "Solar"
         },
@@ -3509,10 +3509,10 @@
           "ticker": "NVAX",
           "qty": 10.0,
           "avg_cost": 8.64,
-          "current_price": 9.495,
-          "market_value": 94.95,
-          "unrealized_pl": 8.55,
-          "unrealized_pl_pct": 9.896,
+          "current_price": 9.29,
+          "market_value": 92.9,
+          "unrealized_pl": 6.5,
+          "unrealized_pl_pct": 7.523000000000001,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -3520,17 +3520,17 @@
           "ticker": "WULF",
           "qty": 4.0,
           "avg_cost": 16.1975,
-          "current_price": 14.88,
-          "market_value": 59.52,
-          "unrealized_pl": -5.27,
-          "unrealized_pl_pct": -8.134,
+          "current_price": 15.11,
+          "market_value": 60.44,
+          "unrealized_pl": -4.35,
+          "unrealized_pl_pct": -6.714,
           "sector": "Financial Services",
           "industry": "Capital Markets"
         }
       ]
     },
     "Perplexity": {
-      "equity": 1019.24,
+      "equity": 1019.2,
       "cash": 977.14,
       "buying_power": 977.14,
       "positions": [
@@ -3538,10 +3538,10 @@
           "ticker": "IBRX",
           "qty": 4.0,
           "avg_cost": 6.18,
-          "current_price": 10.525,
-          "market_value": 42.1,
-          "unrealized_pl": 17.38,
-          "unrealized_pl_pct": 70.307,
+          "current_price": 10.515,
+          "market_value": 42.06,
+          "unrealized_pl": 17.34,
+          "unrealized_pl_pct": 70.146,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
