@@ -3561,7 +3561,7 @@
   },
   "2026-02-24": {
     "ChatGPT": {
-      "equity": 1009.78,
+      "equity": 1002.51,
       "cash": 576.08,
       "buying_power": 576.08,
       "positions": [
@@ -3569,10 +3569,10 @@
           "ticker": "ACHC",
           "qty": 16.0,
           "avg_cost": 16.31,
-          "current_price": 17.055,
-          "market_value": 272.88,
-          "unrealized_pl": 11.92,
-          "unrealized_pl_pct": 4.568,
+          "current_price": 16.9,
+          "market_value": 270.4,
+          "unrealized_pl": 9.44,
+          "unrealized_pl_pct": 3.617,
           "sector": "Healthcare",
           "industry": "Medical Care Facilities"
         },
@@ -3580,17 +3580,17 @@
           "ticker": "IOVA",
           "qty": 43.0,
           "avg_cost": 2.71,
-          "current_price": 3.74,
-          "market_value": 160.82,
-          "unrealized_pl": 44.29,
-          "unrealized_pl_pct": 38.007000000000005,
+          "current_price": 3.6286,
+          "market_value": 156.0298,
+          "unrealized_pl": 39.4998,
+          "unrealized_pl_pct": 33.897,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Gemini": {
-      "equity": 940.22,
+      "equity": 941.27,
       "cash": 531.07,
       "buying_power": 531.07,
       "positions": [
@@ -3609,17 +3609,17 @@
           "ticker": "REPL",
           "qty": 14.0,
           "avg_cost": 8.37,
-          "current_price": 8.465,
-          "market_value": 118.51,
-          "unrealized_pl": 1.33,
-          "unrealized_pl_pct": 1.135,
+          "current_price": 8.54,
+          "market_value": 119.56,
+          "unrealized_pl": 2.38,
+          "unrealized_pl_pct": 2.031,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Claude": {
-      "equity": 890.98,
+      "equity": 896.03,
       "cash": 582.57,
       "buying_power": 582.57,
       "positions": [
@@ -3627,10 +3627,10 @@
           "ticker": "ENPH",
           "qty": 3.0,
           "avg_cost": 49.453333,
-          "current_price": 48.75,
-          "market_value": 146.25,
-          "unrealized_pl": -2.109999,
-          "unrealized_pl_pct": -1.422,
+          "current_price": 49.81,
+          "market_value": 149.43,
+          "unrealized_pl": 1.070001,
+          "unrealized_pl_pct": 0.721,
           "sector": "Technology",
           "industry": "Solar"
         },
@@ -3638,10 +3638,10 @@
           "ticker": "NVAX",
           "qty": 10.0,
           "avg_cost": 8.64,
-          "current_price": 9.52,
-          "market_value": 95.2,
-          "unrealized_pl": 8.8,
-          "unrealized_pl_pct": 10.184999999999999,
+          "current_price": 9.685,
+          "market_value": 96.85,
+          "unrealized_pl": 10.45,
+          "unrealized_pl_pct": 12.095,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -3649,17 +3649,17 @@
           "ticker": "WULF",
           "qty": 4.0,
           "avg_cost": 16.1975,
-          "current_price": 16.7401,
-          "market_value": 66.9604,
-          "unrealized_pl": 2.1704,
-          "unrealized_pl_pct": 3.35,
+          "current_price": 16.7951,
+          "market_value": 67.1804,
+          "unrealized_pl": 2.3904,
+          "unrealized_pl_pct": 3.689,
           "sector": "Financial Services",
           "industry": "Capital Markets"
         }
       ]
     },
     "Perplexity": {
-      "equity": 1019.7,
+      "equity": 1020.84,
       "cash": 977.14,
       "buying_power": 977.14,
       "positions": [
@@ -3667,10 +3667,10 @@
           "ticker": "IBRX",
           "qty": 4.0,
           "avg_cost": 6.18,
-          "current_price": 10.64,
-          "market_value": 42.56,
-          "unrealized_pl": 17.84,
-          "unrealized_pl_pct": 72.16799999999999,
+          "current_price": 10.925,
+          "market_value": 43.7,
+          "unrealized_pl": 18.98,
+          "unrealized_pl_pct": 76.78,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
