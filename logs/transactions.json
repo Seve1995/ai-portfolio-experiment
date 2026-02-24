@@ -201,6 +201,15 @@
   ],
   "Gemini": [
     {
+      "symbol": "REPL",
+      "side": "buy",
+      "qty": 14.0,
+      "price": 8.37,
+      "timestamp": "2026-02-23T17:39:27.248911+00:00",
+      "type": "limit",
+      "id": "d85d4fd4-45e8-45a5-a125-d54298be2618"
+    },
+    {
       "symbol": "SMCI",
       "side": "sell",
       "qty": 4.0,
@@ -370,15 +379,6 @@
       "timestamp": "2026-01-13T14:58:57.358247+00:00",
       "type": "limit",
       "id": "5111370d-3a54-4616-82c9-37a72989887c"
-    },
-    {
-      "symbol": "LCID",
-      "side": "buy",
-      "qty": 24.0,
-      "price": 11.2925,
-      "timestamp": "2026-01-13T14:31:35.461244+00:00",
-      "type": "limit",
-      "id": "b0411738-79e5-4cbd-bc2e-14e7d4a87683"
     }
   ],
   "Claude": [
