@@ -211,6 +211,15 @@
   "Gemini": [
     {
       "symbol": "REPL",
+      "side": "sell",
+      "qty": 14.0,
+      "price": 7.7,
+      "timestamp": "2026-02-26T20:28:19.957571+00:00",
+      "type": "stop",
+      "id": "56c05a46-f9c1-4047-aae9-261836689be8"
+    },
+    {
+      "symbol": "REPL",
       "side": "buy",
       "qty": 14.0,
       "price": 8.37,
