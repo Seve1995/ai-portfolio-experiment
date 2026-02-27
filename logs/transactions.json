@@ -2,6 +2,15 @@
   "ChatGPT": [
     {
       "symbol": "WULF",
+      "side": "sell",
+      "qty": 13.0,
+      "price": 16.786154,
+      "timestamp": "2026-02-27T14:40:50.289825+00:00",
+      "type": "stop",
+      "id": "8106f1df-748f-4237-8372-663d1beb087c"
+    },
+    {
+      "symbol": "WULF",
       "side": "buy",
       "qty": 13.0,
       "price": 18.0,
@@ -197,15 +206,6 @@
       "timestamp": "2026-01-13T14:31:08.984051+00:00",
       "type": "limit",
       "id": "dfe06fed-d262-44a3-a8e6-dda362966ba3"
-    },
-    {
-      "symbol": "RXRX",
-      "side": "buy",
-      "qty": 14.0,
-      "price": 4.7,
-      "timestamp": "2026-01-13T14:45:25.853493+00:00",
-      "type": "limit",
-      "id": "305c2b36-93fc-4f7c-a730-9c768eaf815f"
     }
   ],
   "Gemini": [
