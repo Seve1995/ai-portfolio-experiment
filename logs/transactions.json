@@ -383,6 +383,15 @@
       "id": "f04f56d5-8f69-4d61-99bc-5827096fb7b7"
     },
     {
+      "symbol": "ENPH",
+      "side": "sell",
+      "qty": 3.0,
+      "price": 43.676667,
+      "timestamp": "2026-02-27T14:34:27.482754+00:00",
+      "type": "stop",
+      "id": "34d75f05-d391-4fdc-9e9f-d1ce88a06fda"
+    },
+    {
       "symbol": "APLD",
       "side": "sell",
       "qty": 3.0,
