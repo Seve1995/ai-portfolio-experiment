@@ -4140,7 +4140,7 @@
   },
   "2026-03-03": {
     "ChatGPT": {
-      "equity": 1089.64,
+      "equity": 1087.7,
       "cash": 453.37,
       "buying_power": 453.37,
       "positions": [
@@ -4148,10 +4148,10 @@
           "ticker": "ACHC",
           "qty": 16.0,
           "avg_cost": 16.31,
-          "current_price": 22.675,
-          "market_value": 362.8,
-          "unrealized_pl": 101.84,
-          "unrealized_pl_pct": 39.025,
+          "current_price": 22.8,
+          "market_value": 364.8,
+          "unrealized_pl": 103.84,
+          "unrealized_pl_pct": 39.792,
           "sector": "Healthcare",
           "industry": "Medical Care Facilities"
         },
@@ -4159,10 +4159,10 @@
           "ticker": "ANAB",
           "qty": 2.0,
           "avg_cost": 53.46,
-          "current_price": 53.285,
-          "market_value": 106.57,
-          "unrealized_pl": -0.35,
-          "unrealized_pl_pct": -0.327,
+          "current_price": 53.28,
+          "market_value": 106.56,
+          "unrealized_pl": -0.36,
+          "unrealized_pl_pct": -0.337,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -4170,17 +4170,17 @@
           "ticker": "IOVA",
           "qty": 43.0,
           "avg_cost": 2.71,
-          "current_price": 3.8814,
-          "market_value": 166.9002,
-          "unrealized_pl": 50.3702,
-          "unrealized_pl_pct": 43.225,
+          "current_price": 3.79,
+          "market_value": 162.97,
+          "unrealized_pl": 46.44,
+          "unrealized_pl_pct": 39.852,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Gemini": {
-      "equity": 927.7,
+      "equity": 926.86,
       "cash": 638.86,
       "buying_power": 638.86,
       "positions": [
@@ -4188,17 +4188,17 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 24.07,
-          "market_value": 288.84,
-          "unrealized_pl": -9.699996,
-          "unrealized_pl_pct": -3.2489999999999997,
+          "current_price": 24.0,
+          "market_value": 288.0,
+          "unrealized_pl": -10.539996,
+          "unrealized_pl_pct": -3.531,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         }
       ]
     },
     "Claude": {
-      "equity": 860.59,
+      "equity": 860.56,
       "cash": 603.31,
       "buying_power": 603.31,
       "positions": [
@@ -4206,10 +4206,10 @@
           "ticker": "MPT",
           "qty": 29.0,
           "avg_cost": 5.761379,
-          "current_price": 5.575,
-          "market_value": 161.675,
-          "unrealized_pl": -5.404991,
-          "unrealized_pl_pct": -3.235,
+          "current_price": 5.605,
+          "market_value": 162.545,
+          "unrealized_pl": -4.534991,
+          "unrealized_pl_pct": -2.714,
           "sector": "Real Estate",
           "industry": "REIT - Healthcare Facilities"
         },
@@ -4217,17 +4217,17 @@
           "ticker": "NVAX",
           "qty": 10.0,
           "avg_cost": 8.64,
-          "current_price": 9.56,
-          "market_value": 95.6,
-          "unrealized_pl": 9.2,
-          "unrealized_pl_pct": 10.648,
+          "current_price": 9.47,
+          "market_value": 94.7,
+          "unrealized_pl": 8.3,
+          "unrealized_pl_pct": 9.606,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Perplexity": {
-      "equity": 1018.22,
+      "equity": 1017.48,
       "cash": 977.14,
       "buying_power": 977.14,
       "positions": [
@@ -4235,10 +4235,10 @@
           "ticker": "IBRX",
           "qty": 4.0,
           "avg_cost": 6.18,
-          "current_price": 10.2701,
-          "market_value": 41.0804,
-          "unrealized_pl": 16.3604,
-          "unrealized_pl_pct": 66.183,
+          "current_price": 10.085,
+          "market_value": 40.34,
+          "unrealized_pl": 15.62,
+          "unrealized_pl_pct": 63.188,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
