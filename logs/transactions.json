@@ -383,6 +383,15 @@
       "id": "f04f56d5-8f69-4d61-99bc-5827096fb7b7"
     },
     {
+      "symbol": "WULF",
+      "side": "sell",
+      "qty": 4.0,
+      "price": 14.49,
+      "timestamp": "2026-03-03T15:22:21.155172+00:00",
+      "type": "stop",
+      "id": "f0f414a2-8b8a-4d8c-88e7-7286792e8fe5"
+    },
+    {
       "symbol": "ENPH",
       "side": "sell",
       "qty": 3.0,
