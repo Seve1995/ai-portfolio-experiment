@@ -5,7 +5,7 @@
       "side": "buy",
       "qty": 2.0,
       "price": 53.46,
-      "timestamp": "2026-03-03T19:28:33.668151518+00:00",
+      "timestamp": "2026-03-03T19:28:33.668152+00:00",
       "type": "limit",
       "id": "423fc33a-9693-4fb2-bbf8-c0f9abea114f"
     },
@@ -373,6 +373,15 @@
     }
   ],
   "Claude": [
+    {
+      "symbol": "IOVA",
+      "side": "buy",
+      "qty": 16.0,
+      "price": 3.773125,
+      "timestamp": "2026-03-04T14:32:56.703192+00:00",
+      "type": "limit",
+      "id": "ecce5e7d-37bd-4b43-b564-14ae20d432c9"
+    },
     {
       "symbol": "SMCI",
       "side": "sell",
