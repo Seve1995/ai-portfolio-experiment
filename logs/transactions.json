@@ -1,6 +1,15 @@
 {
   "ChatGPT": [
     {
+      "symbol": "ANAB",
+      "side": "buy",
+      "qty": 2.0,
+      "price": 53.46,
+      "timestamp": "2026-03-03T19:28:33.668152+00:00",
+      "type": "limit",
+      "id": "423fc33a-9693-4fb2-bbf8-c0f9abea114f"
+    },
+    {
       "symbol": "WULF",
       "side": "sell",
       "qty": 13.0,
@@ -197,18 +206,18 @@
       "timestamp": "2026-01-13T14:45:10.425287+00:00",
       "type": "limit",
       "id": "dac893ae-2afb-4af4-9deb-7060d6384414"
-    },
-    {
-      "symbol": "SOUN",
-      "side": "buy",
-      "qty": 8.0,
-      "price": 11.54,
-      "timestamp": "2026-01-13T14:31:08.984051+00:00",
-      "type": "limit",
-      "id": "dfe06fed-d262-44a3-a8e6-dda362966ba3"
     }
   ],
   "Gemini": [
+    {
+      "symbol": "TVTX",
+      "side": "buy",
+      "qty": 8.0,
+      "price": 28.22,
+      "timestamp": "2026-03-04T15:40:31.642655894+00:00",
+      "type": "limit",
+      "id": "4f027f99-2361-46db-84f3-0bf83d0417d5"
+    },
     {
       "symbol": "REPL",
       "side": "sell",
@@ -374,6 +383,33 @@
   ],
   "Claude": [
     {
+      "symbol": "IOVA",
+      "side": "buy",
+      "qty": 16.0,
+      "price": 3.773125,
+      "timestamp": "2026-03-04T14:32:56.703192+00:00",
+      "type": "limit",
+      "id": "ecce5e7d-37bd-4b43-b564-14ae20d432c9"
+    },
+    {
+      "symbol": "SMCI",
+      "side": "sell",
+      "qty": 8.0,
+      "price": 30.9,
+      "timestamp": "2026-03-03T19:10:19.823622+00:00",
+      "type": "stop",
+      "id": "fc94388f-0532-4cb1-b74e-42f361d55d4f"
+    },
+    {
+      "symbol": "SMCI",
+      "side": "buy",
+      "qty": 8.0,
+      "price": 31.045,
+      "timestamp": "2026-03-03T19:02:44.426647+00:00",
+      "type": "limit",
+      "id": "2671e2be-66fd-42db-83d7-e828bd8e9b8e"
+    },
+    {
       "symbol": "MPT",
       "side": "buy",
       "qty": 29.0,
@@ -489,33 +525,6 @@
       "timestamp": "2026-01-20T20:38:46.663702+00:00",
       "type": "stop",
       "id": "b296cbff-1db2-4598-b74a-f719096c2dc1"
-    },
-    {
-      "symbol": "RXRX",
-      "side": "buy",
-      "qty": 34.0,
-      "price": 4.75,
-      "timestamp": "2026-01-13T14:37:30.988584+00:00",
-      "type": "limit",
-      "id": "a1fee62d-c7eb-4eeb-a07d-61ab176778ce"
-    },
-    {
-      "symbol": "AQST",
-      "side": "sell",
-      "qty": 37.0,
-      "price": 4.028649,
-      "timestamp": "2026-01-09T14:31:18.635735+00:00",
-      "type": "market",
-      "id": "21205f4d-0bdc-438f-9dc8-9f907182e937"
-    },
-    {
-      "symbol": "AQST",
-      "side": "buy",
-      "qty": 37.0,
-      "price": 6.25,
-      "timestamp": "2026-01-06T14:34:54.942758+00:00",
-      "type": "limit",
-      "id": "3e657d28-a212-47f3-8836-90e79bb1020c"
     }
   ],
   "Perplexity": [
