@@ -211,6 +211,15 @@
   "Gemini": [
     {
       "symbol": "TVTX",
+      "side": "sell",
+      "qty": 8.0,
+      "price": 27.81,
+      "timestamp": "2026-03-05T15:05:22.076317+00:00",
+      "type": "stop",
+      "id": "19c5d614-cf77-4820-9c16-059df3c0b293"
+    },
+    {
+      "symbol": "TVTX",
       "side": "buy",
       "qty": 8.0,
       "price": 28.22,
@@ -370,15 +379,6 @@
       "timestamp": "2026-01-20T15:03:03.045177+00:00",
       "type": "stop",
       "id": "677fd1b8-d8a5-4ac2-a51d-c94b11e77375"
-    },
-    {
-      "symbol": "WULF",
-      "side": "buy",
-      "qty": 13.0,
-      "price": 13.648462,
-      "timestamp": "2026-01-16T14:32:28.581576+00:00",
-      "type": "limit",
-      "id": "ede45c19-d40e-4641-ae36-a6a9c8779e09"
     }
   ],
   "Claude": [
