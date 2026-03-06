@@ -1,6 +1,15 @@
 {
   "ChatGPT": [
     {
+      "symbol": "NTLA",
+      "side": "buy",
+      "qty": 11.0,
+      "price": 13.16,
+      "timestamp": "2026-03-06T17:17:01.679502141+00:00",
+      "type": "limit",
+      "id": "d6f6c2ec-5250-4b8a-aa9c-9118e38ed28f"
+    },
+    {
       "symbol": "ANAB",
       "side": "buy",
       "qty": 2.0,
@@ -197,15 +206,6 @@
       "timestamp": "2026-01-14T14:40:22.611469+00:00",
       "type": "limit",
       "id": "9858edd4-78fa-496d-b88f-bd2a8176233e"
-    },
-    {
-      "symbol": "NTLA",
-      "side": "buy",
-      "qty": 6.0,
-      "price": 11.38,
-      "timestamp": "2026-01-13T14:45:10.425287+00:00",
-      "type": "limit",
-      "id": "dac893ae-2afb-4af4-9deb-7060d6384414"
     }
   ],
   "Gemini": [
@@ -383,6 +383,24 @@
   ],
   "Claude": [
     {
+      "symbol": "LUNR",
+      "side": "buy",
+      "qty": 7.0,
+      "price": 18.17,
+      "timestamp": "2026-03-06T17:17:12.663643+00:00",
+      "type": "limit",
+      "id": "f81d23e0-b8df-4733-9828-4aee5a6141c7"
+    },
+    {
+      "symbol": "NVAX",
+      "side": "sell",
+      "qty": 10.0,
+      "price": 9.64,
+      "timestamp": "2026-03-06T17:17:10.855853+00:00",
+      "type": "stop",
+      "id": "3f0b3fa1-73f2-4bd6-be7d-790297568b58"
+    },
+    {
       "symbol": "IOVA",
       "side": "buy",
       "qty": 16.0,
@@ -489,15 +507,6 @@
       "timestamp": "2026-02-05T20:32:31.822220+00:00",
       "type": "stop",
       "id": "9f466d80-b730-4ddf-9191-91b3ab5c17a0"
-    },
-    {
-      "symbol": "NVAX",
-      "side": "buy",
-      "qty": 6.0,
-      "price": 9.325,
-      "timestamp": "2026-01-23T14:32:26.078247+00:00",
-      "type": "limit",
-      "id": "9f7bc27f-2158-443b-894a-ab6778ff68bd"
     }
   ],
   "Perplexity": [
