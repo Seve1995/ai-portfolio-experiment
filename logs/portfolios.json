@@ -4494,7 +4494,7 @@
   },
   "2026-03-06": {
     "ChatGPT": {
-      "equity": 1193.61,
+      "equity": 1190.18,
       "cash": 308.61,
       "buying_power": 90.21,
       "positions": [
@@ -4502,10 +4502,10 @@
           "ticker": "ACHC",
           "qty": 16.0,
           "avg_cost": 16.31,
-          "current_price": 25.58,
-          "market_value": 409.28,
-          "unrealized_pl": 148.32,
-          "unrealized_pl_pct": 56.836,
+          "current_price": 25.47,
+          "market_value": 407.52,
+          "unrealized_pl": 146.56,
+          "unrealized_pl_pct": 56.162,
           "sector": "Healthcare",
           "industry": "Medical Care Facilities"
         },
@@ -4513,10 +4513,10 @@
           "ticker": "ANAB",
           "qty": 2.0,
           "avg_cost": 53.46,
-          "current_price": 55.52,
-          "market_value": 111.04,
-          "unrealized_pl": 4.12,
-          "unrealized_pl_pct": 3.853,
+          "current_price": 55.64,
+          "market_value": 111.28,
+          "unrealized_pl": 4.36,
+          "unrealized_pl_pct": 4.077999999999999,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -4524,10 +4524,10 @@
           "ticker": "IOVA",
           "qty": 43.0,
           "avg_cost": 2.71,
-          "current_price": 5.145,
-          "market_value": 221.235,
-          "unrealized_pl": 104.705,
-          "unrealized_pl_pct": 89.852,
+          "current_price": 5.0061,
+          "market_value": 215.2623,
+          "unrealized_pl": 98.7323,
+          "unrealized_pl_pct": 84.727,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -4535,17 +4535,17 @@
           "ticker": "NTLA",
           "qty": 11.0,
           "avg_cost": 13.16,
-          "current_price": 13.04,
-          "market_value": 143.44,
-          "unrealized_pl": -1.32,
-          "unrealized_pl_pct": -0.9119999999999999,
+          "current_price": 13.41,
+          "market_value": 147.51,
+          "unrealized_pl": 2.75,
+          "unrealized_pl_pct": 1.9,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Gemini": {
-      "equity": 923.81,
+      "equity": 924.05,
       "cash": 635.57,
       "buying_power": 635.57,
       "positions": [
@@ -4553,17 +4553,17 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 24.0199,
-          "market_value": 288.2388,
-          "unrealized_pl": -10.301196,
-          "unrealized_pl_pct": -3.451,
+          "current_price": 24.04,
+          "market_value": 288.48,
+          "unrealized_pl": -10.059996,
+          "unrealized_pl_pct": -3.37,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         }
       ]
     },
     "Claude": {
-      "equity": 879.3,
+      "equity": 881.87,
       "cash": 512.14,
       "buying_power": 512.14,
       "positions": [
@@ -4571,10 +4571,10 @@
           "ticker": "IOVA",
           "qty": 16.0,
           "avg_cost": 3.773125,
-          "current_price": 5.145,
-          "market_value": 82.32,
-          "unrealized_pl": 21.95,
-          "unrealized_pl_pct": 36.359,
+          "current_price": 5.0061,
+          "market_value": 80.0976,
+          "unrealized_pl": 19.7276,
+          "unrealized_pl_pct": 32.678000000000004,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -4582,10 +4582,10 @@
           "ticker": "LUNR",
           "qty": 7.0,
           "avg_cost": 18.17,
-          "current_price": 18.175,
-          "market_value": 127.225,
-          "unrealized_pl": 0.035,
-          "unrealized_pl_pct": 0.027999999999999997,
+          "current_price": 18.694,
+          "market_value": 130.858,
+          "unrealized_pl": 3.668,
+          "unrealized_pl_pct": 2.884,
           "sector": "Industrials",
           "industry": "Aerospace & Defense"
         },
@@ -4593,17 +4593,17 @@
           "ticker": "MPT",
           "qty": 29.0,
           "avg_cost": 5.761379,
-          "current_price": 5.435,
-          "market_value": 157.615,
-          "unrealized_pl": -9.464991,
-          "unrealized_pl_pct": -5.665,
+          "current_price": 5.475,
+          "market_value": 158.775,
+          "unrealized_pl": -8.304991,
+          "unrealized_pl_pct": -4.971,
           "sector": "Real Estate",
           "industry": "REIT - Healthcare Facilities"
         }
       ]
     },
     "Perplexity": {
-      "equity": 1012.94,
+      "equity": 1013.1,
       "cash": 977.14,
       "buying_power": 977.14,
       "positions": [
@@ -4611,10 +4611,10 @@
           "ticker": "IBRX",
           "qty": 4.0,
           "avg_cost": 6.18,
-          "current_price": 8.95,
-          "market_value": 35.8,
-          "unrealized_pl": 11.08,
-          "unrealized_pl_pct": 44.822,
+          "current_price": 8.99,
+          "market_value": 35.96,
+          "unrealized_pl": 11.24,
+          "unrealized_pl_pct": 45.469,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
