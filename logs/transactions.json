@@ -498,33 +498,6 @@
       "timestamp": "2026-01-23T14:32:26.078247+00:00",
       "type": "limit",
       "id": "9f7bc27f-2158-443b-894a-ab6778ff68bd"
-    },
-    {
-      "symbol": "BBAI",
-      "side": "sell",
-      "qty": 34.0,
-      "price": 5.75,
-      "timestamp": "2026-01-21T15:28:10.595072+00:00",
-      "type": "stop",
-      "id": "dcfc085b-fc25-465b-b50e-c54337b571a3"
-    },
-    {
-      "symbol": "BBAI",
-      "side": "buy",
-      "qty": 34.0,
-      "price": 5.89,
-      "timestamp": "2026-01-20T14:35:53.540173+00:00",
-      "type": "limit",
-      "id": "93385f31-f9b5-4e4b-a12c-3f61c4b708ec"
-    },
-    {
-      "symbol": "RXRX",
-      "side": "sell",
-      "qty": 34.0,
-      "price": 4.4,
-      "timestamp": "2026-01-20T20:38:46.663702+00:00",
-      "type": "stop",
-      "id": "b296cbff-1db2-4598-b74a-f719096c2dc1"
     }
   ],
   "Perplexity": [
