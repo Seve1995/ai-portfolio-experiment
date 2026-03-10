@@ -383,6 +383,15 @@
   ],
   "Claude": [
     {
+      "symbol": "NTLA",
+      "side": "buy",
+      "qty": 4.0,
+      "price": 13.79,
+      "timestamp": "2026-03-10T17:38:25.962833+00:00",
+      "type": "limit",
+      "id": "fa6e7d84-3c3b-4717-8ca2-19edb2be64d6"
+    },
+    {
       "symbol": "LUNR",
       "side": "buy",
       "qty": 7.0,
@@ -489,24 +498,6 @@
       "timestamp": "2026-02-10T14:32:54.568633+00:00",
       "type": "limit",
       "id": "7f1fdb75-8687-4957-940f-d555f8d6a4b3"
-    },
-    {
-      "symbol": "ENPH",
-      "side": "buy",
-      "qty": 3.0,
-      "price": 49.453333,
-      "timestamp": "2026-02-09T14:35:44.601556+00:00",
-      "type": "limit",
-      "id": "7a82570a-d676-49b0-b058-0030e8efefa2"
-    },
-    {
-      "symbol": "NVAX",
-      "side": "sell",
-      "qty": 6.0,
-      "price": 7.84,
-      "timestamp": "2026-02-05T20:32:31.822220+00:00",
-      "type": "stop",
-      "id": "9f466d80-b730-4ddf-9191-91b3ab5c17a0"
     }
   ],
   "Perplexity": [
