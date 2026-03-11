@@ -4889,5 +4889,156 @@
         }
       ]
     }
+  },
+  "2026-03-11": {
+    "ChatGPT": {
+      "equity": 1199.15,
+      "cash": 106.61,
+      "buying_power": 106.61,
+      "positions": [
+        {
+          "ticker": "ACHC",
+          "qty": 16.0,
+          "avg_cost": 16.31,
+          "current_price": 24.765,
+          "market_value": 396.24,
+          "unrealized_pl": 135.28,
+          "unrealized_pl_pct": 51.839,
+          "sector": "Healthcare",
+          "industry": "Medical Care Facilities"
+        },
+        {
+          "ticker": "ANAB",
+          "qty": 2.0,
+          "avg_cost": 53.46,
+          "current_price": 64.585,
+          "market_value": 129.17,
+          "unrealized_pl": 22.25,
+          "unrealized_pl_pct": 20.810000000000002,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "IOVA",
+          "qty": 43.0,
+          "avg_cost": 2.71,
+          "current_price": 5.2,
+          "market_value": 223.6,
+          "unrealized_pl": 107.07,
+          "unrealized_pl_pct": 91.88199999999999,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "NTLA",
+          "qty": 11.0,
+          "avg_cost": 13.16,
+          "current_price": 13.15,
+          "market_value": 144.65,
+          "unrealized_pl": -0.11,
+          "unrealized_pl_pct": -0.076,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "REPL",
+          "qty": 25.0,
+          "avg_cost": 8.08,
+          "current_price": 7.955,
+          "market_value": 198.875,
+          "unrealized_pl": -3.125,
+          "unrealized_pl_pct": -1.547,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    },
+    "Gemini": {
+      "equity": 928.42,
+      "cash": 546.91,
+      "buying_power": 546.91,
+      "positions": [
+        {
+          "ticker": "GME",
+          "qty": 12.0,
+          "avg_cost": 24.878333,
+          "current_price": 24.5,
+          "market_value": 294.0,
+          "unrealized_pl": -4.539996,
+          "unrealized_pl_pct": -1.521,
+          "sector": "Consumer Cyclical",
+          "industry": "Specialty Retail"
+        },
+        {
+          "ticker": "REPL",
+          "qty": 11.0,
+          "avg_cost": 8.06,
+          "current_price": 7.955,
+          "market_value": 87.505,
+          "unrealized_pl": -1.155,
+          "unrealized_pl_pct": -1.303,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    },
+    "Claude": {
+      "equity": 876.88,
+      "cash": 607.48,
+      "buying_power": 607.48,
+      "positions": [
+        {
+          "ticker": "IOVA",
+          "qty": 16.0,
+          "avg_cost": 3.773125,
+          "current_price": 5.2,
+          "market_value": 83.2,
+          "unrealized_pl": 22.83,
+          "unrealized_pl_pct": 37.817,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        },
+        {
+          "ticker": "LUNR",
+          "qty": 7.0,
+          "avg_cost": 18.17,
+          "current_price": 19.085,
+          "market_value": 133.595,
+          "unrealized_pl": 6.405,
+          "unrealized_pl_pct": 5.0360000000000005,
+          "sector": "Industrials",
+          "industry": "Aerospace & Defense"
+        },
+        {
+          "ticker": "NTLA",
+          "qty": 4.0,
+          "avg_cost": 13.79,
+          "current_price": 13.15,
+          "market_value": 52.6,
+          "unrealized_pl": -2.56,
+          "unrealized_pl_pct": -4.641,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    },
+    "Perplexity": {
+      "equity": 1009.21,
+      "cash": 977.14,
+      "buying_power": 977.14,
+      "positions": [
+        {
+          "ticker": "IBRX",
+          "qty": 4.0,
+          "avg_cost": 6.18,
+          "current_price": 8.018,
+          "market_value": 32.072,
+          "unrealized_pl": 7.352,
+          "unrealized_pl_pct": 29.741,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    }
   }
 }

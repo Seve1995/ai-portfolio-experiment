@@ -1,6 +1,15 @@
 {
   "ChatGPT": [
     {
+      "symbol": "REPL",
+      "side": "buy",
+      "qty": 25.0,
+      "price": 8.08,
+      "timestamp": "2026-03-11T13:33:22.919221+00:00",
+      "type": "limit",
+      "id": "6ef411db-80ca-492d-b7ed-9d1d1407b215"
+    },
+    {
       "symbol": "NTLA",
       "side": "buy",
       "qty": 11.0,
@@ -210,6 +219,15 @@
   ],
   "Gemini": [
     {
+      "symbol": "REPL",
+      "side": "buy",
+      "qty": 11.0,
+      "price": 8.06,
+      "timestamp": "2026-03-11T13:34:38.665420+00:00",
+      "type": "limit",
+      "id": "2cac459e-8f59-4686-8e18-81ac29a7a721"
+    },
+    {
       "symbol": "TVTX",
       "side": "sell",
       "qty": 8.0,
@@ -390,6 +408,15 @@
       "timestamp": "2026-03-10T17:38:25.962833+00:00",
       "type": "limit",
       "id": "fa6e7d84-3c3b-4717-8ca2-19edb2be64d6"
+    },
+    {
+      "symbol": "MPT",
+      "side": "sell",
+      "qty": 29.0,
+      "price": 5.19,
+      "timestamp": "2026-03-11T13:34:47.104832+00:00",
+      "type": "stop",
+      "id": "4350c016-2054-4fd4-acda-7659cf043ce8"
     },
     {
       "symbol": "LUNR",
