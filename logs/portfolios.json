@@ -5043,7 +5043,7 @@
   },
   "2026-03-12": {
     "ChatGPT": {
-      "equity": 1126.68,
+      "equity": 1126.3,
       "cash": 295.86,
       "buying_power": 295.86,
       "positions": [
@@ -5051,10 +5051,10 @@
           "ticker": "ACHC",
           "qty": 16.0,
           "avg_cost": 16.31,
-          "current_price": 24.31,
-          "market_value": 388.96,
-          "unrealized_pl": 128.0,
-          "unrealized_pl_pct": 49.05,
+          "current_price": 24.19,
+          "market_value": 387.04,
+          "unrealized_pl": 126.08,
+          "unrealized_pl_pct": 48.314,
           "sector": "Healthcare",
           "industry": "Medical Care Facilities"
         },
@@ -5084,17 +5084,17 @@
           "ticker": "NTLA",
           "qty": 11.0,
           "avg_cost": 13.16,
-          "current_price": 12.7,
-          "market_value": 139.7,
-          "unrealized_pl": -5.06,
-          "unrealized_pl_pct": -3.495,
+          "current_price": 12.84,
+          "market_value": 141.24,
+          "unrealized_pl": -3.52,
+          "unrealized_pl_pct": -2.432,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Gemini": {
-      "equity": 914.72,
+      "equity": 914.48,
       "cash": 537.41,
       "buying_power": 537.41,
       "positions": [
@@ -5102,10 +5102,10 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 24.43,
-          "market_value": 293.16,
-          "unrealized_pl": -5.379996,
-          "unrealized_pl_pct": -1.802,
+          "current_price": 24.4098,
+          "market_value": 292.9176,
+          "unrealized_pl": -5.622396,
+          "unrealized_pl_pct": -1.883,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         },
@@ -5123,7 +5123,7 @@
       ]
     },
     "Claude": {
-      "equity": 837.7,
+      "equity": 837.76,
       "cash": 477.58,
       "buying_power": 477.58,
       "positions": [
@@ -5131,10 +5131,10 @@
           "ticker": "HIMS",
           "qty": 5.0,
           "avg_cost": 25.978,
-          "current_price": 24.12,
-          "market_value": 120.6,
-          "unrealized_pl": -9.29,
-          "unrealized_pl_pct": -7.152,
+          "current_price": 24.0482,
+          "market_value": 120.241,
+          "unrealized_pl": -9.649,
+          "unrealized_pl_pct": -7.428999999999999,
           "sector": "Healthcare",
           "industry": "Drug Manufacturers - Specialty & Generic"
         },
@@ -5153,10 +5153,10 @@
           "ticker": "LUNR",
           "qty": 7.0,
           "avg_cost": 18.17,
-          "current_price": 17.68,
-          "market_value": 123.76,
-          "unrealized_pl": -3.43,
-          "unrealized_pl_pct": -2.697,
+          "current_price": 17.66,
+          "market_value": 123.62,
+          "unrealized_pl": -3.57,
+          "unrealized_pl_pct": -2.807,
           "sector": "Industrials",
           "industry": "Aerospace & Defense"
         },
@@ -5164,10 +5164,10 @@
           "ticker": "NTLA",
           "qty": 4.0,
           "avg_cost": 13.79,
-          "current_price": 12.7,
-          "market_value": 50.8,
-          "unrealized_pl": -4.36,
-          "unrealized_pl_pct": -7.904,
+          "current_price": 12.84,
+          "market_value": 51.36,
+          "unrealized_pl": -3.8,
+          "unrealized_pl_pct": -6.889000000000001,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
