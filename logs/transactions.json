@@ -489,15 +489,6 @@
       "timestamp": "2026-02-17T14:32:53.553644+00:00",
       "type": "limit",
       "id": "c2bb807a-b45d-4993-91e2-f629e2545d57"
-    },
-    {
-      "symbol": "WULF",
-      "side": "buy",
-      "qty": 4.0,
-      "price": 16.1975,
-      "timestamp": "2026-02-10T14:32:54.568633+00:00",
-      "type": "limit",
-      "id": "7f1fdb75-8687-4957-940f-d555f8d6a4b3"
     }
   ],
   "Perplexity": [
