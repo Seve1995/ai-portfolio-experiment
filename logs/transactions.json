@@ -493,6 +493,15 @@
   ],
   "Perplexity": [
     {
+      "symbol": "VKTX",
+      "side": "buy",
+      "qty": 4.0,
+      "price": 36.59,
+      "timestamp": "2026-03-13T14:01:30.566602+00:00",
+      "type": "limit",
+      "id": "7c8285f7-22fb-42a4-b507-3aa1f507c17c"
+    },
+    {
       "symbol": "IBRX",
       "side": "sell",
       "qty": 4.0,
