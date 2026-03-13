@@ -1,6 +1,24 @@
 {
   "ChatGPT": [
     {
+      "symbol": "ANAB",
+      "side": "sell",
+      "qty": 2.0,
+      "price": 64.22,
+      "timestamp": "2026-03-13T15:33:19.409580848+00:00",
+      "type": "market",
+      "id": "63a8eda6-d80a-4752-aa69-c0dbe837585a"
+    },
+    {
+      "symbol": "ACHC",
+      "side": "sell",
+      "qty": 16.0,
+      "price": 24.16,
+      "timestamp": "2026-03-13T15:33:16.870090+00:00",
+      "type": "market",
+      "id": "89e8d3be-4372-4ba3-93f5-c34b925fec87"
+    },
+    {
       "symbol": "REPL",
       "side": "sell",
       "qty": 25.0,
@@ -170,27 +188,18 @@
       "timestamp": "2026-01-21T16:31:11.479701+00:00",
       "type": "limit",
       "id": "7ded684f-9a17-4a5d-b165-b251cbeba374"
-    },
-    {
-      "symbol": "SLS",
-      "side": "buy",
-      "qty": 29.0,
-      "price": 3.83,
-      "timestamp": "2026-01-20T14:31:42.233623+00:00",
-      "type": "limit",
-      "id": "1b618cb2-d653-48ff-924c-68fb9bf3868c"
-    },
-    {
-      "symbol": "SOUN",
-      "side": "sell",
-      "qty": 8.0,
-      "price": 10.53,
-      "timestamp": "2026-01-20T14:33:17.672689+00:00",
-      "type": "market",
-      "id": "f53c25f8-65a5-4565-b283-2ec308b6e806"
     }
   ],
   "Gemini": [
+    {
+      "symbol": "TVTX",
+      "side": "buy",
+      "qty": 5.0,
+      "price": 27.41,
+      "timestamp": "2026-03-13T15:32:13.205771+00:00",
+      "type": "limit",
+      "id": "81f64b26-f01b-491e-9503-fc63412ff25d"
+    },
     {
       "symbol": "TVTX",
       "side": "sell",
@@ -352,18 +361,18 @@
       "timestamp": "2026-01-26T15:40:04.933371+00:00",
       "type": "stop",
       "id": "1f22173f-f451-43c1-86c9-7741c8db456d"
-    },
-    {
-      "symbol": "CLSK",
-      "side": "buy",
-      "qty": 30.0,
-      "price": 12.85,
-      "timestamp": "2026-01-21T16:24:00.369733+00:00",
-      "type": "limit",
-      "id": "b796139b-0b6c-47fa-8e50-f02ba9a49b27"
     }
   ],
   "Claude": [
+    {
+      "symbol": "NTLA",
+      "side": "sell",
+      "qty": 4.0,
+      "price": 12.87,
+      "timestamp": "2026-03-13T15:33:03.725155+00:00",
+      "type": "market",
+      "id": "be4aa779-0029-4339-9eeb-fd6e41bcf593"
+    },
     {
       "symbol": "HIMS",
       "side": "buy",
