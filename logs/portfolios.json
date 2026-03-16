@@ -5311,7 +5311,7 @@
   },
   "2026-03-16": {
     "ChatGPT": {
-      "equity": 1130.72,
+      "equity": 1132.16,
       "cash": 810.84,
       "buying_power": 737.34,
       "positions": [
@@ -5319,10 +5319,10 @@
           "ticker": "IOVA",
           "qty": 43.0,
           "avg_cost": 2.71,
-          "current_price": 4.0286,
-          "market_value": 173.2298,
-          "unrealized_pl": 56.6998,
-          "unrealized_pl_pct": 48.657000000000004,
+          "current_price": 4.0599,
+          "market_value": 174.5757,
+          "unrealized_pl": 58.0457,
+          "unrealized_pl_pct": 49.812,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -5330,17 +5330,17 @@
           "ticker": "NTLA",
           "qty": 11.0,
           "avg_cost": 13.16,
-          "current_price": 13.3316,
-          "market_value": 146.6476,
-          "unrealized_pl": 1.8876,
-          "unrealized_pl_pct": 1.304,
+          "current_price": 13.34,
+          "market_value": 146.74,
+          "unrealized_pl": 1.98,
+          "unrealized_pl_pct": 1.3679999999999999,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Gemini": {
-      "equity": 900.94,
+      "equity": 900.83,
       "cash": 400.35,
       "buying_power": 400.35,
       "positions": [
@@ -5359,10 +5359,10 @@
           "ticker": "REPL",
           "qty": 11.0,
           "avg_cost": 8.06,
-          "current_price": 7.36,
-          "market_value": 80.96,
-          "unrealized_pl": -7.7,
-          "unrealized_pl_pct": -8.685,
+          "current_price": 7.35,
+          "market_value": 80.85,
+          "unrealized_pl": -7.81,
+          "unrealized_pl_pct": -8.809000000000001,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -5380,7 +5380,7 @@
       ]
     },
     "Claude": {
-      "equity": 836.36,
+      "equity": 836.76,
       "cash": 648.05,
       "buying_power": 428.35,
       "positions": [
@@ -5388,10 +5388,10 @@
           "ticker": "HIMS",
           "qty": 5.0,
           "avg_cost": 25.978,
-          "current_price": 24.7701,
-          "market_value": 123.8505,
-          "unrealized_pl": -6.0395,
-          "unrealized_pl_pct": -4.65,
+          "current_price": 24.75,
+          "market_value": 123.75,
+          "unrealized_pl": -6.14,
+          "unrealized_pl_pct": -4.727,
           "sector": "Healthcare",
           "industry": "Drug Manufacturers - Specialty & Generic"
         },
@@ -5399,17 +5399,17 @@
           "ticker": "IOVA",
           "qty": 16.0,
           "avg_cost": 3.773125,
-          "current_price": 4.0286,
-          "market_value": 64.4576,
-          "unrealized_pl": 4.0876,
-          "unrealized_pl_pct": 6.771000000000001,
+          "current_price": 4.0599,
+          "market_value": 64.9584,
+          "unrealized_pl": 4.5884,
+          "unrealized_pl_pct": 7.6,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Perplexity": {
-      "equity": 1006.89,
+      "equity": 1007.85,
       "cash": 862.85,
       "buying_power": 862.85,
       "positions": [
@@ -5417,10 +5417,10 @@
           "ticker": "VKTX",
           "qty": 4.0,
           "avg_cost": 36.59,
-          "current_price": 36.01,
-          "market_value": 144.04,
-          "unrealized_pl": -2.32,
-          "unrealized_pl_pct": -1.585,
+          "current_price": 36.25,
+          "market_value": 145.0,
+          "unrealized_pl": -1.36,
+          "unrealized_pl_pct": -0.9289999999999999,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
