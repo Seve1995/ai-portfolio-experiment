@@ -5,7 +5,7 @@
       "side": "sell",
       "qty": 2.0,
       "price": 64.22,
-      "timestamp": "2026-03-13T15:33:19.409580848+00:00",
+      "timestamp": "2026-03-13T15:33:19.409581+00:00",
       "type": "market",
       "id": "63a8eda6-d80a-4752-aa69-c0dbe837585a"
     },
@@ -372,6 +372,15 @@
       "timestamp": "2026-03-13T15:33:03.725155+00:00",
       "type": "market",
       "id": "be4aa779-0029-4339-9eeb-fd6e41bcf593"
+    },
+    {
+      "symbol": "LUNR",
+      "side": "sell",
+      "qty": 7.0,
+      "price": 17.0,
+      "timestamp": "2026-03-16T14:49:00.340384+00:00",
+      "type": "stop",
+      "id": "25fc1e76-2e40-420d-9721-e1e8ef76f56b"
     },
     {
       "symbol": "HIMS",
