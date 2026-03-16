@@ -32,7 +32,7 @@ def fetch_all_market_data(symbols: list) -> dict:
     Fetches data for all holdings + Macro tickers in one go.
     Returns a dict of DataFrames keyed by symbol.
     """
-    macro_tickers = ["^TNX", "DX-Y.NYB", "UUP"]
+    macro_tickers = ["^TNX", "DX=F", "UUP"]
     all_tickers = list(set(symbols + macro_tickers))
     
     if not all_tickers:
@@ -108,9 +108,9 @@ def get_macro_data(batch_data):
 
     # --- DXY (fallback to UUP) ---
     try:
-        # Try DX-Y.NYB
+        # Try DX=F (Dollar Index Futures)
         dxy = None
-        source = "DX-Y.NYB"
+        source = "DX=F"
         if isinstance(batch_data.columns, pd.MultiIndex):
             if source in batch_data.columns.levels[0]:
                 dxy = batch_data[source]
