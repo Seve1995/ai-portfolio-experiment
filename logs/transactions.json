@@ -1,6 +1,15 @@
 {
   "ChatGPT": [
     {
+      "symbol": "HIMS",
+      "side": "buy",
+      "qty": 3.0,
+      "price": 24.5,
+      "timestamp": "2026-03-17T13:31:16.640521+00:00",
+      "type": "limit",
+      "id": "ae299e7f-c6bf-4c27-a36a-f58efc145134"
+    },
+    {
       "symbol": "ANAB",
       "side": "sell",
       "qty": 2.0,
@@ -193,6 +202,15 @@
   "Gemini": [
     {
       "symbol": "TVTX",
+      "side": "sell",
+      "qty": 5.0,
+      "price": 27.98,
+      "timestamp": "2026-03-17T16:06:30.966527543+00:00",
+      "type": "market",
+      "id": "1b9486c0-0964-4c4e-9f90-0294793982a0"
+    },
+    {
+      "symbol": "TVTX",
       "side": "buy",
       "qty": 5.0,
       "price": 27.41,
@@ -352,18 +370,18 @@
       "timestamp": "2026-01-29T14:32:02.033501+00:00",
       "type": "market",
       "id": "64ce5c11-65b6-4d2b-b154-e9a4924ab16f"
-    },
-    {
-      "symbol": "CLSK",
-      "side": "sell",
-      "qty": 30.0,
-      "price": 12.35,
-      "timestamp": "2026-01-26T15:40:04.933371+00:00",
-      "type": "stop",
-      "id": "1f22173f-f451-43c1-86c9-7741c8db456d"
     }
   ],
   "Claude": [
+    {
+      "symbol": "ACHC",
+      "side": "buy",
+      "qty": 5.0,
+      "price": 22.904,
+      "timestamp": "2026-03-17T13:32:25.090086+00:00",
+      "type": "limit",
+      "id": "8d3d7807-ab2b-4c2a-a7ed-d77889718bca"
+    },
     {
       "symbol": "NTLA",
       "side": "sell",
