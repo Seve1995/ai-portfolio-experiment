@@ -5429,7 +5429,7 @@
   },
   "2026-03-17": {
     "ChatGPT": {
-      "equity": 1128.28,
+      "equity": 1127.12,
       "cash": 737.34,
       "buying_power": 737.34,
       "positions": [
@@ -5437,10 +5437,10 @@
           "ticker": "HIMS",
           "qty": 3.0,
           "avg_cost": 24.5,
-          "current_price": 24.95,
-          "market_value": 74.85,
-          "unrealized_pl": 1.35,
-          "unrealized_pl_pct": 1.8370000000000002,
+          "current_price": 24.8,
+          "market_value": 74.4,
+          "unrealized_pl": 0.9,
+          "unrealized_pl_pct": 1.224,
           "sector": "Healthcare",
           "industry": "Drug Manufacturers - Specialty & Generic"
         },
@@ -5448,10 +5448,10 @@
           "ticker": "IOVA",
           "qty": 43.0,
           "avg_cost": 2.71,
-          "current_price": 3.9,
-          "market_value": 167.7,
-          "unrealized_pl": 51.17,
-          "unrealized_pl_pct": 43.911,
+          "current_price": 3.8906,
+          "market_value": 167.2958,
+          "unrealized_pl": 50.7658,
+          "unrealized_pl_pct": 43.565,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -5459,17 +5459,17 @@
           "ticker": "NTLA",
           "qty": 11.0,
           "avg_cost": 13.16,
-          "current_price": 13.49,
-          "market_value": 148.39,
-          "unrealized_pl": 3.63,
-          "unrealized_pl_pct": 2.508,
+          "current_price": 13.4623,
+          "market_value": 148.0853,
+          "unrealized_pl": 3.3253,
+          "unrealized_pl_pct": 2.297,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Gemini": {
-      "equity": 900.11,
+      "equity": 900.35,
       "cash": 617.03,
       "buying_power": 617.03,
       "positions": [
@@ -5477,17 +5477,17 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 23.59,
-          "market_value": 283.08,
-          "unrealized_pl": -15.459996,
-          "unrealized_pl_pct": -5.179,
+          "current_price": 23.61,
+          "market_value": 283.32,
+          "unrealized_pl": -15.219996,
+          "unrealized_pl_pct": -5.098,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         }
       ]
     },
     "Claude": {
-      "equity": 839.32,
+      "equity": 838.42,
       "cash": 533.52,
       "buying_power": 428.82,
       "positions": [
@@ -5506,10 +5506,10 @@
           "ticker": "HIMS",
           "qty": 5.0,
           "avg_cost": 25.978,
-          "current_price": 24.95,
-          "market_value": 124.75,
-          "unrealized_pl": -5.14,
-          "unrealized_pl_pct": -3.9570000000000003,
+          "current_price": 24.8,
+          "market_value": 124.0,
+          "unrealized_pl": -5.89,
+          "unrealized_pl_pct": -4.535,
           "sector": "Healthcare",
           "industry": "Drug Manufacturers - Specialty & Generic"
         },
@@ -5517,17 +5517,17 @@
           "ticker": "IOVA",
           "qty": 16.0,
           "avg_cost": 3.773125,
-          "current_price": 3.9,
-          "market_value": 62.4,
-          "unrealized_pl": 2.03,
-          "unrealized_pl_pct": 3.363,
+          "current_price": 3.8906,
+          "market_value": 62.2496,
+          "unrealized_pl": 1.8796,
+          "unrealized_pl_pct": 3.113,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Perplexity": {
-      "equity": 1004.97,
+      "equity": 1005.61,
       "cash": 862.85,
       "buying_power": 862.85,
       "positions": [
@@ -5535,10 +5535,10 @@
           "ticker": "VKTX",
           "qty": 4.0,
           "avg_cost": 36.59,
-          "current_price": 35.53,
-          "market_value": 142.12,
-          "unrealized_pl": -4.24,
-          "unrealized_pl_pct": -2.897,
+          "current_price": 35.69,
+          "market_value": 142.76,
+          "unrealized_pl": -3.6,
+          "unrealized_pl_pct": -2.46,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
