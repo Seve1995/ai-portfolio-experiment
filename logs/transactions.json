@@ -188,15 +188,6 @@
       "timestamp": "2026-01-26T14:30:38.798209+00:00",
       "type": "market",
       "id": "2653f0c7-96b8-45c8-a4e9-161f2ea1a000"
-    },
-    {
-      "symbol": "SMCI",
-      "side": "buy",
-      "qty": 7.0,
-      "price": 32.0,
-      "timestamp": "2026-01-21T16:31:11.479701+00:00",
-      "type": "limit",
-      "id": "7ded684f-9a17-4a5d-b165-b251cbeba374"
     }
   ],
   "Gemini": [
@@ -516,15 +507,6 @@
       "timestamp": "2026-02-17T16:16:41.284154+00:00",
       "type": "limit",
       "id": "defcea7a-4295-4dc3-b6b7-274443a1d99a"
-    },
-    {
-      "symbol": "APLD",
-      "side": "buy",
-      "qty": 3.0,
-      "price": 34.196667,
-      "timestamp": "2026-02-17T14:32:53.553644+00:00",
-      "type": "limit",
-      "id": "c2bb807a-b45d-4993-91e2-f629e2545d57"
     }
   ],
   "Perplexity": [
