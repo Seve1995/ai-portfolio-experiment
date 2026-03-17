@@ -1,6 +1,15 @@
 {
   "ChatGPT": [
     {
+      "symbol": "HIMS",
+      "side": "buy",
+      "qty": 3.0,
+      "price": 24.5,
+      "timestamp": "2026-03-17T13:31:16.640521+00:00",
+      "type": "limit",
+      "id": "ae299e7f-c6bf-4c27-a36a-f58efc145134"
+    },
+    {
       "symbol": "ANAB",
       "side": "sell",
       "qty": 2.0,
@@ -364,6 +373,15 @@
     }
   ],
   "Claude": [
+    {
+      "symbol": "ACHC",
+      "side": "buy",
+      "qty": 5.0,
+      "price": 22.904,
+      "timestamp": "2026-03-17T13:32:25.090086+00:00",
+      "type": "limit",
+      "id": "8d3d7807-ab2b-4c2a-a7ed-d77889718bca"
+    },
     {
       "symbol": "NTLA",
       "side": "sell",
