@@ -383,6 +383,15 @@
       "id": "8d3d7807-ab2b-4c2a-a7ed-d77889718bca"
     },
     {
+      "symbol": "VKTX",
+      "side": "buy",
+      "qty": 3.0,
+      "price": 34.9,
+      "timestamp": "2026-03-18T13:39:57.489516+00:00",
+      "type": "limit",
+      "id": "4e4055f4-1ac5-439d-b782-08a032b9e145"
+    },
+    {
       "symbol": "NTLA",
       "side": "sell",
       "qty": 4.0,
