@@ -15,7 +15,7 @@
    • HIMS: 3 shares @ $24.50 (Current: $22.49)
 
 📝 Open Orders:
-   • HIMS: STOP SELL 3 shares Stop @ $18.90 (new)
+   (No open orders)
 
 ==================================================
 
@@ -31,11 +31,10 @@
 🔎 Found 3 trade(s) (Markdown table).
 
 📉 PROCESSING SELL: HIMS
-   🧹 Clearing 1 active order(s) for HIMS before selling.
    ✅ SELL submitted for HIMS
 
 🚫 PROCESSING CANCEL: HIMS
    🧹 Cancelling 1 active order(s) for HIMS...
-   ✅ Cancelled order 4d7ed158-c25c-4398-bd7f-94e6fd0c959c
+   ✅ Cancelled order b2f4bec2-b3e4-4ef6-87b1-5d840d7eff90
    ✅ All orders for HIMS successfully cancelled.
 ```
