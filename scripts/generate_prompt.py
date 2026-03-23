@@ -32,7 +32,7 @@ def fetch_all_market_data(symbols: list) -> dict:
     Fetches data for all holdings + Macro tickers in one go.
     Returns a dict of DataFrames keyed by symbol.
     """
-    macro_tickers = ["^TNX", "DX=F", "UUP"]
+    macro_tickers = ["^TNX", "UUP"]
     all_tickers = list(set(symbols + macro_tickers))
     
     if not all_tickers:
