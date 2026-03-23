@@ -5900,7 +5900,7 @@
   },
   "2026-03-23": {
     "ChatGPT": {
-      "equity": 1103.56,
+      "equity": 1102.49,
       "cash": 1035.29,
       "buying_power": 1035.29,
       "positions": [
@@ -5908,17 +5908,17 @@
           "ticker": "HIMS",
           "qty": 3.0,
           "avg_cost": 24.5,
-          "current_price": 22.755,
-          "market_value": 68.265,
-          "unrealized_pl": -5.235,
-          "unrealized_pl_pct": -7.122000000000001,
+          "current_price": 22.4,
+          "market_value": 67.2,
+          "unrealized_pl": -6.3,
+          "unrealized_pl_pct": -8.571,
           "sector": "Healthcare",
           "industry": "Drug Manufacturers - Specialty & Generic"
         }
       ]
     },
     "Gemini": {
-      "equity": 894.24,
+      "equity": 893.58,
       "cash": 498.22,
       "buying_power": 498.22,
       "positions": [
@@ -5926,10 +5926,10 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 23.01,
-          "market_value": 276.12,
-          "unrealized_pl": -22.419996,
-          "unrealized_pl_pct": -7.51,
+          "current_price": 22.9,
+          "market_value": 274.8,
+          "unrealized_pl": -23.739996,
+          "unrealized_pl_pct": -7.951999999999999,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         },
@@ -5937,17 +5937,17 @@
           "ticker": "TDOC",
           "qty": 22.0,
           "avg_cost": 5.4,
-          "current_price": 5.45,
-          "market_value": 119.9,
-          "unrealized_pl": 1.1,
-          "unrealized_pl_pct": 0.9259999999999999,
+          "current_price": 5.48,
+          "market_value": 120.56,
+          "unrealized_pl": 1.76,
+          "unrealized_pl_pct": 1.481,
           "sector": "Healthcare",
           "industry": "Health Information Services"
         }
       ]
     },
     "Claude": {
-      "equity": 814.99,
+      "equity": 812.28,
       "cash": 428.82,
       "buying_power": 338.82,
       "positions": [
@@ -5955,10 +5955,10 @@
           "ticker": "ACHC",
           "qty": 5.0,
           "avg_cost": 22.904,
-          "current_price": 23.065,
-          "market_value": 115.325,
-          "unrealized_pl": 0.805,
-          "unrealized_pl_pct": 0.703,
+          "current_price": 23.18,
+          "market_value": 115.9,
+          "unrealized_pl": 1.38,
+          "unrealized_pl_pct": 1.205,
           "sector": "Healthcare",
           "industry": "Medical Care Facilities"
         },
@@ -5966,10 +5966,10 @@
           "ticker": "HIMS",
           "qty": 5.0,
           "avg_cost": 25.978,
-          "current_price": 22.755,
-          "market_value": 113.775,
-          "unrealized_pl": -16.115,
-          "unrealized_pl_pct": -12.407,
+          "current_price": 22.4,
+          "market_value": 112.0,
+          "unrealized_pl": -17.89,
+          "unrealized_pl_pct": -13.773,
           "sector": "Healthcare",
           "industry": "Drug Manufacturers - Specialty & Generic"
         },
@@ -5977,10 +5977,10 @@
           "ticker": "IOVA",
           "qty": 16.0,
           "avg_cost": 3.773125,
-          "current_price": 3.66,
-          "market_value": 58.56,
-          "unrealized_pl": -1.81,
-          "unrealized_pl_pct": -2.9979999999999998,
+          "current_price": 3.63,
+          "market_value": 58.08,
+          "unrealized_pl": -2.29,
+          "unrealized_pl_pct": -3.7929999999999997,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         },
@@ -5988,10 +5988,10 @@
           "ticker": "VKTX",
           "qty": 3.0,
           "avg_cost": 34.9,
-          "current_price": 32.835,
-          "market_value": 98.505,
-          "unrealized_pl": -6.195,
-          "unrealized_pl_pct": -5.917,
+          "current_price": 32.4919,
+          "market_value": 97.4757,
+          "unrealized_pl": -7.2243,
+          "unrealized_pl_pct": -6.9,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
