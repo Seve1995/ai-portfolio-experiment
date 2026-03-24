@@ -6006,7 +6006,7 @@
   },
   "2026-03-24": {
     "ChatGPT": {
-      "equity": 1100.2,
+      "equity": 1099.97,
       "cash": 1035.29,
       "buying_power": 1035.29,
       "positions": [
@@ -6014,17 +6014,17 @@
           "ticker": "HIMS",
           "qty": 3.0,
           "avg_cost": 24.5,
-          "current_price": 21.6381,
-          "market_value": 64.9143,
-          "unrealized_pl": -8.5857,
-          "unrealized_pl_pct": -11.681,
+          "current_price": 21.56,
+          "market_value": 64.68,
+          "unrealized_pl": -8.82,
+          "unrealized_pl_pct": -12.0,
           "sector": "Healthcare",
           "industry": "Drug Manufacturers - Specialty & Generic"
         }
       ]
     },
     "Gemini": {
-      "equity": 887.97,
+      "equity": 887.57,
       "cash": 361.37,
       "buying_power": 361.37,
       "positions": [
@@ -6032,10 +6032,10 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 22.6,
-          "market_value": 271.2,
-          "unrealized_pl": -27.339996,
-          "unrealized_pl_pct": -9.158,
+          "current_price": 22.7,
+          "market_value": 272.4,
+          "unrealized_pl": -26.139996,
+          "unrealized_pl_pct": -8.756,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         },
@@ -6043,10 +6043,10 @@
           "ticker": "TDOC",
           "qty": 22.0,
           "avg_cost": 5.4,
-          "current_price": 5.5,
-          "market_value": 121.0,
-          "unrealized_pl": 2.2,
-          "unrealized_pl_pct": 1.8519999999999999,
+          "current_price": 5.4,
+          "market_value": 118.8,
+          "unrealized_pl": 0.0,
+          "unrealized_pl_pct": 0.0,
           "sector": "Healthcare",
           "industry": "Health Information Services"
         },
@@ -6054,17 +6054,17 @@
           "ticker": "UPST",
           "qty": 5.0,
           "avg_cost": 27.37,
-          "current_price": 26.88,
-          "market_value": 134.4,
-          "unrealized_pl": -2.45,
-          "unrealized_pl_pct": -1.79,
+          "current_price": 27.0,
+          "market_value": 135.0,
+          "unrealized_pl": -1.85,
+          "unrealized_pl_pct": -1.352,
           "sector": "Financial Services",
           "industry": "Credit Services"
         }
       ]
     },
     "Claude": {
-      "equity": 807.04,
+      "equity": 806.77,
       "cash": 548.92,
       "buying_power": 548.92,
       "positions": [
@@ -6094,10 +6094,10 @@
           "ticker": "VKTX",
           "qty": 3.0,
           "avg_cost": 34.9,
-          "current_price": 32.39,
-          "market_value": 97.17,
-          "unrealized_pl": -7.53,
-          "unrealized_pl_pct": -7.192,
+          "current_price": 32.3,
+          "market_value": 96.9,
+          "unrealized_pl": -7.8,
+          "unrealized_pl_pct": -7.449999999999999,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
