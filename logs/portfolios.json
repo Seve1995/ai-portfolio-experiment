@@ -6112,7 +6112,7 @@
   },
   "2026-03-25": {
     "ChatGPT": {
-      "equity": 1097.84,
+      "equity": 1097.63,
       "cash": 1035.29,
       "buying_power": 1035.29,
       "positions": [
@@ -6120,17 +6120,17 @@
           "ticker": "HIMS",
           "qty": 3.0,
           "avg_cost": 24.5,
-          "current_price": 20.85,
-          "market_value": 62.55,
-          "unrealized_pl": -10.95,
-          "unrealized_pl_pct": -14.898,
+          "current_price": 20.78,
+          "market_value": 62.34,
+          "unrealized_pl": -11.16,
+          "unrealized_pl_pct": -15.184000000000001,
           "sector": "Healthcare",
           "industry": "Drug Manufacturers - Specialty & Generic"
         }
       ]
     },
     "Gemini": {
-      "equity": 891.32,
+      "equity": 891.29,
       "cash": 361.37,
       "buying_power": 361.37,
       "positions": [
@@ -6138,10 +6138,10 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 23.08,
-          "market_value": 276.96,
-          "unrealized_pl": -21.579996,
-          "unrealized_pl_pct": -7.228999999999999,
+          "current_price": 23.09,
+          "market_value": 277.08,
+          "unrealized_pl": -21.459996,
+          "unrealized_pl_pct": -7.188,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         },
@@ -6160,17 +6160,17 @@
           "ticker": "UPST",
           "qty": 5.0,
           "avg_cost": 27.37,
-          "current_price": 26.09,
-          "market_value": 130.45,
-          "unrealized_pl": -6.4,
-          "unrealized_pl_pct": -4.677,
+          "current_price": 26.06,
+          "market_value": 130.3,
+          "unrealized_pl": -6.55,
+          "unrealized_pl_pct": -4.786,
           "sector": "Financial Services",
           "industry": "Credit Services"
         }
       ]
     },
     "Claude": {
-      "equity": 821.47,
+      "equity": 821.59,
       "cash": 548.91,
       "buying_power": 548.91,
       "positions": [
@@ -6189,10 +6189,10 @@
           "ticker": "SEDG",
           "qty": 1.0,
           "avg_cost": 46.5,
-          "current_price": 51.41,
-          "market_value": 51.41,
-          "unrealized_pl": 4.91,
-          "unrealized_pl_pct": 10.559000000000001,
+          "current_price": 51.29,
+          "market_value": 51.29,
+          "unrealized_pl": 4.79,
+          "unrealized_pl_pct": 10.301,
           "sector": "Technology",
           "industry": "Solar"
         },
@@ -6200,10 +6200,10 @@
           "ticker": "VKTX",
           "qty": 3.0,
           "avg_cost": 34.9,
-          "current_price": 33.2,
-          "market_value": 99.6,
-          "unrealized_pl": -5.1,
-          "unrealized_pl_pct": -4.871,
+          "current_price": 33.2786,
+          "market_value": 99.8358,
+          "unrealized_pl": -4.8642,
+          "unrealized_pl_pct": -4.646,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
