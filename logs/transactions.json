@@ -170,27 +170,18 @@
       "timestamp": "2026-01-28T18:53:52.660433+00:00",
       "type": "stop",
       "id": "28289833-5d02-4cc8-b90e-92a019e6ed4e"
-    },
-    {
-      "symbol": "RXRX",
-      "side": "sell",
-      "qty": 14.0,
-      "price": 4.444286,
-      "timestamp": "2026-01-28T19:29:41.664730+00:00",
-      "type": "stop",
-      "id": "c563927f-ab93-43ac-96df-6a5a43ce4861"
-    },
-    {
-      "symbol": "CLSK",
-      "side": "sell",
-      "qty": 14.0,
-      "price": 12.74,
-      "timestamp": "2026-01-26T14:32:53.630990+00:00",
-      "type": "stop",
-      "id": "6b973f25-8399-4c45-9ec8-bd24de3b7348"
     }
   ],
   "Gemini": [
+    {
+      "symbol": "UPST",
+      "side": "buy",
+      "qty": 5.0,
+      "price": 27.37,
+      "timestamp": "2026-03-24T13:31:53.279118+00:00",
+      "type": "limit",
+      "id": "cca1c486-06de-4fe0-93ab-da40085d93f3"
+    },
     {
       "symbol": "TDOC",
       "side": "buy",
@@ -352,36 +343,36 @@
       "timestamp": "2026-01-30T18:27:59.720867+00:00",
       "type": "limit",
       "id": "f3004136-714c-421b-809c-c570b1895392"
-    },
-    {
-      "symbol": "BBAI",
-      "side": "sell",
-      "qty": 41.0,
-      "price": 5.75,
-      "timestamp": "2026-01-29T14:56:14.814308+00:00",
-      "type": "stop",
-      "id": "d07e15f3-0d27-4275-b80e-998313afe512"
-    },
-    {
-      "symbol": "BBAI",
-      "side": "buy",
-      "qty": 41.0,
-      "price": 5.886098,
-      "timestamp": "2026-01-29T14:33:06.271841+00:00",
-      "type": "limit",
-      "id": "b2ac3257-18a9-4cea-ba87-d33f73500d64"
-    },
-    {
-      "symbol": "CORZ",
-      "side": "sell",
-      "qty": 10.0,
-      "price": 19.32,
-      "timestamp": "2026-01-29T14:32:02.033501+00:00",
-      "type": "market",
-      "id": "64ce5c11-65b6-4d2b-b154-e9a4924ab16f"
     }
   ],
   "Claude": [
+    {
+      "symbol": "HIMS",
+      "side": "sell",
+      "qty": 5.0,
+      "price": 22.1,
+      "timestamp": "2026-03-24T13:31:40.170846+00:00",
+      "type": "market",
+      "id": "c5d9c7d0-51be-4cff-b5a6-8dc75c4d08b8"
+    },
+    {
+      "symbol": "SEDG",
+      "side": "buy",
+      "qty": 1.0,
+      "price": 46.5,
+      "timestamp": "2026-03-24T13:31:08.162650+00:00",
+      "type": "limit",
+      "id": "9f74852e-6848-4939-9154-79c48737145c"
+    },
+    {
+      "symbol": "IOVA",
+      "side": "sell",
+      "qty": 16.0,
+      "price": 3.50625,
+      "timestamp": "2026-03-24T13:41:26.744905+00:00",
+      "type": "stop",
+      "id": "880017e2-cf2b-4194-a4e6-dce0f0a864ae"
+    },
     {
       "symbol": "ACHC",
       "side": "buy",
@@ -516,24 +507,6 @@
       "timestamp": "2026-02-27T14:34:27.482754+00:00",
       "type": "stop",
       "id": "34d75f05-d391-4fdc-9e9f-d1ce88a06fda"
-    },
-    {
-      "symbol": "APLD",
-      "side": "sell",
-      "qty": 3.0,
-      "price": 30.873333,
-      "timestamp": "2026-02-20T14:32:00.377620+00:00",
-      "type": "market",
-      "id": "e78eabd3-9faf-42ef-bb00-974265412134"
-    },
-    {
-      "symbol": "NVAX",
-      "side": "buy",
-      "qty": 10.0,
-      "price": 8.64,
-      "timestamp": "2026-02-17T16:16:41.284154+00:00",
-      "type": "limit",
-      "id": "defcea7a-4295-4dc3-b6b7-274443a1d99a"
     }
   ],
   "Perplexity": [
