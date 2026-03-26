@@ -1,6 +1,15 @@
 {
   "ChatGPT": [
     {
+      "symbol": "HIMS",
+      "side": "sell",
+      "qty": 3.0,
+      "price": 20.456667,
+      "timestamp": "2026-03-26T13:31:51.554376+00:00",
+      "type": "market",
+      "id": "f88b699c-6476-4880-b004-d0599d9cbfdc"
+    },
+    {
       "symbol": "NTLA",
       "side": "sell",
       "qty": 11.0,
@@ -174,6 +183,15 @@
   ],
   "Gemini": [
     {
+      "symbol": "HIMS",
+      "side": "buy",
+      "qty": 6.0,
+      "price": 20.486667,
+      "timestamp": "2026-03-26T13:31:42.812351+00:00",
+      "type": "limit",
+      "id": "1f75cb5b-8790-4eb9-9f7d-5e0f8925c630"
+    },
+    {
       "symbol": "UPST",
       "side": "buy",
       "qty": 5.0,
@@ -307,42 +325,6 @@
       "timestamp": "2026-02-09T14:34:30.926136+00:00",
       "type": "limit",
       "id": "84cb7808-394b-4a4e-a3bc-605d2c8f754f"
-    },
-    {
-      "symbol": "APLD",
-      "side": "sell",
-      "qty": 3.0,
-      "price": 29.28,
-      "timestamp": "2026-02-05T17:10:55.804326+00:00",
-      "type": "stop",
-      "id": "c72024fc-1b80-4c84-b3d6-ace875f751cc"
-    },
-    {
-      "symbol": "APLD",
-      "side": "buy",
-      "qty": 3.0,
-      "price": 29.9,
-      "timestamp": "2026-02-05T16:29:24.953717+00:00",
-      "type": "limit",
-      "id": "5da9afeb-2517-4733-8ffb-f883df6ec91f"
-    },
-    {
-      "symbol": "RXRX",
-      "side": "sell",
-      "qty": 30.0,
-      "price": 4.21,
-      "timestamp": "2026-02-03T15:09:42.532025+00:00",
-      "type": "market",
-      "id": "2f7343dd-2a5d-467c-9053-5fa577909a7a"
-    },
-    {
-      "symbol": "RXRX",
-      "side": "buy",
-      "qty": 30.0,
-      "price": 4.22,
-      "timestamp": "2026-01-30T18:27:59.720867+00:00",
-      "type": "limit",
-      "id": "f3004136-714c-421b-809c-c570b1895392"
     }
   ],
   "Claude": [
@@ -498,18 +480,18 @@
       "timestamp": "2026-03-03T15:22:21.155172+00:00",
       "type": "stop",
       "id": "f0f414a2-8b8a-4d8c-88e7-7286792e8fe5"
-    },
-    {
-      "symbol": "ENPH",
-      "side": "sell",
-      "qty": 3.0,
-      "price": 43.676667,
-      "timestamp": "2026-02-27T14:34:27.482754+00:00",
-      "type": "stop",
-      "id": "34d75f05-d391-4fdc-9e9f-d1ce88a06fda"
     }
   ],
   "Perplexity": [
+    {
+      "symbol": "VKTX",
+      "side": "buy",
+      "qty": 6.0,
+      "price": 32.98,
+      "timestamp": "2026-03-26T13:32:24.127228+00:00",
+      "type": "limit",
+      "id": "5fa222e5-2531-4e03-b95f-7d17b4578142"
+    },
     {
       "symbol": "VKTX",
       "side": "sell",
