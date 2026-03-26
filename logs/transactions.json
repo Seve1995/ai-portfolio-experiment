@@ -1,6 +1,15 @@
 {
   "ChatGPT": [
     {
+      "symbol": "RCKT",
+      "side": "buy",
+      "qty": 71.0,
+      "price": 4.68,
+      "timestamp": "2026-03-26T19:10:19.168354+00:00",
+      "type": "limit",
+      "id": "47581cfe-191f-4063-ab46-7d22e73fa44a"
+    },
+    {
       "symbol": "HIMS",
       "side": "sell",
       "qty": 3.0,
