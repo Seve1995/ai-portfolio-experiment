@@ -2,6 +2,15 @@
   "ChatGPT": [
     {
       "symbol": "RCKT",
+      "side": "sell",
+      "qty": 71.0,
+      "price": 4.140423,
+      "timestamp": "2026-03-27T13:33:17.773028+00:00",
+      "type": "stop",
+      "id": "a0edaacd-f065-4b2a-aebc-4420265aa322"
+    },
+    {
+      "symbol": "RCKT",
       "side": "buy",
       "qty": 71.0,
       "price": 4.68,
@@ -179,15 +188,6 @@
       "timestamp": "2026-02-03T14:47:06.709769+00:00",
       "type": "market",
       "id": "a3aec3c0-fc28-46ea-8cff-11fe79ffe6f2"
-    },
-    {
-      "symbol": "SLS",
-      "side": "sell",
-      "qty": 29.0,
-      "price": 4.06,
-      "timestamp": "2026-01-28T18:53:52.660433+00:00",
-      "type": "stop",
-      "id": "28289833-5d02-4cc8-b90e-92a019e6ed4e"
     }
   ],
   "Gemini": [
