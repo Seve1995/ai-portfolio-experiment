@@ -6353,40 +6353,29 @@
       "positions": []
     },
     "Gemini": {
-      "equity": 864.65,
-      "cash": 238.45,
-      "buying_power": 238.45,
+      "equity": 859.64,
+      "cash": 354.82,
+      "buying_power": 354.82,
       "positions": [
         {
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 22.4697,
-          "market_value": 269.6364,
-          "unrealized_pl": -28.903596,
-          "unrealized_pl_pct": -9.682,
+          "current_price": 22.24,
+          "market_value": 266.88,
+          "unrealized_pl": -31.659996,
+          "unrealized_pl_pct": -10.605,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
-        },
-        {
-          "ticker": "HIMS",
-          "qty": 6.0,
-          "avg_cost": 20.486667,
-          "current_price": 19.635,
-          "market_value": 117.81,
-          "unrealized_pl": -5.110002,
-          "unrealized_pl_pct": -4.157,
-          "sector": "Healthcare",
-          "industry": "Drug Manufacturers - Specialty & Generic"
         },
         {
           "ticker": "TDOC",
           "qty": 22.0,
           "avg_cost": 5.4,
-          "current_price": 5.175,
-          "market_value": 113.85,
-          "unrealized_pl": -4.95,
-          "unrealized_pl_pct": -4.167,
+          "current_price": 5.195,
+          "market_value": 114.29,
+          "unrealized_pl": -4.51,
+          "unrealized_pl_pct": -3.7960000000000003,
           "sector": "Healthcare",
           "industry": "Health Information Services"
         },
@@ -6394,17 +6383,17 @@
           "ticker": "UPST",
           "qty": 5.0,
           "avg_cost": 27.37,
-          "current_price": 24.98,
-          "market_value": 124.9,
-          "unrealized_pl": -11.95,
-          "unrealized_pl_pct": -8.732,
+          "current_price": 24.73,
+          "market_value": 123.65,
+          "unrealized_pl": -13.2,
+          "unrealized_pl_pct": -9.646,
           "sector": "Financial Services",
           "industry": "Credit Services"
         }
       ]
     },
     "Claude": {
-      "equity": 813.69,
+      "equity": 812.8,
       "cash": 548.91,
       "buying_power": 461.91,
       "positions": [
@@ -6412,10 +6401,10 @@
           "ticker": "ACHC",
           "qty": 5.0,
           "avg_cost": 22.904,
-          "current_price": 23.02,
-          "market_value": 115.1,
-          "unrealized_pl": 0.58,
-          "unrealized_pl_pct": 0.506,
+          "current_price": 22.97,
+          "market_value": 114.85,
+          "unrealized_pl": 0.33,
+          "unrealized_pl_pct": 0.28800000000000003,
           "sector": "Healthcare",
           "industry": "Medical Care Facilities"
         },
@@ -6423,10 +6412,10 @@
           "ticker": "SEDG",
           "qty": 1.0,
           "avg_cost": 46.5,
-          "current_price": 51.79,
-          "market_value": 51.79,
-          "unrealized_pl": 5.29,
-          "unrealized_pl_pct": 11.376,
+          "current_price": 51.1775,
+          "market_value": 51.1775,
+          "unrealized_pl": 4.6775,
+          "unrealized_pl_pct": 10.059,
           "sector": "Technology",
           "industry": "Solar"
         },
@@ -6434,17 +6423,17 @@
           "ticker": "VKTX",
           "qty": 3.0,
           "avg_cost": 34.9,
-          "current_price": 32.63,
-          "market_value": 97.89,
-          "unrealized_pl": -6.81,
-          "unrealized_pl_pct": -6.5040000000000004,
+          "current_price": 32.62,
+          "market_value": 97.86,
+          "unrealized_pl": -6.84,
+          "unrealized_pl_pct": -6.5329999999999995,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }
       ]
     },
     "Perplexity": {
-      "equity": 986.7,
+      "equity": 986.64,
       "cash": 790.92,
       "buying_power": 558.42,
       "positions": [
@@ -6452,10 +6441,10 @@
           "ticker": "VKTX",
           "qty": 6.0,
           "avg_cost": 32.98,
-          "current_price": 32.63,
-          "market_value": 195.78,
-          "unrealized_pl": -2.1,
-          "unrealized_pl_pct": -1.061,
+          "current_price": 32.62,
+          "market_value": 195.72,
+          "unrealized_pl": -2.16,
+          "unrealized_pl_pct": -1.0919999999999999,
           "sector": "Healthcare",
           "industry": "Biotechnology"
         }

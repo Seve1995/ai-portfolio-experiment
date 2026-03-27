@@ -193,6 +193,15 @@
   "Gemini": [
     {
       "symbol": "HIMS",
+      "side": "sell",
+      "qty": 6.0,
+      "price": 19.395,
+      "timestamp": "2026-03-27T17:27:03.416213+00:00",
+      "type": "stop",
+      "id": "3f12d6ca-7943-4c84-b5b8-deb9fee39097"
+    },
+    {
+      "symbol": "HIMS",
       "side": "buy",
       "qty": 6.0,
       "price": 20.486667,
@@ -325,15 +334,6 @@
       "timestamp": "2026-02-09T14:32:04.011683+00:00",
       "type": "limit",
       "id": "aa7b5cda-7621-46d4-8c3c-082c3cc7aac0"
-    },
-    {
-      "symbol": "GME",
-      "side": "buy",
-      "qty": 12.0,
-      "price": 24.878334,
-      "timestamp": "2026-02-09T14:34:30.926136+00:00",
-      "type": "limit",
-      "id": "84cb7808-394b-4a4e-a3bc-605d2c8f754f"
     }
   ],
   "Claude": [
