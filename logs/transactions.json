@@ -374,6 +374,15 @@
       "id": "880017e2-cf2b-4194-a4e6-dce0f0a864ae"
     },
     {
+      "symbol": "VKTX",
+      "side": "sell",
+      "qty": 3.0,
+      "price": 30.46,
+      "timestamp": "2026-03-30T17:27:09.346805+00:00",
+      "type": "stop",
+      "id": "2255e836-27ad-4237-b21f-06d4a9ef81a9"
+    },
+    {
       "symbol": "ACHC",
       "side": "buy",
       "qty": 5.0,
