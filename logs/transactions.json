@@ -347,6 +347,15 @@
   ],
   "Claude": [
     {
+      "symbol": "SEDG",
+      "side": "sell",
+      "qty": 1.0,
+      "price": 45.8,
+      "timestamp": "2026-03-30T19:27:19.154810+00:00",
+      "type": "stop",
+      "id": "e75f0420-e20f-4fa1-860b-5b05ae1c1833"
+    },
+    {
       "symbol": "HIMS",
       "side": "sell",
       "qty": 5.0,
@@ -498,15 +507,6 @@
       "timestamp": "2026-02-26T14:34:12.561995+00:00",
       "type": "limit",
       "id": "f04f56d5-8f69-4d61-99bc-5827096fb7b7"
-    },
-    {
-      "symbol": "WULF",
-      "side": "sell",
-      "qty": 4.0,
-      "price": 14.49,
-      "timestamp": "2026-03-03T15:22:21.155172+00:00",
-      "type": "stop",
-      "id": "f0f414a2-8b8a-4d8c-88e7-7286792e8fe5"
     }
   ],
   "Perplexity": [
