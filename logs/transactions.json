@@ -201,6 +201,15 @@
       "id": "3f12d6ca-7943-4c84-b5b8-deb9fee39097"
     },
     {
+      "symbol": "TDOC",
+      "side": "sell",
+      "qty": 22.0,
+      "price": 5.07,
+      "timestamp": "2026-03-30T14:36:52.102021+00:00",
+      "type": "stop",
+      "id": "12cd54a2-2b04-4b0a-8e46-ac97145bdea8"
+    },
+    {
       "symbol": "HIMS",
       "side": "buy",
       "qty": 6.0,

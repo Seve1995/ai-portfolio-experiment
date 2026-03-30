@@ -6450,5 +6450,100 @@
         }
       ]
     }
+  },
+  "2026-03-30": {
+    "ChatGPT": {
+      "equity": 1058.32,
+      "cash": 1058.32,
+      "buying_power": 1058.32,
+      "positions": []
+    },
+    "Gemini": {
+      "equity": 856.65,
+      "cash": 466.35,
+      "buying_power": 466.35,
+      "positions": [
+        {
+          "ticker": "GME",
+          "qty": 12.0,
+          "avg_cost": 24.878333,
+          "current_price": 22.2,
+          "market_value": 266.4,
+          "unrealized_pl": -32.139996,
+          "unrealized_pl_pct": -10.766,
+          "sector": "Consumer Cyclical",
+          "industry": "Specialty Retail"
+        },
+        {
+          "ticker": "UPST",
+          "qty": 5.0,
+          "avg_cost": 27.37,
+          "current_price": 24.78,
+          "market_value": 123.9,
+          "unrealized_pl": -12.95,
+          "unrealized_pl_pct": -9.463000000000001,
+          "sector": "Financial Services",
+          "industry": "Credit Services"
+        }
+      ]
+    },
+    "Claude": {
+      "equity": 807.55,
+      "cash": 548.91,
+      "buying_power": 461.91,
+      "positions": [
+        {
+          "ticker": "ACHC",
+          "qty": 5.0,
+          "avg_cost": 22.904,
+          "current_price": 22.955,
+          "market_value": 114.775,
+          "unrealized_pl": 0.255,
+          "unrealized_pl_pct": 0.22300000000000003,
+          "sector": "Healthcare",
+          "industry": "Medical Care Facilities"
+        },
+        {
+          "ticker": "SEDG",
+          "qty": 1.0,
+          "avg_cost": 46.5,
+          "current_price": 49.335,
+          "market_value": 49.335,
+          "unrealized_pl": 2.835,
+          "unrealized_pl_pct": 6.097,
+          "sector": "Technology",
+          "industry": "Solar"
+        },
+        {
+          "ticker": "VKTX",
+          "qty": 3.0,
+          "avg_cost": 34.9,
+          "current_price": 31.51,
+          "market_value": 94.53,
+          "unrealized_pl": -10.17,
+          "unrealized_pl_pct": -9.713,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    },
+    "Perplexity": {
+      "equity": 979.98,
+      "cash": 790.92,
+      "buying_power": 558.42,
+      "positions": [
+        {
+          "ticker": "VKTX",
+          "qty": 6.0,
+          "avg_cost": 32.98,
+          "current_price": 31.51,
+          "market_value": 189.06,
+          "unrealized_pl": -8.82,
+          "unrealized_pl_pct": -4.457,
+          "sector": "Healthcare",
+          "industry": "Biotechnology"
+        }
+      ]
+    }
   }
 }
