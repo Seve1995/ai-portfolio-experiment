@@ -6520,7 +6520,7 @@
       "positions": []
     },
     "Gemini": {
-      "equity": 870.86,
+      "equity": 870.76,
       "cash": 466.34,
       "buying_power": 466.34,
       "positions": [
@@ -6528,10 +6528,10 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 23.0019,
-          "market_value": 276.0228,
-          "unrealized_pl": -22.517196,
-          "unrealized_pl_pct": -7.542,
+          "current_price": 22.9935,
+          "market_value": 275.922,
+          "unrealized_pl": -22.617996,
+          "unrealized_pl_pct": -7.576,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         },
@@ -6539,10 +6539,10 @@
           "ticker": "UPST",
           "qty": 5.0,
           "avg_cost": 27.37,
-          "current_price": 25.6992,
-          "market_value": 128.496,
-          "unrealized_pl": -8.354,
-          "unrealized_pl_pct": -6.104,
+          "current_price": 25.6991,
+          "market_value": 128.4955,
+          "unrealized_pl": -8.3545,
+          "unrealized_pl_pct": -6.105,
           "sector": "Financial Services",
           "industry": "Credit Services"
         }
