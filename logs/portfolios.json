@@ -6520,7 +6520,7 @@
       "positions": []
     },
     "Gemini": {
-      "equity": 862.71,
+      "equity": 862.52,
       "cash": 466.34,
       "buying_power": 466.34,
       "positions": [
@@ -6528,10 +6528,10 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 22.66,
-          "market_value": 271.92,
-          "unrealized_pl": -26.619996,
-          "unrealized_pl_pct": -8.917,
+          "current_price": 22.715,
+          "market_value": 272.58,
+          "unrealized_pl": -25.959996,
+          "unrealized_pl_pct": -8.696,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         },
@@ -6539,17 +6539,17 @@
           "ticker": "UPST",
           "qty": 5.0,
           "avg_cost": 27.37,
-          "current_price": 24.89,
-          "market_value": 124.45,
-          "unrealized_pl": -12.4,
-          "unrealized_pl_pct": -9.061,
+          "current_price": 24.72,
+          "market_value": 123.6,
+          "unrealized_pl": -13.25,
+          "unrealized_pl_pct": -9.682,
           "sector": "Financial Services",
           "industry": "Credit Services"
         }
       ]
     },
     "Claude": {
-      "equity": 801.81,
+      "equity": 801.71,
       "cash": 686.08,
       "buying_power": 599.08,
       "positions": [
@@ -6557,10 +6557,10 @@
           "ticker": "ACHC",
           "qty": 5.0,
           "avg_cost": 22.904,
-          "current_price": 23.145,
-          "market_value": 115.725,
-          "unrealized_pl": 1.205,
-          "unrealized_pl_pct": 1.052,
+          "current_price": 23.125,
+          "market_value": 115.625,
+          "unrealized_pl": 1.105,
+          "unrealized_pl_pct": 0.9650000000000001,
           "sector": "Healthcare",
           "industry": "Medical Care Facilities"
         }
