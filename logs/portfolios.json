@@ -6581,7 +6581,7 @@
       "positions": []
     },
     "Gemini": {
-      "equity": 866.01,
+      "equity": 866.33,
       "cash": 466.34,
       "buying_power": 466.34,
       "positions": [
@@ -6589,10 +6589,10 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 22.76,
-          "market_value": 273.12,
-          "unrealized_pl": -25.419996,
-          "unrealized_pl_pct": -8.515,
+          "current_price": 22.77,
+          "market_value": 273.24,
+          "unrealized_pl": -25.299996,
+          "unrealized_pl_pct": -8.475000000000001,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         },
@@ -6600,10 +6600,10 @@
           "ticker": "UPST",
           "qty": 5.0,
           "avg_cost": 27.37,
-          "current_price": 25.31,
-          "market_value": 126.55,
-          "unrealized_pl": -10.3,
-          "unrealized_pl_pct": -7.526,
+          "current_price": 25.35,
+          "market_value": 126.75,
+          "unrealized_pl": -10.1,
+          "unrealized_pl_pct": -7.380000000000001,
           "sector": "Financial Services",
           "industry": "Credit Services"
         }
@@ -6628,7 +6628,7 @@
       ]
     },
     "Perplexity": {
-      "equity": 975.49,
+      "equity": 974.49,
       "cash": 744.49,
       "buying_power": 744.49,
       "positions": [
@@ -6636,10 +6636,10 @@
           "ticker": "PBF",
           "qty": 5.0,
           "avg_cost": 46.47,
-          "current_price": 46.2,
-          "market_value": 231.0,
-          "unrealized_pl": -1.35,
-          "unrealized_pl_pct": -0.581,
+          "current_price": 46.0,
+          "market_value": 230.0,
+          "unrealized_pl": -2.35,
+          "unrealized_pl_pct": -1.011,
           "sector": "Energy",
           "industry": "Oil & Gas Refining & Marketing"
         }
