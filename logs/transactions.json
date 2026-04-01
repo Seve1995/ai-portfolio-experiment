@@ -529,6 +529,15 @@
       "id": "5fa222e5-2531-4e03-b95f-7d17b4578142"
     },
     {
+      "symbol": "PBF",
+      "side": "buy",
+      "qty": 5.0,
+      "price": 46.47,
+      "timestamp": "2026-04-01T13:50:58.684614+00:00",
+      "type": "limit",
+      "id": "c20b7ae7-0575-48f4-adc2-20c3a2979f9e"
+    },
+    {
       "symbol": "VKTX",
       "side": "sell",
       "qty": 4.0,

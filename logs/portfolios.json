@@ -6572,5 +6572,78 @@
       "buying_power": 744.34,
       "positions": []
     }
+  },
+  "2026-04-01": {
+    "ChatGPT": {
+      "equity": 1058.32,
+      "cash": 1058.32,
+      "buying_power": 1058.32,
+      "positions": []
+    },
+    "Gemini": {
+      "equity": 872.13,
+      "cash": 466.34,
+      "buying_power": 466.34,
+      "positions": [
+        {
+          "ticker": "GME",
+          "qty": 12.0,
+          "avg_cost": 24.878333,
+          "current_price": 23.095,
+          "market_value": 277.14,
+          "unrealized_pl": -21.399996,
+          "unrealized_pl_pct": -7.167999999999999,
+          "sector": "Consumer Cyclical",
+          "industry": "Specialty Retail"
+        },
+        {
+          "ticker": "UPST",
+          "qty": 5.0,
+          "avg_cost": 27.37,
+          "current_price": 25.73,
+          "market_value": 128.65,
+          "unrealized_pl": -8.2,
+          "unrealized_pl_pct": -5.992,
+          "sector": "Financial Services",
+          "industry": "Credit Services"
+        }
+      ]
+    },
+    "Claude": {
+      "equity": 806.68,
+      "cash": 686.08,
+      "buying_power": 599.08,
+      "positions": [
+        {
+          "ticker": "ACHC",
+          "qty": 5.0,
+          "avg_cost": 22.904,
+          "current_price": 24.12,
+          "market_value": 120.6,
+          "unrealized_pl": 6.08,
+          "unrealized_pl_pct": 5.309,
+          "sector": "Healthcare",
+          "industry": "Medical Care Facilities"
+        }
+      ]
+    },
+    "Perplexity": {
+      "equity": 975.84,
+      "cash": 744.49,
+      "buying_power": 744.49,
+      "positions": [
+        {
+          "ticker": "PBF",
+          "qty": 5.0,
+          "avg_cost": 46.47,
+          "current_price": 46.27,
+          "market_value": 231.35,
+          "unrealized_pl": -1.0,
+          "unrealized_pl_pct": -0.43,
+          "sector": "Energy",
+          "industry": "Oil & Gas Refining & Marketing"
+        }
+      ]
+    }
   }
 }
