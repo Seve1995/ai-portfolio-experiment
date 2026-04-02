@@ -6654,7 +6654,7 @@
       "positions": []
     },
     "Gemini": {
-      "equity": 874.19,
+      "equity": 873.66,
       "cash": 466.34,
       "buying_power": 466.34,
       "positions": [
@@ -6673,10 +6673,10 @@
           "ticker": "UPST",
           "qty": 5.0,
           "avg_cost": 27.37,
-          "current_price": 25.65,
-          "market_value": 128.25,
-          "unrealized_pl": -8.6,
-          "unrealized_pl_pct": -6.283999999999999,
+          "current_price": 25.5435,
+          "market_value": 127.7175,
+          "unrealized_pl": -9.1325,
+          "unrealized_pl_pct": -6.673,
           "sector": "Financial Services",
           "industry": "Credit Services"
         }
