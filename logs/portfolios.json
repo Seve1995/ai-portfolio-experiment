@@ -6654,7 +6654,7 @@
       "positions": []
     },
     "Gemini": {
-      "equity": 873.76,
+      "equity": 873.54,
       "cash": 466.34,
       "buying_power": 466.34,
       "positions": [
@@ -6662,10 +6662,10 @@
           "ticker": "GME",
           "qty": 12.0,
           "avg_cost": 24.878333,
-          "current_price": 23.285,
-          "market_value": 279.42,
-          "unrealized_pl": -19.119996,
-          "unrealized_pl_pct": -6.404999999999999,
+          "current_price": 23.3,
+          "market_value": 279.6,
+          "unrealized_pl": -18.939996,
+          "unrealized_pl_pct": -6.343999999999999,
           "sector": "Consumer Cyclical",
           "industry": "Specialty Retail"
         },
@@ -6673,17 +6673,17 @@
           "ticker": "UPST",
           "qty": 5.0,
           "avg_cost": 27.37,
-          "current_price": 25.6,
-          "market_value": 128.0,
-          "unrealized_pl": -8.85,
-          "unrealized_pl_pct": -6.4670000000000005,
+          "current_price": 25.52,
+          "market_value": 127.6,
+          "unrealized_pl": -9.25,
+          "unrealized_pl_pct": -6.7589999999999995,
           "sector": "Financial Services",
           "industry": "Credit Services"
         }
       ]
     },
     "Claude": {
-      "equity": 803.93,
+      "equity": 805.88,
       "cash": 686.08,
       "buying_power": 599.08,
       "positions": [
@@ -6691,17 +6691,17 @@
           "ticker": "ACHC",
           "qty": 5.0,
           "avg_cost": 22.904,
-          "current_price": 23.57,
-          "market_value": 117.85,
-          "unrealized_pl": 3.33,
-          "unrealized_pl_pct": 2.9080000000000004,
+          "current_price": 23.96,
+          "market_value": 119.8,
+          "unrealized_pl": 5.28,
+          "unrealized_pl_pct": 4.611,
           "sector": "Healthcare",
           "industry": "Medical Care Facilities"
         }
       ]
     },
     "Perplexity": {
-      "equity": 972.82,
+      "equity": 969.49,
       "cash": 744.49,
       "buying_power": 744.49,
       "positions": [
@@ -6709,10 +6709,10 @@
           "ticker": "PBF",
           "qty": 5.0,
           "avg_cost": 46.47,
-          "current_price": 45.665,
-          "market_value": 228.325,
-          "unrealized_pl": -4.025,
-          "unrealized_pl_pct": -1.7319999999999998,
+          "current_price": 45.0,
+          "market_value": 225.0,
+          "unrealized_pl": -7.35,
+          "unrealized_pl_pct": -3.163,
           "sector": "Energy",
           "industry": "Oil & Gas Refining & Marketing"
         }
