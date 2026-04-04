@@ -2972,7 +2972,8 @@
         }
 
         function processData(data) {
-            const cleanData = data.filter(row => row.Date);
+            let cleanData = data.filter(row => row.Date);
+            cleanData = cleanData.filter(row => row.Date <= '2026-03-31');
             if (cleanData.length === 0) return;
 
             const firstDate = cleanData[0].Date;
@@ -3617,8 +3618,14 @@ https://seve1995.github.io/ai-portfolio-experiment/`;
                     return response.json();
                 })
                 .then(data => {
-                    portfolioData = data;
-                    window.portfolioData = data; // Expose for modal access
+                    const filteredData = {};
+                    Object.keys(data).forEach(date => {
+                        if (date <= '2026-03-31') {
+                            filteredData[date] = data[date];
+                        }
+                    });
+                    portfolioData = filteredData;
+                    window.portfolioData = filteredData; // Expose for modal access
                     populateDateSelector();
                 })
                 .catch(err => {
@@ -3837,7 +3844,13 @@ https://seve1995.github.io/ai-portfolio-experiment/`;
                     return res.json();
                 })
                 .then(data => {
-                    renderActivityFeed(data);
+                    const filteredData = {};
+                    Object.keys(data).forEach(model => {
+                        if (Array.isArray(data[model])) {
+                            filteredData[model] = data[model].filter(tx => tx.timestamp <= '2026-04-01');
+                        }
+                    });
+                    renderActivityFeed(filteredData);
                 })
                 .catch(err => {
                     console.log(err);
