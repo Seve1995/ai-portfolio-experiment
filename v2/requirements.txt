@@ -1,0 +1,29 @@
+# AI Portfolio Experiment V2 — Dependencies
+
+# LLM API clients
+openai>=1.30.0
+anthropic>=0.40.0
+google-genai>=1.0.0
+mistralai>=1.0.0
+
+# MCP
+mcp>=1.0.0
+
+# Financial data
+yfinance>=0.2.40
+pandas>=2.2.0
+pandas-market-calendars>=4.4.0
+fredapi>=0.5.0
+
+# Brave Search (web search tool)
+brave-search>=0.3.0
+
+# Metrics & Analysis
+numpy>=1.26.0
+scipy>=1.14.0
+statsmodels>=0.14.0          # For Fama-French regression
+
+# Utilities
+python-dotenv>=1.0.0
+httpx>=0.27.0                # Async HTTP for URL fetching
+beautifulsoup4>=4.12.0       # HTML sanitization for fetch_url

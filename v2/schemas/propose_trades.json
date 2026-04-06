@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProposeTradesOutput",
+  "description": "Structured output for an AI agent's daily trading decisions. Every trade must include a stop-loss level.",
+  "type": "object",
+  "required": ["trades", "daily_notes"],
+  "properties": {
+    "trades": {
+      "type": "array",
+      "description": "List of proposed trades for today. Empty array means HOLD (no action).",
+      "items": {
+        "type": "object",
+        "required": ["action", "ticker", "allocation_pct", "order_type", "stop_loss_pct", "reason"],
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": ["BUY", "SELL"],
+            "description": "BUY to open a new position or add to existing. SELL to close or reduce a position."
+          },
+          "ticker": {
+            "type": "string",
+            "description": "Stock ticker symbol (e.g., AAPL, SPY, QQQ). Must be a US stock with price >= $5 or a US ETF.",
+            "pattern": "^[A-Z]{1,5}$"
+          },
+          "allocation_pct": {
+            "type": "number",
+            "minimum": 5,
+            "maximum": 25,
+            "description": "For BUY: percentage of total portfolio value to allocate (5-25%). For SELL: percentage of the position to sell (use 100 to close entirely)."
+          },
+          "order_type": {
+            "type": "string",
+            "enum": ["MARKET", "LIMIT"],
+            "description": "MARKET: execute at next open. LIMIT: execute only if price <= limit_price."
+          },
+          "limit_price": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Required if order_type is LIMIT. The maximum price you are willing to pay (BUY) or minimum price to accept (SELL)."
+          },
+          "stop_loss_pct": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 50,
+            "description": "For BUY orders: percentage below entry price to set the stop-loss (e.g., 10 means stop at -10%). System-enforced, non-overridable."
+          },
+          "take_profit_pct": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 500,
+            "description": "Optional. Percentage above entry price to set take-profit (e.g., 20 means sell at +20%)."
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 10,
+            "description": "Brief explanation of the trade thesis. Used for strategy adherence analysis."
+          }
+        }
+      },
+      "maxItems": 3
+    },
+    "daily_notes": {
+      "type": "string",
+      "description": "Brief market outlook and portfolio commentary for the day. Helps track strategic consistency."
+    },
+    "portfolio_review": {
+      "type": "array",
+      "description": "Optional review of existing positions. Note any positions you considered selling but decided to hold.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ticker": { "type": "string" },
+          "action": {
+            "type": "string",
+            "enum": ["HOLD", "WATCH"],
+            "description": "HOLD: keeping position. WATCH: monitoring closely for potential exit."
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    }
+  }
+}
