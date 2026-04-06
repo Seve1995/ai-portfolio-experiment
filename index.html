@@ -2711,8 +2711,8 @@
             updateSnapshotButton();
 
             const timestamp = new Date().getTime();
-            const csvPath = `logs/performance.csv?t=${timestamp}`;
-            const lastUpdatedPath = `logs/last_updated.json?t=${timestamp}`;
+            const csvPath = `v1/logs/performance.csv?t=${timestamp}`;
+            const lastUpdatedPath = `v1/logs/last_updated.json?t=${timestamp}`;
 
             // Fetch last updated timestamp
             fetch(lastUpdatedPath)
@@ -3612,7 +3612,7 @@ https://seve1995.github.io/ai-portfolio-experiment/`;
         const modelOrder = ['ChatGPT', 'Gemini', 'Claude', 'Perplexity'];
 
         function loadPortfolios() {
-            fetch('logs/portfolios.json')
+            fetch('v1/logs/portfolios.json')
                 .then(response => {
                     if (!response.ok) throw new Error('Portfolio data not found');
                     return response.json();
@@ -3838,7 +3838,7 @@ https://seve1995.github.io/ai-portfolio-experiment/`;
         // Activity Feed Logic
         const activityFeed = document.getElementById('activityFeed');
         function loadTransactions() {
-            fetch('logs/transactions.json')
+            fetch('v1/logs/transactions.json')
                 .then(res => {
                     if (!res.ok) throw new Error('Transactions not found');
                     return res.json();
