@@ -1,80 +1,72 @@
-# AI Portfolio Experiment: LLM Comparative Trading Study
+# AI Portfolio Experiment (V2): Automated Agentic LLM Study
 
-A Python-based framework for benchmarking Large Language Models (LLMs) in algorithmic trading. This project imposes a strict, rules-based environment to evaluate the financial decision-making capabilities of **ChatGPT (5.3)**, **Gemini (3.1)**, **Claude (4.6 Opus)**, and **Perplexity (Pro)**.
+A Python-based, fully automated framework for benchmarking Large Language Models (LLMs) in algorithmic trading. This project imposes a strict, rules-based environment to evaluate the financial decision-making capabilities of 18 AI agents (6 models × 3 personas) and 1 Random Control baseline.
+
+**Models Tested**: ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google), Mistral, DeepSeek, and Qwen.
 
 ## Overview
 
-This experiment eliminates prompting variability to isolate model performance. Each model acts as an autonomous Portfolio Manager starting with $1,000, operating under identical constraints.
+Unlike V1 (which required manual execution via Alpaca and clipboard manipulation), **V2 is completely autonomous and agentic**. 
+Each agent acts as a virtual Portfolio Manager starting with $10,000 in a deterministic paper-trading simulator ("Code is Law"). 
 
-**Architecture:**
-1.  **Data Pipeline**: Fetches real-time portfolio state (Alpaca API) and market data (Yahoo Finance).
-2.  **Prompt Engineering**: Generates a deterministic, context-rich prompt containing standardized macro/technical indicators.
-3.  **Execution Engine**: Parses structured model outputs (Markdown/CSV) and routes orders to Alpaca Paper Trading.
+**Architecture Pipeline:**
+1. **Daily Snapshot**: Fetches identical daily market OHLC, macro indicators (FRED), and news (Finnhub) for all agents to enforce *fairness*.
+2. **LLM Orchestration**: Injects the snapshot and a Day-0 custom "Playbook" into each agent's context, giving them access to MCP Server tools (Search, Fundamentals, Technicals). 
+3. **Portfolio Simulator**: Validates structured trades against system limits (max 25% sizing, mandatory stop-losses, no shorts) and executes them deterministically at T+1 open prices with slippage.
+4. **Dashboard Exporter**: Dumps aggregated JSON and CSV data, directly powering the GitHub Pages Dashboard.
 
 ## Project Structure
 
-- `config.py`: Centralized configuration, paths, and model selection logic.
-- `scripts/`:
-  - `generate_prompt.py`: Fetches account and macro data, then generates and copies a PM-style prompt to your clipboard.
-  - `execute_trade.py`: Parses AI output from the clipboard (Markdown tables or CSV) and executes trades on Alpaca with safety checks.
-  - `check_history.py`: Displays recent account activity, including fills and order status.
-  - `log_performance.py`: Rebuilds performance history from Alpaca and saves to `logs/performance.csv`.
-  - `generate_substack_report.py`: Generates a Markdown report for Substack based on performance data.
-- `index.html`: Interactive performance dashboard (located in the root for GitHub Pages).
-- `requirements.txt`: List of Python dependencies.
-- `.env`: (User-created) Stores sensitive API keys.
+- `v2/config.py`: Core system rules, agent personas, and API provider definitions.
+- `v2/agent_runner.py`: Orchestrator driving the daily LLM inference loop and Tool execution.
+- `v2/portfolio_simulator.py`: Strict validation firewall and T+1 execution engine.
+- `v2/daily_snapshot.py`: Scrapes market ground-truth (YFinance, FRED, News).
+- `v2/mcp_servers/`: Custom tools for LLMs (Sanitized Web Search, Technicals, Fundamentals).
+- `v2/dashboard_exporter.py`: Outputs simulator state to `v1/logs/` formats for the UI.
+- `index.html`: The static React Dashboard (serves data from `v1/logs/`).
 
 ## Setup
 
-1. **Clone the repository.**
-2. **Create a virtual environment**:
+1. **Clone and create a virtual environment**:
    ```bash
+   git clone <repo_url>
+   cd ai-portfolio-experiment
    python -m venv .venv
    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    ```
-3. **Install dependencies**:
+2. **Install V2 Dependencies**:
    ```bash
-   pip install -r requirements.txt
+   pip install -r v2/requirements.txt
    ```
-4. **Configure Environment Variables**:
-   Create a `.env` file in the root directory with your Alpaca Paper Trading keys:
-   ```text
-   ALPACA_KEY=your_api_key_here
-   ALPACA_SECRET=your_api_secret_here
+3. **Configure Environment Variables**:
+   Copy the example environment file and fill in your API keys (you don't strictly need all of them to test single models):
+   ```bash
+   cp .env.example .env
    ```
 
 ## Usage
 
-### 1. Generate Prompt
-Run the generator to gather data and prepare the AI prompt:
+### 1. Generate Strategy Playbooks (Day 0)
+Run exactly once to have each LLM write its own distinct trading constitution, ensuring consistency over the 6-month simulation:
 ```bash
-python scripts/generate_prompt.py
-```
-*The prompt is automatically copied to your clipboard. Paste it into your preferred AI.*
-
-### 2. Execute Trades
-After the AI provides an execution table, copy that table to your clipboard and run:
-```bash
-python scripts/execute_trade.py
-```
-To preview trades without executing, use the dry-run flag:
-```bash
-python scripts/execute_trade.py --dry-run
+python -m v2.main --day-0
 ```
 
-### 3. Check Status
-View your recent trade history and fills:
+### 2. Run the Daily Execution Loop
+Execute the core orchestrator for a specific market day. This updates prices, checks stop-losses, requests LLM trade proposals, and marks portfolios to market:
 ```bash
-python scripts/check_history.py
+python -m v2.main --run-date 2026-07-06
 ```
 
-## Safety Features
+*(Note: Data extraction formats automatically sync to the existing web dashboard!)*
 
-- **Idempotency**: `execute_trade.py` checks for existing positions and open orders to prevent duplicate trades.
-- **Buying Power**: Validates that enough buying power exists before attempting a purchase.
-- **Stop-Loss Validation**: Ensures stop-loss levels are logical relative to entry prices.
-- **Position Protection**: Automatically manages stop-loss orders for current holdings.
+## Safety Rules & "Code is Law"
+
+LLMs are prone to hallucination. Therefore, the Portfolio Simulator strictly enforces:
+- **No Penny Stocks / Shorts / Crypto**: Filtered out cleanly.
+- **Sizing Boundaries**: 5% minimum to 25% maximum portfolio weight per position.
+- **Mandatory Stop-Loss**: Trades proposed without stop-loss levels are forcefully rejected.
+- **Fair Ground-Truth**: Agents only know what the Daily Snapshot specifies.
 
 ## License
-
 MIT

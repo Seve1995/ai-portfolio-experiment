@@ -11,7 +11,7 @@ import os
 import logging
 from pathlib import Path
 
-from .config import AGENTS, SYSTEM_RULES
+from .config import AGENTS, RULES
 from .api_adapters import UnifiedLLMClient
 
 logger = logging.getLogger(__name__)
@@ -58,7 +58,8 @@ def generate_playbooks():
             
         logger.info(f"Generating Day 0 Playbook for {agent_id}...")
         
-        system_prompt = f"YOU ARE {config.name}.\nPersona: {config.persona.description}\nBias: {config.persona.bias}\n"
+        from .config import PERSONA_MODIFIERS
+        system_prompt = f"YOU ARE {config.display_name}.\nPersona: {PERSONA_MODIFIERS[config.persona]}\n"
         
         client = UnifiedLLMClient(config.provider)
         try:

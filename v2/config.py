@@ -98,23 +98,17 @@ PROVIDERS = {
     ),
     "gemini": LLMProvider(
         name="Gemini",
-        model_id="gemini-3.1-flash",
+        model_id="gemini-3.1-pro",
         api_type="google",
         api_key_env="GOOGLE_API_KEY",
     ),
     "claude": LLMProvider(
         name="Claude",
-        model_id="claude-sonnet-4-20260514",
+        model_id="claude-4.6-sonnet",
         api_type="anthropic",
         api_key_env="ANTHROPIC_API_KEY",
     ),
-    "perplexity": LLMProvider(
-        name="Perplexity",
-        model_id="sonar-pro",
-        api_type="perplexity",
-        api_key_env="PERPLEXITY_API_KEY",
-        base_url="https://api.perplexity.ai",
-    ),
+
     "mistral": LLMProvider(
         name="Mistral",
         model_id="mistral-large-latest",
@@ -176,8 +170,7 @@ def _build_agents() -> list[Agent]:
         benchmark="SPY",
     ))
     return agents
-
-AGENTS = _build_agents()
+AGENTS = {a.id: a for a in _build_agents()}
 
 # ─────────────────────────────────────────────
 # MCP Tool Configuration
