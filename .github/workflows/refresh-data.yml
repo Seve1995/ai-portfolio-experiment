@@ -1,11 +1,9 @@
 name: Refresh Portfolio Data
 
 on:
-  # Run every 30 minutes during US market hours (Mon-Fri, 9:30 AM - 4:00 PM ET)
-  # GitHub Actions uses UTC, so 9:30 AM ET = 14:30 UTC, 4:00 PM ET = 21:00 UTC
-  # Note: This is approximate - we run at :00 and :30 each hour during market window
-  schedule:
-    - cron: '0,30 14-21 * * 1-5'   # Mon-Fri, 2:00 PM - 9:30 PM UTC (covers 9:00 AM - 4:30 PM ET)
+  # V1 workflow deactivated for schedule.
+  # schedule:
+  #   - cron: '0,30 14-21 * * 1-5'
   
   # Allow manual trigger for testing
   workflow_dispatch:
