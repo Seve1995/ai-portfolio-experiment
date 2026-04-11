@@ -8,12 +8,48 @@ All models are forced to temperature=0 and parallel_tool_calls=False for fairnes
 
 import os
 import json
+import time
+import random
 import logging
-from typing import Any, Optional, Dict, List
+from typing import Any, Optional, Dict, List, Callable
 
 from .config import LLMProvider
 
 logger = logging.getLogger(__name__)
+
+def retry_with_backoff(func: Callable, max_retries: int = 5, base_delay: float = 2.0):
+    """Generic 2026-style exponential backoff wrapper."""
+    def wrapper(*args, **kwargs):
+        retries = 0
+        while retries < max_retries:
+            try:
+                return func(*args, **kwargs)
+            except Exception as e:
+                err_msg = str(e).lower()
+                # Categorize common 2026 rate/quota limits
+                is_rate_limit = any(x in err_msg for x in ["429", "rate limit", "quota", "resource exhausted"])
+                is_timeout = any(x in err_msg for x in ["timeout", "timed out", "deadline exceeded"])
+                is_unavailable = any(x in err_msg for x in ["503", "unavailable", "service unavailable"])
+                
+                if is_rate_limit or is_timeout or is_unavailable:
+                    retries += 1
+                    if retries >= max_retries:
+                        logger.error(f"Max retries reached. Final error: {e}")
+                        raise e
+                    
+                    delay = base_delay * (2 ** (retries - 1)) + random.uniform(0, 1)
+                    # For Google Free Tier, we need even more aggressive delays
+                    if "google" in err_msg or "gemini" in err_msg:
+                        delay = max(delay, 30.0) 
+                        
+                    logger.warning(f"Retry {retries}/{max_retries} due to: {e}. Sleeping {delay:.1f}s...")
+                    time.sleep(delay)
+                else:
+                    # Non-retryable error
+                    logger.error(f"Non-retryable error: {e}")
+                    raise e
+        return None
+    return wrapper
 
 class UnifiedLLMClient:
     def __init__(self, provider: LLMProvider):
@@ -60,16 +96,31 @@ class UnifiedLLMClient:
         
         from .mcp_servers import execute_tool
         
+        if not formatted_tools or max_calls == 0:
+            @retry_with_backoff
+            def _call_oai():
+                return client.chat.completions.create(
+                    model=self.provider.model_id,
+                    messages=messages,
+                    temperature=self.provider.temperature,
+                    max_tokens=self.provider.max_tokens,
+                )
+            response = _call_oai()
+            return response.choices[0].message.content or ""
+            
         call_count = 0
         while call_count < max_calls:
-            response = client.chat.completions.create(
-                model=self.provider.model_id,
-                messages=messages,
-                tools=formatted_tools,
-                temperature=self.provider.temperature,
-                max_tokens=self.provider.max_tokens,
-                parallel_tool_calls=self.provider.parallel_tool_calls
-            )
+            @retry_with_backoff
+            def _call_oai_tool():
+                return client.chat.completions.create(
+                    model=self.provider.model_id,
+                    messages=messages,
+                    tools=formatted_tools,
+                    temperature=self.provider.temperature,
+                    max_tokens=self.provider.max_tokens,
+                    parallel_tool_calls=self.provider.parallel_tool_calls
+                )
+            response = _call_oai_tool()
             
             message = response.choices[0].message
             messages.append(message)
@@ -122,105 +173,208 @@ class UnifiedLLMClient:
         ]
         
         from .mcp_servers import execute_tool
+        
+        if not tools or max_calls == 0:
+            @retry_with_backoff
+            def _call_anthropic():
+                return client.messages.create(
+                    model=self.provider.model_id,
+                    system=system_prompt,
+                    messages=messages,
+                    max_tokens=self.provider.max_tokens,
+                    temperature=self.provider.temperature,
+                )
+            response = _call_anthropic()
+            return "".join([b.text for b in response.content if b.type == "text"])
+            
         call_count = 0
         
         while call_count < max_calls:
-            response = client.messages.create(
-                model=self.provider.model_id,
-                system=system_prompt,
-                messages=messages,
-                tools=anthropic_tools,
-                max_tokens=self.provider.max_tokens,
-                temperature=self.provider.temperature,
-            )
+            @retry_with_backoff
+            def _call_anthropic_tool():
+                return client.messages.create(
+                    model=self.provider.model_id,
+                    system=system_prompt,
+                    messages=messages,
+                    tools=anthropic_tools,
+                    max_tokens=self.provider.max_tokens,
+                    temperature=self.provider.temperature,
+                )
+            response = _call_anthropic_tool()
             
-            # Extract tool calls
+            # Extract tool calls and text
             tool_calls = [block for block in response.content if block.type == "tool_use"]
             text_blocks = [block.text for block in response.content if block.type == "text"]
             
-            # Save assistant message
+            # Append assistant's turn (must include the tool_use blocks)
             messages.append({"role": "assistant", "content": response.content})
             
             if not tool_calls:
                 return "\n".join(text_blocks)
                 
-            # Process first tool call (parallel execution is off practically)
-            tool_call = tool_calls[0]
-            func_name = tool_call.name
-            args = tool_call.input
+            # Anthropic requires a 'user' message with 'tool_result' for EVERY 'tool_use' in the turn
+            results_content = []
             
-            if func_name == "propose_trades":
-                return json.dumps(args)
+            for tool_call in tool_calls:
+                func_name = tool_call.name
+                args = tool_call.input
                 
-            call_count += 1
-            logger.info(f"{self.provider.name} called {func_name}")
-            result = execute_tool(func_name, args)
-            
-            messages.append({
-                "role": "user",
-                "content": [
-                    {
-                        "type": "tool_result",
-                        "tool_use_id": tool_call.id,
-                        "content": json.dumps(result)
-                    }
-                ]
-            })
+                # Special handling for trade proposal
+                if func_name == "propose_trades":
+                    return json.dumps(args)
+                
+                logger.info(f"{self.provider.name} calling {func_name} with {args}")
+                result = execute_tool(func_name, args)
+                call_count += 1
+                
+                results_content.append({
+                    "type": "tool_result",
+                    "tool_use_id": tool_call.id,
+                    "content": json.dumps(result)
+                })
+                
+            # Submit all results in the next turn
+            messages.append({"role": "user", "content": results_content})
             
         return ""
 
     def _run_google_loop(self, system_prompt: str, user_prompt: str, tools: List[Dict], max_calls: int) -> str:
-        # For simplicity and standardization, we can use the official litellm routing or native python SDK.
-        # Since v2 focuses on stability, and gemini SDK has tools, we implement basic wrapper.
-        pass # Will implement via standard API later, or suggest liteLLM
+        from google import genai
+        from google.genai import types
+        from .mcp_servers import execute_tool
+        
+        client = genai.Client(api_key=self.api_key)
+        
+        # Format tools for Google
+        google_tools = []
+        if tools and max_calls > 0:
+            google_tools = [types.Tool(function_declarations=[
+                types.FunctionDeclaration(
+                    name=t["name"],
+                    description=t["description"],
+                    parameters=t["parameters"]
+                ) for t in tools
+            ])]
+
+        contents = [{"role": "user", "parts": [{"text": user_prompt}]}]
+        config = types.GenerateContentConfig(
+            system_instruction=system_prompt,
+            temperature=self.provider.temperature,
+            tools=google_tools if google_tools else None
+        )
+        
+        call_count = 0
+        while call_count < max_calls or not google_tools:
+            @retry_with_backoff
+            def _call_google_iter():
+                return client.models.generate_content(
+                    model=self.provider.model_id,
+                    contents=contents,
+                    config=config
+                )
+            
+            response = _call_google_iter()
+            
+            # Extract text and tool calls
+            text = response.text
+            parts = response.candidates[0].content.parts
+            
+            # Add assistant turn
+            contents.append({"role": "model", "parts": parts})
+            
+            tool_calls = [p.function_call for p in parts if p.function_call]
+            
+            if not tool_calls:
+                return text or ""
+                
+            # Execute all function calls in the turn
+            response_parts = []
+            for fc in tool_calls:
+                func_name = fc.name
+                args = fc.args
+                
+                if func_name == "propose_trades":
+                    return json.dumps(args)
+                
+                call_count += 1
+                logger.info(f"{self.provider.name} calling {func_name}")
+                result = execute_tool(func_name, args)
+                
+                response_parts.append(types.Part(
+                    function_response=types.FunctionResponse(
+                        name=func_name,
+                        response={"result": result}
+                    )
+                ))
+            
+            contents.append({"role": "user", "parts": response_parts})
+            
+        return ""
 
     def _run_mistral_loop(self, system_prompt: str, user_prompt: str, tools: List[Dict], max_calls: int) -> str:
-        # Mistral uses OpenAI compatible SDK generally
+        # Mistral uses Mistral class from mistralai.client in SDK v2+
         import os
-        from mistralai.client import MistralClient
-        from mistralai.models.chat_completion import ChatMessage
+        from mistralai.client import Mistral
         
-        client = MistralClient(api_key=self.api_key)
+        client = Mistral(api_key=self.api_key, timeout_ms=120000)
         messages = [
-            ChatMessage(role="system", content=system_prompt),
-            ChatMessage(role="user", content=user_prompt)
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt}
         ]
-        formatted_tools = self._convert_tools_to_openai(tools)
         
-        from .mcp_servers import execute_tool
+        if not tools or max_calls == 0:
+            @retry_with_backoff
+            def _call_mistral():
+                return client.chat.complete(
+                    model=self.provider.model_id,
+                    messages=messages,
+                    temperature=self.provider.temperature,
+                )
+            
+            response = _call_mistral()
+            return response.choices[0].message.content or ""
+            
         call_count = 0
         
         while call_count < max_calls:
-            response = client.chat(
-                model=self.provider.model_id,
-                messages=messages,
-                tools=formatted_tools,
-                temperature=self.provider.temperature,
-            )
+            formatted_tools = self._convert_tools_to_openai(tools)
+            @retry_with_backoff
+            def _call_mistral_tool():
+                return client.chat.complete(
+                    model=self.provider.model_id,
+                    messages=messages,
+                    tools=formatted_tools,
+                    temperature=self.provider.temperature,
+                )
+            response = _call_mistral_tool()
             
             message = response.choices[0].message
             messages.append(message)
             
-            if not message.tool_calls:
+            if not getattr(message, "tool_calls", None):
                 return message.content or ""
                 
-            tool_call = message.tool_calls[0]
-            func_name = tool_call.function.name
-            try:
-                args = json.loads(tool_call.function.arguments)
-            except:
-                args = {}
+            from .mcp_servers import execute_tool
+            for tool_call in message.tool_calls:
+                func_name = tool_call.function.name
+                try:
+                    args = json.loads(tool_call.function.arguments)
+                except:
+                    args = {}
+                    
+                if func_name == "propose_trades":
+                    return tool_call.function.arguments
+                    
+                call_count += 1
+                logger.info(f"{self.provider.name} calling {func_name}")
+                result = execute_tool(func_name, args)
                 
-            if func_name == "propose_trades":
-                return tool_call.function.arguments
-                
-            call_count += 1
-            result = execute_tool(func_name, args)
-            
-            messages.append(ChatMessage(
-                role="tool",
-                name=func_name,
-                content=json.dumps(result)
-            ))
+                messages.append({
+                    "role": "tool",
+                    "tool_call_id": tool_call.id,
+                    "name": func_name,
+                    "content": json.dumps(result)
+                })
             
         return ""
+

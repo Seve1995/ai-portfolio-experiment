@@ -48,16 +48,16 @@ def generate_playbooks():
     playbooks_dir.mkdir(parents=True, exist_ok=True)
     
     for agent_id, config in AGENTS.items():
-        if config.provider.name == "Random Control":
+        if not config.provider:
             continue
             
         playbook_path = playbooks_dir / f"{agent_id}.md"
-        if playbook_path.exists():
+        if playbook_path.exists() and playbook_path.stat().st_size > 0:
             logger.info(f"Playbook already exists for {agent_id}. Skipping.")
             continue
             
         logger.info(f"Generating Day 0 Playbook for {agent_id}...")
-        
+        # Resilience (backoff/ritenta) is now handled in UnifiedLLMClient
         from .config import PERSONA_MODIFIERS
         system_prompt = f"YOU ARE {config.display_name}.\nPersona: {PERSONA_MODIFIERS[config.persona]}\n"
         
@@ -66,7 +66,7 @@ def generate_playbooks():
             # We don't provide tools for the Day 0 prompt, just ask for the strategy text
             playbook = client.generate(system_prompt, DAY_0_PROMPT, tools=[], max_tool_calls=0)
             
-            with open(playbook_path, "w") as f:
+            with open(playbook_path, "w", encoding="utf-8") as f:
                 f.write(playbook)
                 
             logger.info(f"Playbook saved for {agent_id}.")

@@ -1,197 +1,154 @@
 {
   "chatgpt_aggressive": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "chatgpt_balanced": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "chatgpt_conservative": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "claude_aggressive": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "claude_balanced": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "claude_conservative": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "deepseek_aggressive": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "deepseek_balanced": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "deepseek_conservative": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "gemini_aggressive": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "gemini_balanced": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "gemini_conservative": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "mistral_aggressive": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "mistral_balanced": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "mistral_conservative": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
-      "cash": 10000.0,
-      "portfolio_value": 10000.0,
-      "positions": []
-    }
-  },
-  "perplexity_aggressive": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
-      "cash": 10000.0,
-      "portfolio_value": 10000.0,
-      "positions": []
-    }
-  },
-  "perplexity_balanced": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
-      "cash": 10000.0,
-      "portfolio_value": 10000.0,
-      "positions": []
-    }
-  },
-  "perplexity_conservative": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "qwen_aggressive": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "qwen_balanced": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "qwen_conservative": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
       "cash": 10000.0,
       "portfolio_value": 10000.0,
       "positions": []
     }
   },
   "random_control": {
-    "2026-04-06": {
-      "timestamp": "2026-04-06",
-      "cash": 8602.05,
-      "portfolio_value": 10010.59,
-      "positions": [
-        {
-          "symbol": "V",
-          "qty": 2.727206,
-          "avg_price": 301.0407,
-          "current_price": 303.48,
-          "market_value": 827.65247688,
-          "unrealized_pl": 6.652473595800007,
-          "unrealized_pl_pct": 0.8102891070875143
-        },
-        {
-          "symbol": "KO",
-          "qty": 7.520572,
-          "avg_price": 76.7166,
-          "current_price": 77.24,
-          "market_value": 580.8889812799999,
-          "unrealized_pl": 3.936267384799964,
-          "unrealized_pl_pct": 0.6822512989365994
-        }
-      ]
+    "2026-04-07": {
+      "timestamp": "2026-04-07",
+      "cash": 10000.0,
+      "portfolio_value": 10000.0,
+      "positions": []
     }
   }
 }

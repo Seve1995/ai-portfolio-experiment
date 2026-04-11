@@ -18,6 +18,8 @@ import logging
 from datetime import datetime, date
 from pathlib import Path
 from typing import Optional
+from dotenv import load_dotenv
+load_dotenv(Path(__file__).parent.parent / ".env")
 
 logger = logging.getLogger(__name__)
 

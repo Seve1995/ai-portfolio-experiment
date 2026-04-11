@@ -65,9 +65,9 @@ def execute(query: str, count: int = 5, freshness: Optional[str] = None) -> dict
             "total_results": 5
         }
     """
-    api_key = os.getenv("BRAVE_SEARCH_API_KEY")
+    api_key = os.getenv("BRAVE_API_KEY")
     if not api_key:
-        return {"error": "BRAVE_SEARCH_API_KEY not set. Get one free at https://brave.com/search/api/"}
+        return {"error": "BRAVE_API_KEY not set. Get one free at https://brave.com/search/api/"}
 
     headers = {
         "Accept": "application/json",

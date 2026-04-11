@@ -7,9 +7,10 @@ provides the MCP tools, and runs the LLM loop until it proposes trades.
 Validates the trades with the PortfolioSimulator and commits them for T+1 execution.
 """
 
-import os
 import json
 import logging
+import random
+import time
 from pathlib import Path
 
 from .config import AGENTS, RULES, PERSONA_MODIFIERS
@@ -25,6 +26,10 @@ def get_trade_tool() -> dict:
     schema_path = Path(__file__).parent / "schemas" / "propose_trades.json"
     with open(schema_path) as f:
         schema = json.load(f)
+    
+    # Gemini/Google SDK is VERY strict: absolutely NO "$schema" key allowed in parameters
+    if "$schema" in schema:
+        del schema["$schema"]
         
     return {
         "name": "propose_trades",
@@ -55,15 +60,16 @@ def build_system_prompt(agent_config, playbook: str) -> str:
     return prompt
 
 def build_user_prompt(snapshot: dict, portfolio_state: dict) -> str:
-    prompt = f"Market Date: {snapshot['date']}\n\n"
+    prompt = f"Market Date: {snapshot['metadata']['date']}\n\n"
     
-    prompt += "=== DAILY SNAPSHOT ===\n"
-    prompt += f"{snapshot['market_summary']}\n\n"
+    # Inject the high-density Market Intelligence Hub (MIH) payload
+    prompt += "=== MARKET INTELLIGENCE HUB (MIH) ===\n"
+    prompt += f"{snapshot.get('mih_prompt_payload', 'No MIH data available.')}\n\n"
     
-    prompt += "=== YOUR PORTFOLIO STATE ===\n"
+    prompt += "=== YOUR CURRENT PORTFOLIO STATE ===\n"
     prompt += json.dumps(portfolio_state, indent=2) + "\n\n"
     
-    prompt += "What are your trading decisions for tomorrow (T+1)? Use your tools, then call propose_trades."
+    prompt += "What are your trading decisions for tomorrow (T+1)? Based on the RRG/Watchlist above, use your tools to confirm then call propose_trades."
     return prompt
 
 
@@ -84,17 +90,37 @@ def run_agent(agent_id: str, snapshot: dict, simulator: PortfolioSimulator):
     tickers_needed = set(simulator.position_tickers + [o.ticker for o in simulator.pending_orders])
     
     # Needs to fetch actual prices for today
-    from .daily_snapshot import fetch_ohlc_for_tickers
-    ohlc_data = fetch_ohlc_for_tickers(list(tickers_needed)) if tickers_needed else {}
+    import yfinance as yf
     
-    # Assuming open_prices are same as ohlc "open" and close_prices are "close"
-    open_prices = {t: data["open"] for t, data in ohlc_data.items() if "open" in data}
-    close_prices = {t: data["close"] for t, data in ohlc_data.items() if "close" in data}
+    ohlc_data = {}
+    if tickers_needed:
+        # Download today's specific bar (simulated)
+        data = yf.download(list(tickers_needed), period="1d", progress=False)
+        if not data.empty:
+            for tkr in tickers_needed:
+                try:
+                    # Multi-index or single ticker check
+                    if len(tickers_needed) > 1:
+                        row = data.xs(tkr, level=1, axis=1).iloc[-1]
+                    else:
+                        row = data.iloc[-1]
+                        
+                    ohlc_data[tkr] = {
+                        "open": float(row["Open"]),
+                        "high": float(row["High"]),
+                        "low": float(row["Low"]),
+                        "close": float(row["Close"])
+                    }
+                except: continue
 
     # Execute simulator's daily tasks BEFORE LLM (so LLM sees accurate EOD portfolio)
-    simulator.check_stops_and_targets(ohlc_data, snapshot["date"])
-    simulator.execute_pending_orders(open_prices, snapshot["date"])
-    simulator.mark_to_market(close_prices, snapshot["date"])
+    current_date = snapshot["metadata"]["date"]
+    simulator.check_stops_and_targets(ohlc_data, current_date)
+    
+    # For open prices, we assume 'Price' from fetch_watchlist_data is most recent/open
+    open_prices = {s["Tkr"]: s["Price"] for s in ohlc_raw}
+    simulator.execute_pending_orders(open_prices, current_date)
+    simulator.mark_to_market(open_prices, current_date)
 
     # Random agent bypasses LLM logic entirely
     if agent.id == "random_control":
@@ -107,11 +133,17 @@ def run_agent(agent_id: str, snapshot: dict, simulator: PortfolioSimulator):
         if not playbook_path.exists():
             playbook = "Default strategy: Maximize risk-adjusted returns."
         else:
-            with open(playbook_path) as f:
+            with open(playbook_path, encoding="utf-8") as f:
                 playbook = f.read()
 
         # Get tools
         tools = get_tool_definitions()
+        
+        # Sanitize tools: Gemini/Google SDK crashes if any tool has "$schema" in parameters
+        for t in tools:
+            if "parameters" in t and "$schema" in t["parameters"]:
+                del t["parameters"]["$schema"]
+                
         tools.append(get_trade_tool())
 
         # Build prompts
@@ -122,7 +154,7 @@ def run_agent(agent_id: str, snapshot: dict, simulator: PortfolioSimulator):
         
         client = UnifiedLLMClient(agent.provider)
         try:
-            result_json = client.generate(sys_prompt, user_prompt, tools, max_tool_calls=12)
+            result_json = client.generate(sys_prompt, user_prompt, tools, max_tool_calls=15)
         except Exception as e:
             logger.error(f"Agent {agent_id} crashed: {e}")
             result_json = ""
@@ -135,7 +167,7 @@ def run_agent(agent_id: str, snapshot: dict, simulator: PortfolioSimulator):
             logger.info(f"{agent_id} proposed: {len(trades)} trades.")
             
             # Submit to simulator
-            simulator.submit_orders(trades, snapshot["date"])
+            simulator.submit_orders(trades, snapshot["metadata"]["date"])
             
         except json.JSONDecodeError:
             logger.error(f"{agent_id} returned invalid JSON: {result_json}")
@@ -149,21 +181,30 @@ def run_agent(agent_id: str, snapshot: dict, simulator: PortfolioSimulator):
 
 def run_all_agents(snapshot_date: str):
     """Main entry point for running all agents on a specific date."""
-    from .daily_snapshot import build_daily_snapshot
+    from .snapshot_engine import build_mih_snapshot
     from datetime import date
     from .config import AGENTS, STARTING_CAPITAL, RULES, PORTFOLIOS_DIR, SNAPSHOTS_DIR
     
-    logger.info(f"--- STARTING DAILY RUN: {snapshot_date} ---")
+    logger.info(f"--- STARTING MIH-DRIVEN DAILY RUN: {snapshot_date} ---")
     
     dt = date.fromisoformat(snapshot_date)
-    snapshot = build_daily_snapshot(dt, save_dir=SNAPSHOTS_DIR)
+    # The MIH Snapshot now drives the high-intelligence context
+    snapshot = build_mih_snapshot(dt, save_dir=SNAPSHOTS_DIR)
     
-    if not snapshot.get("is_market_day", True):
+    # Metadata structure changed in V2
+    if not snapshot.get("metadata", {}).get("is_market_day", True):
         logger.info(f"{snapshot_date} is not a market day. Skipping.")
         return
         
     # Run agents
-    for agent_id in AGENTS.keys():
+    agent_ids = list(AGENTS.keys())
+    for i, agent_id in enumerate(agent_ids):
+        # Apply Jitter (except for the first one for speed, or always for safety)
+        if i > 0:
+            delay = random.uniform(5, 15)
+            logger.info(f"Roster Jitter: Waiting {delay:.1f}s before starting {agent_id}...")
+            time.sleep(delay)
+            
         simulator = PortfolioSimulator(agent_id, STARTING_CAPITAL, RULES, PORTFOLIOS_DIR)
         run_agent(agent_id, snapshot, simulator)
 

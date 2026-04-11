@@ -92,19 +92,19 @@ class LLMProvider:
 PROVIDERS = {
     "chatgpt": LLMProvider(
         name="ChatGPT",
-        model_id="gpt-4.1-2026-04-14",
+        model_id="gpt-4o",
         api_type="openai",
         api_key_env="OPENAI_API_KEY",
     ),
     "gemini": LLMProvider(
         name="Gemini",
-        model_id="gemini-3.1-pro",
+        model_id="gemini-2.5-flash",
         api_type="google",
         api_key_env="GOOGLE_API_KEY",
     ),
     "claude": LLMProvider(
         name="Claude",
-        model_id="claude-4.6-sonnet",
+        model_id="claude-sonnet-4-6",
         api_type="anthropic",
         api_key_env="ANTHROPIC_API_KEY",
     ),
@@ -145,8 +145,8 @@ class Agent:
     benchmark: str = "SPY"                 # Default benchmark, updated after Day 0
 
     @property
-    def provider(self) -> LLMProvider:
-        return PROVIDERS[self.provider_key]
+    def provider(self) -> Optional[LLMProvider]:
+        return PROVIDERS.get(self.provider_key)
 
 def _build_agents() -> list[Agent]:
     """Generate all 21 AI agents (7 models × 3 personas) + 1 random control."""
