@@ -2772,18 +2772,11 @@
                 timeAgo = syncTime.toLocaleDateString();
             }
 
-            // Check if market is currently open (Mon-Fri, 9:30 AM - 4:00 PM ET)
-            const marketStatus = getMarketStatus();
-            const indicatorClass = marketStatus.isOpen ? 'open' : 'closed';
-            const statusText = marketStatus.isOpen ? 'Market Open' : 'Market Closed';
-
-            // Calculate next update time
-            const nextUpdate = getNextUpdateTime(syncTime);
-
+            // Experiment V1 finished status
             document.getElementById('lastSync').innerHTML =
-                `<span class="market-indicator ${indicatorClass}"></span>${statusText}<span class="status-separator">·</span>Last updated: ${timeAgo}` +
+                `<span class="market-indicator closed"></span>Market Closed<span class="status-separator">·</span>Final Update: ${syncTime.toLocaleDateString()}` +
                 `<span class="status-separator">·</span>` +
-                `<span class="next-update">Next update: ${nextUpdate}</span>`;
+                `<span class="next-update">Status: Experiment Complete</span>`;
         }
 
         // Calculate the next data refresh time
